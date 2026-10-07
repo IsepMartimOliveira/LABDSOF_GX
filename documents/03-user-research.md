@@ -1,7 +1,7 @@
 # 3. User Research
 
 **Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** plano de investigação (v0.1). **Ainda não existem resultados.**
+**Sprint:** 1 · **Estado:** plano de investigação (v0.2). **Ainda não existem resultados.**
 
 > **Regra do enunciado:** não fabricar evidência de investigação. Este documento contém o plano, os guiões e os modelos de registo. As secções de resultados ficam **em branco até haver dados reais**. Se não for possível entrevistar utilizadores reais, isso deve ser escrito na secção de limitações.
 
@@ -31,7 +31,7 @@
 | Análise de documentos públicos dos concorrentes / demos | Q6 | n/a | Baixo |
 | Teste de protótipo (Sprint 1 final ou Sprint 2) | Q7, usabilidade | Administradores, condóminos | Médio |
 
-### Amostra-alvo (mínimo realista)
+### Amostra-alvo (proposta a ajustar à capacidade)
 
 | Grupo | Alvo | Nota |
 |---|---|---|
@@ -45,15 +45,15 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 ## 3. Recrutamento e ética
 
 - Explicar o **propósito** do estudo antes de começar (requisito do enunciado, secção 11).
-- Obter **consentimento** (verbal gravado ou escrito) para notas e, se aplicável, gravação áudio.
-- **Não recolher dados pessoais desnecessários.** Anonimizar com códigos (A1, A2, C1, P1…).
+- Obter **consentimento** (registado em nota ou por escrito) para notas e, se aplicável, gravação áudio.
+- **Não recolher dados pessoais desnecessários.** Identificar participantes com códigos (A1, A2, C1…). Códigos são pseudónimos se existir ligação à identidade; guardar essa ligação separadamente e fora do Git.
 - Não pedir a participantes que partilhem dados reais de moradores, fotos de casas ou documentos internos.
 - Permitir desistir a qualquer momento. Guardar notas em local com acesso restrito à equipa.
 - Se alguém partilhar registos reais para análise, anonimizar antes de os guardar no repositório.
 
 ### Texto de consentimento (modelo)
 
-> Somos estudantes a desenvolver um projeto académico sobre gestão de avarias em condomínios. Gostaríamos de lhe fazer algumas perguntas sobre a sua experiência (cerca de 30 minutos). A participação é voluntária e pode parar a qualquer momento. As suas respostas serão anonimizadas e usadas apenas neste projeto. Podemos tomar notas? (Se aceitar, podemos também gravar o áudio, que será apagado após a análise.)
+> Somos estudantes a desenvolver um projeto académico sobre gestão de avarias em condomínios. Gostaríamos de lhe fazer algumas perguntas sobre a sua experiência (cerca de 30 minutos). A participação é voluntária e pode parar a qualquer momento. Usaremos as respostas apenas neste projeto e publicaremos apenas sínteses sem elementos identificadores. Podemos tomar notas? A gravação é opcional e exige autorização separada; antes de gravar explicaremos quem terá acesso, onde será guardada e a data de eliminação.
 
 ## 4. Guiões de entrevista
 
@@ -66,7 +66,7 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 **Fluxo atual**
 3. Conte-me a última avaria que teve de resolver. Como chegou até si e o que fez a seguir?
 4. Que canais usa para receber avisos? E para contactar prestadores?
-5. Como decide se algo é urgente? Dê-me um exemplo de um caso mal avaliado.
+5. Como decidiu a urgência na última ocorrência? Houve algum caso em que a prioridade teve de mudar? O que motivou a alteração?
 6. Recebe o mesmo problema reportado por várias pessoas? O que faz nesses casos?
 
 **Prestadores e custos**
@@ -79,7 +79,7 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 
 **Fecho**
 11. Quanto tempo gasta, em média, por avaria? Qual é a parte mais frustrante?
-12. Pagaria por uma solução? Como preferiria pagar (por edifício, por fração, por mês)?
+12. Que ferramentas já paga ou contratou? Quem decide essa compra? O que justificaria testar outra solução? Só depois explorar modelo de pagamento e distinguir intenção de compromisso.
 
 ### 4.2 Condómino
 
@@ -154,7 +154,19 @@ Limitações previstas, a confirmar ou ajustar:
 
 | Quando | Atividade |
 |---|---|
-| Semana 1 | Finalizar guiões, identificar e contactar participantes |
-| Semana 1 a 2 | Entrevistas a administradores e contractors |
-| Semana 2 | Inquérito a condóminos |
-| Semana 2 a 3 | Análise, atualização das personas, decisões de produto, teste rápido de protótipo |
+| Phase 1 / início da Phase 2 | Finalizar guiões, identificar e contactar participantes |
+| Phase 2 | Entrevistas a administradores e prestadores |
+| Phase 2, conforme capacidade | Inquérito a moradores |
+| Phase 2–3 | Análise, atualização das personas, decisões e teste de protótipo |
+
+## 10. Reforços do guião e ligação às decisões
+
+- Pedir um episódio com vários contactos e identificar onde se perdeu tempo, sem sugerir que existiu necessariamente uma falha.
+- Perguntar quem confirma a data, quem considera o trabalho concluído e como se trata recusa ou indisponibilidade do prestador (DEC-10).
+- Investigar que informação pode ser partilhada no edifício e o que deve ficar privado (DEC-07).
+- Explorar acesso digital e alternativa para moradores que não usem a aplicação; não assumir adoção universal.
+- Só após compreender o processo atual, mostrar protótipo e observar tarefa concreta. Registar erros, tempo e ajuda necessária; variar ordem de comparação quando possível.
+- Perguntar se existem sensores e que decisão seria apoiada pelos dados, sem apresentar IoT como requisito já escolhido (DEC-01).
+- Registar disponibilidade efetiva para um segundo teste, sem equiparar cortesia ou intenção de pagar a validação comercial.
+
+Usar o [modelo de registo](templates/research-record.md). Antes da recolha, atribuir responsável e definir acesso/retenção em DEC-07. Datas reais dependem de DEC-03. Resultados alimentam os [requisitos](requirements.md) e a priorização do [backlog](06-product-backlog.md).

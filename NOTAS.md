@@ -1,3 +1,13 @@
+> **Notas exploratórias do autor — contextualização em 2026-10-07.** O conteúdo original abaixo é preservado para discussão; não constitui âmbito aprovado nem verificação atual de fornecedores, preços, limites ou capacidades.
+>
+> - IoT e a jornada de monitorização: **DEC-01**, alternativa à base centrada na coordenação de avarias.
+> - Vários fornecedores, solvers e instruções para IA: **DEC-05**, hipóteses a comparar com baseline simples. Instruções textuais não substituem controlos em código.
+> - Separação de serviços: **DEC-04** e ADR-001; subscrições não pertencem à base do MVP.
+> - A sugestão atribuída ao Gemini é uma recomendação exploratória, não evidência de adequação ou decisão da equipa.
+> - Fontes/valores das tabelas precisam de confirmação datada antes de orientar implementação ou orçamento.
+>
+> Consultar [decisões pendentes](documents/planning/decisions-and-feedback.md), [visão harmonizada](documents/04-product-vision.md) e [AI Assessment](documents/07-responsible-ai-assessment.md).
+
 # Análise do enunciado
 
 ## 1. Uso de AI e alternativas

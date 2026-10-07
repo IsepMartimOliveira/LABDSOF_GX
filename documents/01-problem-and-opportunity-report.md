@@ -1,7 +1,7 @@
 # 1. Problem and Opportunity Report
 
 **Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** rascunho v0.1 (a rever após entrevistas)
+**Sprint:** 1 · **Estado:** rascunho v0.2 (a rever após entrevistas)
 
 > Convenção deste documento: tudo o que ainda não foi validado com utilizadores reais está marcado como **[Hipótese]**. A evidência só passa a "validada" depois de documentada na secção de User Research (entregável 3).
 
@@ -18,7 +18,7 @@ A comunidade inclui os condóminos (moradores e proprietários) e os prestadores
 
 ## 2. Problema
 
-> Os administradores de condomínio gerem avarias através de chamadas, WhatsApp e emails dispersos. Não há triagem por urgência, os reports duplicados multiplicam o trabalho, a contratação de prestadores é manual e não existe histórico estruturado de ocorrências e custos.
+> **[Hipótese]** Em alguns condomínios, a dispersão de avisos por chamadas, mensagens e emails aumenta o esforço de triagem, contacto com prestadores e acompanhamento. A frequência de duplicados, a qualidade da triagem e as limitações dos registos atuais ainda precisam de evidência.
 
 ### Ligação ao tema do projeto (resiliência comunitária)
 
@@ -26,13 +26,13 @@ Avarias como fugas de água, falhas elétricas, elevadores parados ou problemas 
 
 ### Resultado que o produto pretende melhorar
 
-Reduzir o tempo entre o report de uma avaria e a sua resolução, e reduzir o esforço de coordenação do administrador por ocorrência. Métricas detalhadas no entregável 4.
+Reduzir o esforço ativo do administrador para triar e preparar uma intervenção. Medir também tempos até envio, aceitação e resolução, distinguindo fatores externos. Métricas na [visão](04-product-vision.md); alvos dependem da baseline (DEC-08).
 
 ## 3. Práticas atuais (alternativas existentes)
 
 | Prática | Como funciona hoje [Hipótese] | Limitação provável |
 |---|---|---|
-| Chamadas, SMS, WhatsApp, email | O condómino contacta o administrador ou o porteiro/vizinho; o administrador contacta o prestador | Informação dispersa, sem estado nem histórico, sem triagem |
+| Chamadas, SMS, WhatsApp, email | O condómino contacta o administrador ou o porteiro/vizinho; o administrador contacta o prestador | Informação potencialmente dispersa; histórico de mensagens pode não estruturar estados e decisões |
 | Grupos de vizinhos | Problemas são discutidos informalmente | Duplicação, ruído, sem responsável |
 | Folhas de cálculo / papel | O administrador regista ocorrências e custos | Manual, difícil de analisar, propenso a perdas |
 | Software de gestão de condomínios | Módulos de ocorrências, documentos, quotas (ver entregável 2) | Foco administrativo/financeiro; a profundidade da triagem e do despacho está por confirmar |
@@ -102,13 +102,21 @@ Reduzir o tempo entre o report de uma avaria e a sua resolução, e reduzir o es
 | Acesso limitado a administradores profissionais | Alta | Alto | Validar também com voluntários; documentar a limitação |
 | Âmbito demasiado grande (marketplace de contractors) | Alta | Alto | Catálogo sintético pequeno, ranking por regras |
 | Dados pessoais e fotografias de interiores (RGPD) | Média | Alto | Dados sintéticos, minimização, retenção definida |
-| Erro de AI numa urgência crítica | Média | Alto | Regras determinísticas para palavras críticas, aprovação humana |
-| Concorrentes existentes cobrem o essencial | Média | Médio | Foco na triagem + despacho + análise, ver entregável 2 |
+| Erro de AI numa urgência crítica | Média | Alto | Regras independentes, revisão humana e avaliação de falsos negativos; sem garantia de deteção perfeita |
+| Concorrentes existentes cobrem o essencial | Média | Médio | Investigar valor específico do fluxo e rever âmbito com evidência, ver entregável 2 |
 
 ## 8. Oportunidade
 
-Transformar um fluxo informal e fragmentado numa cadeia rastreável **report → triagem → despacho → resolução → histórico**, com urgência como eixo central e AI como apoio (nunca como decisor final). A oportunidade confirma-se se P1 a P3 forem validados e se a análise competitiva mostrar lacuna na triagem e no despacho assistidos.
+Transformar um fluxo informal e fragmentado numa cadeia rastreável **report → triagem → despacho → resolução → histórico**, com urgência como eixo central e AI como apoio (nunca como decisor final). P1 é central para a oportunidade. P2 e P3 determinam o valor de duplicados e triagem assistida; resultados negativos devem alterar essas funcionalidades. Adoção (P4–P6), utilidade da IA (P7) e diferenciação precisam de avaliação própria.
 
 ## 9. Pergunta para o investidor (Sprint 1)
 
-*É este um problema de valor, e é o fluxo "reportar, classificar, detetar duplicado, propor contractor, aprovar, agendar, notificar" o menor MVP credível?*
+*É este um problema de valor, e é o ciclo "reportar, rever triagem, aprovar pedido, obter resposta, agendar e encerrar" a menor experiência credível?*
+
+## 10. Rastreabilidade e investigação do domínio
+
+- Guiões e resultados: [03 User Research](03-user-research.md).
+- Requisitos derivados: [requisitos](requirements.md), ainda sujeitos a validação.
+- IoT e segmento: DEC-01 e DEC-02 no [registo](planning/decisions-and-feedback.md).
+- Investigar responsabilidade por áreas comuns/privadas, intervenções recorrentes, disponibilidade dos prestadores, aprovações e exclusão digital. A lista é de perguntas, não de conclusões jurídicas ou de mercado.
+- Moradores podem ser arrendatários; pertença ao edifício e autorização para aprovar despesas são conceitos distintos. Confirmar o vocabulário nas entrevistas.

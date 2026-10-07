@@ -1,3 +1,82 @@
+# Building Maintenance Coordinator — Estratégia
+
+**Estado:** proposta v0.2 · **Fase atual:** Sprint 1 · **Revisão:** 2026-10-07
+
+Este documento sintetiza a direção do produto. O âmbito detalhado pertence à [visão](04-product-vision.md), as prioridades ao [backlog](06-product-backlog.md) e as escolhas abertas ao [registo de decisões](planning/decisions-and-feedback.md). Esta revisão documental não representa aprovação da equipa nem dos docentes.
+
+## 1. Problema e posicionamento
+
+**[Hipótese]** A dispersão de avisos por chamadas, mensagens e emails aumenta o esforço de coordenação de avarias em alguns condomínios. É necessário investigar a frequência, o impacto e as alternativas já usadas.
+
+> O BMC ajuda administradores de condomínios a transformar avisos de avarias em intervenções acompanhadas, reduzindo o trabalho de coordenação e mantendo os moradores informados.
+
+A comunidade-alvo são condomínios residenciais em Portugal. Avarias em água, eletricidade, elevadores ou espaços comuns afetam a continuidade da vida diária e enquadram o produto no desafio de resiliência.
+
+| Papel | Benefício esperado [Hipótese] |
+|---|---|
+| Administrador profissional — segmento principal proposto | Menos esforço por ocorrência; responsabilidade e estado visíveis |
+| Administrador voluntário — segmento secundário | Coordenação mais simples |
+| Morador/condómino | Reportar e acompanhar sem repetir contactos |
+| Prestador de manutenção | Receber pedidos claros, responder e comunicar conclusão |
+
+Disponibilidade para pagar e identidade do comprador não estão validadas. Entrevistas a voluntários não substituem evidência do segmento profissional. SaaS por edifício/fração é uma hipótese comercial (DEC-02).
+
+## 2. Base provisória de âmbito
+
+**Reportar → sugerir triagem → revisão do administrador → propor intervenção → aprovação → resposta do prestador → agendamento → execução → encerramento e histórico.**
+
+- Relatos por texto e dados sintéticos na demonstração.
+- IA sugere classificação; regras e triagem manual permitem continuar sem IA.
+- Sugestões de duplicados, quando implementadas, são revistas e preservam os relatos originais.
+- Catálogo pequeno de prestadores; ranking explicável por regras, sem marketplace.
+- Aprovação autoriza o pedido; marcação só fica confirmada após aceitação do prestador e registo no calendário, ou confirmação manual explícita.
+- Um canal de notificações, participação «isto também me afeta», histórico e custo básico opcional.
+- Administrador encerra após conclusão comunicada pelo prestador, ou com justificação registada.
+
+**Sprint 1:** descoberta, decisões, desenho e walking skeleton. **Sprint 2:** primeira versão operacional do ciclo. **Sprint 3:** completar, avaliar e robustecer o mesmo MVP.
+
+Fotografias, análise visual por IA, gráficos de custos e resumos narrativos são candidatos **pós-MVP**, sem compromisso para a Sprint 3. Autoaprovação de despesas fica fora da base. IoT é uma alternativa em aberto (DEC-01), não um requisito acrescentado automaticamente.
+
+## 3. Valor e medição
+
+Métrica principal proposta: **tempo ativo do administrador para triar e preparar uma intervenção**, comparando tarefas equivalentes. Tempo até envio, aceitação e resolução são métricas distintas; a resolução depende também de fatores externos.
+
+Qualidade da classificação, erros de associação de duplicados, latência e custo são avaliados no [plano de IA](07-responsible-ai-assessment.md). Metas não são resultados. Não se promete deteção perfeita de situações críticas.
+
+## 4. IA e segurança das decisões
+
+| Capacidade | Proposta |
+|---|---|
+| Classificar texto | Workflow de IA significativo, comparado com baseline por regras e com fallback manual |
+| Sinais críticos | Regras independentes da IA e destaque para revisão; regras também têm limitações |
+| Duplicados | Contexto estruturado primeiro; embeddings dependem de avaliação (DEC-05) |
+| Prestadores | Filtros e ranking por regras; explicações derivadas dos critérios |
+| Aprovar/agendar | Permissões e transições impostas pelo backend; o modelo não executa estas ações |
+| Custos | Registo estruturado; análises e narrativas pós-MVP |
+
+O enunciado exige baseline **ou** fallback não-IA. Propomos ambos para avaliar valor e permitir continuidade. Instruções versionadas para o modelo complementam validação de outputs e controlos em código; não os substituem.
+
+## 5. Direção técnica proposta
+
+Dois componentes backend implantáveis independentemente: **Issue Service** (ocorrências, triagem e histórico) e **Dispatch Service** (prestadores e intervenções), com processamento assíncrono. Stack, fila e implantação por decidir em [ADR-001](adr/ADR-001-backend-boundaries.md) e DEC-04.
+
+Integração proposta: calendário com simulador realista como primeira opção de planeamento; fornecedor e implementação final em DEC-06. Um monólito modular exige justificação e aceitação pelos docentes; não é uma exceção já concedida.
+
+Autenticação simulada é permitida para o MVP. Autorização por papel, edifício e intervenção continua aplicada e testada. Ver [segurança](09-security-privacy.md).
+
+## 6. Execução
+
+- [Fases da Sprint 1](planning/sprint-1-plan.md): critérios e evidências de saída.
+- [Acordo de equipa](governance/team-working-agreement.md): metodologia e papéis por ratificar.
+- [DoR](governance/definition-of-ready.md) e [DoD](governance/definition-of-done.md): propostas operacionais.
+- [Protocolo Git](governance/git-workflow.md): colaboração, revisões e rastreabilidade.
+- [Decisões e feedback](planning/decisions-and-feedback.md): escolhas e alterações justificadas.
+
+Prioridade imediata: atribuir responsáveis, recolher evidência, rever a proposta com stakeholders e preparar uma fatia mínima executável. Estado no [README](../README.md).
+
+
+---
+
 # Building Maintenance Coordinator — Estratégia do Projeto
 
 > Documento "seed" para o projeto LABDSOF 26/27 (Community Resilience and Everyday Services Platform).

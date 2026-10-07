@@ -1,18 +1,18 @@
 # 2. Market and Competitor Analysis
 
-**Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** rascunho v0.1
+**Estado:** levantamento preliminar v0.2 · **Sprint:** 1 · **Revisão:** 2026-10-07
 
-## Nota metodológica e limitações
+## 1A. Qualidade da evidência
 
-- A análise baseia-se em **páginas públicas e material de marketing** consultados em outubro de 2026. Não foi feito trial nem demo de nenhum produto.
-- "Não encontrado" significa que **não encontrámos referência nas fontes consultadas**, não que a funcionalidade não exista. Confirmar com demo ou contacto comercial antes de tomar decisões.
-- Preços e funcionalidades mudam. Registar a data e o URL de cada fonte.
-- Lista não exaustiva. Linhas marcadas **[a pesquisar]** são categorias a investigar na próxima iteração.
+O rascunho anterior referia consultas em outubro de 2026, mas não continha URLs completos e datas por achado. As pistas abaixo são preservadas como **alegações do levantamento inicial a verificar**. Não se declara nesta revisão uma demo, trial ou auditoria funcional realizada.
 
----
+- «Não confirmado» significa ausência de evidência suficiente, não ausência da funcionalidade.
+- Material de marketing descreve alegações do fornecedor; não comprova qualidade de utilização ou conformidade.
+- Registar fonte exata, data, versão/plano e excerto ou observação relevante.
+- Não usar preços antigos ou limites gratuitos para decidir custos atuais.
+- Sem análise completa de manutenção/helpdesk, não está demonstrada uma lacuna competitiva.
 
-## 1. Alternativas identificadas
+## 1B. Alternativas identificadas
 
 ### 1.1 Alternativas não digitais ou informais (o concorrente real)
 
@@ -41,9 +41,26 @@
 | Marketplaces de serviços e orçamentos **[a pesquisar]** | Plataformas portuguesas de profissionais | Concorrem na fase de contratação, não na triagem nem no histórico |
 | Helpdesk / ticketing genérico **[a pesquisar]** | Ferramentas de suporte | Resolvem o fluxo de tickets, mas não conhecem edifícios, urgência doméstica nem prestadores |
 
----
 
-## 2. Comparação por critérios (§5.2 do enunciado)
+## 2A. Alternativas e pistas de pesquisa
+
+| Alternativa | O que investigar | Pista existente / estado |
+|---|---|---|
+| Chamadas, mensagens e email | Custo de coordenação, procura de informação, comunicação de estado | Hipótese de prática atual; confirmar nas entrevistas |
+| Folhas de cálculo e papel | Registo de responsáveis, datas e custos; esforço de atualização | Hipótese de prática atual |
+| Contactos habituais de prestadores | Confiança, disponibilidade e aprovações | Podem ser uma vantagem do processo atual; investigar |
+| SolidSoft GC | Relato de avarias, fotos/offline, técnicos/QR e manutenção; triagem e despacho | Artigo Pplware referido no rascunho; URL/data por recuperar |
+| Unitify | Administração, acessos, contadores, app de residente e fluxo de avarias | Pista: unitify.com/smart-building/portugal; funcionalidades por verificar |
+| CondoBOM | Livro de ocorrências, manutenção e visibilidade por utilizador | Listagem App Store referida; URL/versão por recuperar |
+| Manu | Manutenção preventiva e ligação a fornecedores | Conteúdo SíndicoNet de 2022 referido; URL por recuperar; preço antigo não utilizável |
+| Condomob / Sivirino | Reporte, acompanhamento e manutenção | Imprensa de 2017 referida; verificar produto e relevância atual |
+| Software de manutenção / gestão de propriedades | Ordens de trabalho, priorização, prestadores e histórico | Selecionar pelo menos um comparável após pesquisa |
+| Helpdesk genérico | Estados, atribuição, automações, duplicados e permissões | Selecionar comparável e avaliar adaptação ao domínio |
+| Marketplace de serviços | Contratação, resposta, orçamento e continuidade do acompanhamento | Selecionar comparável relevante para Portugal |
+
+O alcance e a importância destas alternativas dependem das ferramentas que os participantes realmente usam.
+
+## 2B. Comparação por critérios (§5.2 do enunciado)
 
 Legenda: ✔ referido na fonte · ✖ não encontrado nas fontes · ? por confirmar
 
@@ -61,6 +78,57 @@ Legenda: ✔ referido na fonte · ✖ não encontrado nas fontes · ? por confir
 | Hardware / acessos / contadores | ✖ | ✖ | ✔ | ✖ | ✖ | ✖ (fora de âmbito) |
 
 > As células de concorrentes com ✖ e ? são **hipóteses** a validar com demos. Se alguma for contrariada, a diferenciação tem de ser revista (e documentada como decisão).
+
+## 3. Matriz de comparação a completar
+
+Preencher por produto com «confirmado na fonte», «observado em teste», «não confirmado» ou «fora do âmbito», sempre com referência. Não usar cruzes como sinónimo de ausência.
+
+| Critério | Evidência a recolher | BMC proposto (não implementado) |
+|---|---|---|
+| Utilizadores e mercado | Quem usa, quem decide e quem paga | Administração profissional e moradores; prestadores secundários |
+| Relato e acompanhamento | Texto/fotos, estados, responsáveis e permissões | Texto e histórico no MVP; fotos pós-MVP |
+| Triagem | Manual, regras, IA; explicação e correção | IA assistida + regras/fallback e revisão |
+| Duplicados | Sugestão, associação e reversibilidade | Should; associação revista, preservando originais |
+| Intervenção | Seleção, aprovação, aceitação e calendário | Catálogo pequeno e ciclo explícito |
+| Custos | Registo básico vs análise financeira | Registo opcional no MVP; gráficos/resumos pós-MVP |
+| UX | Conclusão de tarefas, erros, ajuda necessária | Por testar |
+| Privacidade/confiança | Visibilidade, retenção e controlos; distinguir alegação de evidência | Proposta em [segurança](09-security-privacy.md) |
+| Negócio | Plano, preço datado, custos de adoção/migração | SaaS por edifício/fração por validar |
+| IoT | Sensores, tratamento de falhas e utilidade | DEC-01, fora da base provisória |
+
+## 4. Registo de fontes e resultados
+
+| ID | Produto e plano | URL exato / data de consulta | Capacidade ou limitação observada | Tipo de evidência | Consequência para BMC |
+|---|---|---|---|---|---|
+| A preencher após verificação | — | — | — | — | — |
+
+Não preencher este registo com memória de páginas, inferências de IA ou referências que não tenham sido consultadas.
+
+## 5. Hipótese de diferenciação e negócio
+
+> O BMC pretende reduzir esforço administrativo através de um fluxo simples e rastreável entre relato, triagem, intervenção e encerramento.
+
+Esta proposta não afirma exclusividade de IA, rastreabilidade ou calendário. É necessário demonstrar qual melhoria importa aos utilizadores e se justifica acrescentar uma ferramenta.
+
+Hipóteses a testar:
+- Simplicidade do percurso pode reduzir contactos e tempo ativo.
+- Explicações e possibilidade de corrigir sugestões podem apoiar decisões.
+- Empresas podem preferir integração com software existente a substituir ferramentas.
+- Um catálogo conhecido pode ser mais útil que um marketplace aberto.
+- Compra por edifício/fração depende de valor e processo de decisão reais.
+
+Se concorrentes cobrirem o fluxo, rever posicionamento com evidência. Não mudar automaticamente para análise de custos sem investigar essa necessidade.
+
+## 6. Próximas ações
+
+1. Recuperar fontes do levantamento e selecionar comparáveis usados pelo segmento.
+2. Completar critérios do §5.2: utilizadores, funcionalidades, forças/fraquezas, negócio, UX, privacidade/confiança e diferenciação.
+3. Quando possível, realizar uma tarefa equivalente em demo/trial; documentar restrições de acesso.
+4. Cruzar resultados com [investigação](03-user-research.md) e rever prioridades com stakeholders.
+5. Registar decisões em [DEC-02](planning/decisions-and-feedback.md) e evidência em DISC-02 do [backlog](06-product-backlog.md).
+
+---
+
 
 ---
 
