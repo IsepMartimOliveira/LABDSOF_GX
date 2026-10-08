@@ -1,7 +1,7 @@
 # 3. User Research
 
 **Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** plano de investigação (v0.2). **Ainda não existem resultados.**
+**Sprint:** 1 · **Estado:** plano de investigação (v0.3). **Ainda não existem resultados.** · **Revisão:** 2026-10-09
 
 > **Regra do enunciado:** não fabricar evidência de investigação. Este documento contém o plano, os guiões e os modelos de registo. As secções de resultados ficam **em branco até haver dados reais**. Se não for possível entrevistar utilizadores reais, isso deve ser escrito na secção de limitações.
 
@@ -49,7 +49,7 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 - **Não recolher dados pessoais desnecessários.** Identificar participantes com códigos (A1, A2, C1…). Códigos são pseudónimos se existir ligação à identidade; guardar essa ligação separadamente e fora do Git.
 - Não pedir a participantes que partilhem dados reais de moradores, fotos de casas ou documentos internos.
 - Permitir desistir a qualquer momento. Guardar notas em local com acesso restrito à equipa.
-- Se alguém partilhar registos reais para análise, anonimizar antes de os guardar no repositório.
+- Antes da recolha, definir responsável, acesso e retenção segundo o [ciclo de vida dos dados](09-security-privacy.md#4-ciclo-de-vida-e-minimização). Não publicar registos brutos; usar apenas sínteses sem elementos identificadores.
 
 ### Texto de consentimento (modelo)
 
@@ -57,29 +57,38 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 
 ## 4. Guiões de entrevista
 
+Começar por episódios reais e só depois apresentar a proposta. As perguntas centrais estão abaixo; extensões opcionais ficam separadas para não induzir âmbito nem alongar todas as entrevistas.
+
 ### 4.1 Administrador (profissional ou voluntário)
 
 **Contexto**
+
 1. Quantos edifícios/frações gere? Há quanto tempo? Esta é a sua atividade principal?
 2. Existe porteiro ou zelador?
 
 **Fluxo atual**
-3. Conte-me a última avaria que teve de resolver. Como chegou até si e o que fez a seguir?
+
+3. Conte-me a última avaria que teve de resolver. Como chegou até si e o que fez a seguir? Se exigiu vários contactos, onde se gastou mais tempo?
 4. Que canais usa para receber avisos? E para contactar prestadores?
 5. Como decidiu a urgência na última ocorrência? Houve algum caso em que a prioridade teve de mudar? O que motivou a alteração?
 6. Recebe o mesmo problema reportado por várias pessoas? O que faz nesses casos?
 
 **Prestadores e custos**
+
 7. Como escolhe o prestador? Pede vários orçamentos? Quem aprova a despesa e a partir de que valor?
-8. Como regista custos e histórico? Usa isso para decidir (por exemplo, obras ou substituições)?
+8. Como regista custos e histórico? Usa isso para decidir (por exemplo, obras ou substituições)? Quem confirma a data e a conclusão? Como tratam recusa, indisponibilidade ou remarcação (DEC-10)?
 
 **Ferramentas e AI**
+
 9. Que software ou ferramentas usa? O que lhe falta?
 10. Se um sistema sugerisse a urgência e o prestador, o que precisaria de ver para confiar? Aceitaria aprovar com um clique? Em que casos não aceitaria?
 
 **Fecho**
+
 11. Quanto tempo gasta, em média, por avaria? Qual é a parte mais frustrante?
 12. Que ferramentas já paga ou contratou? Quem decide essa compra? O que justificaria testar outra solução? Só depois explorar modelo de pagamento e distinguir intenção de compromisso.
+13. Que informação pode ser partilhada com o edifício e o que deve ficar privado (DEC-07)? Como recebe avisos de moradores sem acesso digital?
+14. Estaria disponível para um teste de tarefa numa segunda sessão? Registar compromisso efetivo separadamente de interesse declarado.
 
 ### 4.2 Condómino
 
@@ -87,16 +96,27 @@ Estes números são **objetivos**, não resultados. Registar o número real obti
 2. Como reportou (a quem, por que canal)? Teve resposta? Quanto tempo demorou?
 3. Alguma vez viu um problema e não reportou? Porquê?
 4. O que gostaria de saber depois de reportar?
-5. Teria problema em enviar fotografias? Em que condições?
+5. Que informação sobre si ou a sua casa preferiria não partilhar? Que dificuldades teria em usar uma página/app e que alternativa precisaria?
 6. Aceitaria confirmar um problema já reportado por um vizinho ("isto também me afeta")? Preocupa-o ser identificado?
 
 ### 4.3 Contractor
 
 1. Como recebe os pedidos hoje? Que informação costuma faltar?
-2. Como gere a agenda? Já usou calendário digital?
+2. Como gere a agenda? Já usou calendário digital? Quem confirma a data e como comunica recusas ou alterações?
 3. Que informação precisa para estimar o preço e o tempo antes de ir ao local?
-4. Como são feitos os pagamentos e as aprovações? Quais as maiores dificuldades?
+4. Como são feitos os pagamentos e as aprovações? Quais as maiores dificuldades? Como comunica a conclusão e quem a valida?
 5. Aceitaria receber pedidos e marcações por uma plataforma? O que o faria recusar?
+
+### 4.4. Perguntas exploratórias opcionais
+
+- **Fotografias, pós-MVP:** ajudariam a explicar o problema? Em que condições aceitariam enviá-las?
+- **IoT, DEC-01:** existem sensores/dispositivos monitorizados? Que decisão concreta beneficiaria desses dados?
+
+Não apresentar estas capacidades como incluídas no MVP.
+
+### 4.5. Teste de protótipo
+
+Após compreender o processo atual, propor tarefa concreta e observar conclusão, erros, tempo e ajuda necessária. Comparar com tarefa equivalente no processo atual, variando a ordem quando possível. Registar amostra e contexto; intenção de adoção ou cortesia não prova benefício nem compra.
 
 ## 5. Inquérito curto para condóminos (modelo)
 
@@ -159,14 +179,8 @@ Limitações previstas, a confirmar ou ajustar:
 | Phase 2, conforme capacidade | Inquérito a moradores |
 | Phase 2–3 | Análise, atualização das personas, decisões e teste de protótipo |
 
-## 10. Reforços do guião e ligação às decisões
+## 10. Registos e decisões
 
-- Pedir um episódio com vários contactos e identificar onde se perdeu tempo, sem sugerir que existiu necessariamente uma falha.
-- Perguntar quem confirma a data, quem considera o trabalho concluído e como se trata recusa ou indisponibilidade do prestador (DEC-10).
-- Investigar que informação pode ser partilhada no edifício e o que deve ficar privado (DEC-07).
-- Explorar acesso digital e alternativa para moradores que não usem a aplicação; não assumir adoção universal.
-- Só após compreender o processo atual, mostrar protótipo e observar tarefa concreta. Registar erros, tempo e ajuda necessária; variar ordem de comparação quando possível.
-- Perguntar se existem sensores e que decisão seria apoiada pelos dados, sem apresentar IoT como requisito já escolhido (DEC-01).
-- Registar disponibilidade efetiva para um segundo teste, sem equiparar cortesia ou intenção de pagar a validação comercial.
+Usar o [modelo de registo](templates/research-record.md). Os achados permanecem na secção 7; requisitos e relatório do problema referenciam os respetivos IDs. A secção 7.3 liga ao [registo de decisões](planning/decisions-and-feedback.md), onde ficam motivo, participantes e estado da decisão, sem duplicar atas.
 
-Usar o [modelo de registo](templates/research-record.md). Antes da recolha, atribuir responsável e definir acesso/retenção em DEC-07. Datas reais dependem de DEC-03. Resultados alimentam os [requisitos](requirements.md) e a priorização do [backlog](06-product-backlog.md).
+Antes da recolha, atribuir responsável e resolver acesso/retenção em DEC-07. Datas dependem de DEC-03. Resultados alimentam os [requisitos](requirements.md) e a priorização do [backlog](06-product-backlog.md).

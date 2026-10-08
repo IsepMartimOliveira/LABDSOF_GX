@@ -1,9 +1,9 @@
 # 1. Problem and Opportunity Report
 
 **Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** rascunho v0.2 (a rever após entrevistas)
+**Sprint:** 1 · **Estado:** rascunho v0.3 (a rever após entrevistas) · **Revisão:** 2026-10-09
 
-> Convenção deste documento: tudo o que ainda não foi validado com utilizadores reais está marcado como **[Hipótese]**. A evidência só passa a "validada" depois de documentada na secção de User Research (entregável 3).
+> Pressupostos e benefícios ainda não demonstrados são hipóteses. Evidência primária fica no [User Research](03-user-research.md); fontes concorrenciais no [documento 02](02-market-and-competitor-analysis.md). Este relatório liga essas evidências ao problema, sem duplicar os resultados.
 
 ---
 
@@ -30,13 +30,7 @@ Reduzir o esforço ativo do administrador para triar e preparar uma intervençã
 
 ## 3. Práticas atuais (alternativas existentes)
 
-| Prática | Como funciona hoje [Hipótese] | Limitação provável |
-|---|---|---|
-| Chamadas, SMS, WhatsApp, email | O condómino contacta o administrador ou o porteiro/vizinho; o administrador contacta o prestador | Informação potencialmente dispersa; histórico de mensagens pode não estruturar estados e decisões |
-| Grupos de vizinhos | Problemas são discutidos informalmente | Duplicação, ruído, sem responsável |
-| Folhas de cálculo / papel | O administrador regista ocorrências e custos | Manual, difícil de analisar, propenso a perdas |
-| Software de gestão de condomínios | Módulos de ocorrências, documentos, quotas (ver entregável 2) | Foco administrativo/financeiro; a profundidade da triagem e do despacho está por confirmar |
-| Pesquisa direta de prestadores | O administrador pede orçamentos a contactos conhecidos | Dependente de relações pessoais, sem comparação sistemática |
+**[Hipótese]** Os avisos podem chegar por chamadas, mensagens ou grupos de vizinhos; administração e prestadores coordenam-se por contactos habituais e registos em software, folhas de cálculo ou papel. Importa observar onde esse processo ajuda e onde exige esforço adicional. A comparação de vantagens, limitações e produtos está na [análise de alternativas](02-market-and-competitor-analysis.md#2-alternativas-identificadas).
 
 ## 4. Stakeholders
 
@@ -49,17 +43,6 @@ Reduzir o esforço ativo do administrador para triar e preparar uma intervençã
 | Porteiro / zelador (quando existe) | Reportar e acompanhar | Baixo | Sobrecarga como intermediário |
 | Assembleia de condóminos | Aprovar despesas, ver contas | Alto em despesas elevadas | Falta de transparência nos custos |
 | Seguradoras | Ocorrências documentadas | Baixo (indireto) | Falta de registo de danos |
-
-```
-            Poder alto
-                │
-   Assembleia   │   Administrador (empresa)
-                │
-────────────────┼────────────────  Interesse
-                │
-   Seguradoras  │   Condómino · Contractor · Zelador
-            Poder baixo
-```
 
 ## 5. Evidência do problema
 
@@ -74,9 +57,11 @@ Reduzir o esforço ativo do administrador para triar e preparar uma intervençã
 
 ### Registo de evidência (preencher)
 
-| ID | Tipo (entrevista, relatório, observação) | Fonte e data | Achado | Suporta qual pressuposto? |
+Referenciar IDs de achados do 03 e fontes do 02; manter aqui apenas a implicação para o problema. Fontes de domínio não registadas nesses documentos devem incluir URL exato e data.
+
+| ID | Tipo | Referência ao achado/fonte e data | Implicação para o problema | Pressuposto afetado |
 |---|---|---|---|---|
-| E1 | | | | |
+| E1 (por preencher) | — | — | — | — |
 
 ## 6. Consequências de não resolver o problema
 

@@ -49,6 +49,6 @@ Este skeleton não precisa de implementar já todas as histórias, IA ou calend�
 
 ## 5. Evolução
 
-Na Sprint 2 acrescentar Dispatch, processamento assíncrono, IA/fallback, calendário/simulador, notificações, ciclo de encerramento e observabilidade. Cada incremento atualiza [desenho](08-technical-design.md), contratos e [DoD](governance/definition-of-done.md).
+A evolução após o skeleton segue os [marcos da Sprint 2](05-product-roadmap.md#3-sprint-2--sequência-proposta). Cada incremento atualiza [desenho](08-technical-design.md), contratos e [DoD](governance/definition-of-done.md).
 
 Itens: EN-01/02/03 e US-01 no [backlog](06-product-backlog.md). Este documento será o ponto de entrada para instruções reais de execução quando existirem.

@@ -1,6 +1,6 @@
 # Product Backlog
 
-**Estado:** proposta v0.1 · **Sprint:** 1 · **Prioridade:** ainda não validada com cliente/docentes
+**Estado:** proposta v0.2 · **Sprint:** 1 · **Prioridade:** ainda não validada com cliente/docentes
 
 Corresponde ao entregável 5 do §7.1.2. O [roadmap](05-product-roadmap.md) define horizontes; este documento define itens. Nenhuma issue remota, estimativa, atribuição ou implementação é presumida.
 
@@ -36,6 +36,8 @@ Ordem inicial: DISC/EN de descoberta e fundações → US-01/02 → US-03/04 →
 
 ## 4. Histórias e critérios
 
+Os critérios abaixo aplicam as necessidades a cada entrega. Definições detalhadas são mantidas na [avaliação de IA](07-responsible-ai-assessment.md#4-critérios-provisórios), nos [estados de domínio](08-technical-design.md#3-estados-e-regras-de-negócio), na [matriz de acesso](09-security-privacy.md#2-matriz-de-acesso-proposta) e nos [NFRs](requirements.md#requisitos-não-funcionais--restrições). Alterações nessas definições exigem rever as histórias afetadas.
+
 ### US-01 — Registar e consultar relato · Must · EP-01
 
 Como morador, quero reportar uma avaria no meu edifício para que a administração possa acompanhá-la.
@@ -67,7 +69,7 @@ Como administrador, quero uma sugestão de categoria e urgência para reduzir es
 - Regras de sinais críticos executam independentemente da IA; resultado do modelo não remove um alerta nem sobrescreve decisão humana posterior.
 - Falha, timeout ou resposta inválida deixam regras/triagem manual disponíveis e estado visível.
 - Reentrega de evento não duplica sugestão nem efeitos; tentativas esgotadas ficam observáveis.
-- Avaliação compara IA, baseline e resultado combinado no dataset versionado, segundo critérios acordados.
+- Avaliação compara IA, baseline e resultado combinado no dataset versionado, segundo os [critérios de IA](07-responsible-ai-assessment.md#4-critérios-provisórios) acordados.
 
 **Origem:** RF-03; NFR-03/04/10. **Dependências:** US-01/02, DEC-05/08. **Horizonte:** S2.
 
@@ -190,7 +192,7 @@ Fotografias e análise visual, gráficos/resumos de custos, pagamentos, marketpl
 
 - Sessão de MoSCoW: **não realizada/registada**; data e participantes por preencher.
 - Levar valor por item, custo/risco estimado e trade-offs; registar mudança e motivo em [feedback](planning/decisions-and-feedback.md).
-- S1: proposta validada até ao possível + skeleton; S2: primeira release operacional; S3: release avaliada e apresentação. Datas por confirmar.
+- Objetivos e plano de release no [roadmap](05-product-roadmap.md#1-horizontes); datas por confirmar.
 - [Sprint B](planning/sprint-b-backlog.md): seleção apenas após DoR/capacidade.
 - Templates e campos: [gestão de issues](governance/issue-management.md).
 

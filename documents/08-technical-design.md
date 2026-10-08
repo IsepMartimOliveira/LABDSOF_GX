@@ -59,6 +59,8 @@ O histórico da ocorrência pode refletir eventos do Dispatch com atraso; mostra
 
 ## 4. API inicial (sem contrato executável ainda)
 
+A [matriz de acesso](09-security-privacy.md#2-matriz-de-acesso-proposta) define a política; a tabela abaixo mostra a sua aplicação aos endpoints. Critérios funcionais permanecem no [backlog](06-product-backlog.md#4-histórias-e-critérios).
+
 | Operação proposta | Autorização / resultado |
 |---|---|
 | POST /reports | Morador do edifício; devolve ID após persistência; chave idempotente |
@@ -81,7 +83,7 @@ Definir contratos OpenAPI/schemas após stack: erros 400/401/403 ou 404 sem enum
 
 1. Issue persiste relato/ocorrência e registo de evento na mesma transação (outbox proposta).
 2. Publicador envia ReportSubmitted; falha de broker preserva evento para repetição.
-3. Worker valida schema, ID e versão, aplica regras e tenta IA com timeout.
+3. Worker valida schema, ID e versão e aplica o [workflow de IA/baseline/fallback](07-responsible-ai-assessment.md#2-baseline-e-fallback), com timeout definido em NFR-03.
 4. Resultado chega à interface interna autorizada do Issue; resultado antigo não substitui correção humana.
 5. Eventos de mudança alimentam projeções/notificações; consumidores deduplicam pelo eventId.
 6. Dispatch gere aprovação/aceitação e emite pedido de calendário só quando elegível.

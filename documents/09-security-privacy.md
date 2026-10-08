@@ -31,7 +31,7 @@ Verificar no backend para cada operação; ocultar botões não basta. Mock de a
 |---|---|---|---|
 | T-01 | Alterar ID para ler outro edifício | Autorização por pertença/recurso e projeção de dados | Testes negativos em API/listagem/pesquisa |
 | T-02 | Prestador aprovar despesas ou ler outro pedido | Permissões e atribuição verificadas no servidor | Testes da matriz |
-| T-03 | Texto induz IA a agir/divulgar | Entrada não confiável, schema, sem ferramentas/credenciais de ação no modelo | Casos adversos no AI Assessment |
+| T-03 | Texto induz IA a agir/divulgar | Aplicar [controlos de IA](07-responsible-ai-assessment.md#5-controlos-e-comunicação) | [Casos adversos e protocolo](07-responsible-ai-assessment.md#3-dataset-e-protocolo-propostos) |
 | T-04 | Retry duplica pedido/marcação | Idempotência, versionamento e reconciliação | Falhas após efeito externo e eventos repetidos |
 | T-05 | Texto malicioso na UI | Renderização segura, validação de inputs | Testes de conteúdo não executável |
 | T-06 | Logs/payloads expõem dados | Minimização, sanitização e acesso limitado | Inspeção de logs e payloads |
@@ -54,7 +54,7 @@ Avaliar probabilidade e impacto com a equipa após definir deployment; não atri
 | Dados enviados a fornecedor | Apenas necessário; sintéticos no desenvolvimento | Rever termos, configuração e retenção do fornecedor antes do uso |
 | Backups | Acesso limitado e teste de restore | Definir rotação e efeito de pedidos de eliminação |
 
-Código de participante não é anonimização se a pessoa continuar identificável. Não publicar notas brutas, contactos, gravações ou consentimentos no repositório.
+Código de participante não é anonimização se a pessoa continuar identificável. Não publicar notas brutas, contactos, gravações ou consentimentos no repositório. O procedimento de recrutamento e o [texto de consentimento](03-user-research.md#texto-de-consentimento-modelo) são mantidos no plano de investigação.
 
 ## 5. Questões por fechar e plano de revisão
 

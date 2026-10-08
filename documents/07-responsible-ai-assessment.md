@@ -49,9 +49,9 @@ Proposta inicial: pelo menos 60 casos de classificação, cobrindo classes norma
 |---|---|---|
 | Classificação | Accuracy global, precisão/recall/F1 por classe e matriz de confusão | Accuracy ≥ 85% como alvo inicial; não suficiente isoladamente |
 | Casos críticos | Recall, falsos negativos e falsos positivos; conjunto crítico separado | Nenhum falso negativo no conjunto crítico revisto antes da demo; 100% nesse conjunto não garante deteção em produção |
-| Valor | Tempo ativo/correções face à baseline | Redução pretendida; limiar após primeira medição (DEC-08) |
+| Valor | Tempo ativo/correções face à baseline | Aplicar a definição de esforço e alvo da [visão](04-product-vision.md#5-métricas-e-sucesso), após DEC-08 |
 | Duplicados (se aplicável) | Precisão e recall em pares | ≥ 80% cada como alvo inicial; rever custo de associação errada |
-| Latência | p50/p95, timeouts e fila | Timeout proposto de 10 s por tentativa; registo não espera pelo modelo |
+| Latência | p50/p95, timeouts e fila | Aplicar timeout e continuidade de NFR-03 nos [requisitos](requirements.md#requisitos-não-funcionais--restrições) |
 | Custo | Tokens/chamadas, retries, custo por ocorrência e execução | Budget e teto por definir antes de US-03 Ready; não depender de gratuidade presumida |
 | Resiliência | IA desligada, erro e saída inválida | Relato/consulta/triagem manual continuam |
 | Segurança | Tentativas de injeção e acesso indevido | Nenhuma ação consequente autorizada pelo modelo nos testes; backend impõe controlos |
@@ -65,8 +65,7 @@ Metas devem ser acordadas antes do teste formal. Não alterar limiares depois de
 - Output validado por schema e lista de valores; sem execução de código ou ferramentas pelo modelo.
 - Autorização, despesas e marcações controladas em código.
 - UI indica «sugestão por IA», «regras/fallback» ou «confirmado pelo administrador».
-- Não usar logs para guardar texto privado integral; dados mínimos enviados ao fornecedor.
-- Rever condições do fornecedor e orçamento antes de uso; dados sintéticos por defeito.
+- Aplicar a política de [dados, logs e fornecedores](09-security-privacy.md#4-ciclo-de-vida-e-minimização); confirmar orçamento antes do uso.
 - Um fornecedor inicialmente; múltiplos adaptadores só se houver necessidade comprovada.
 
 ## 6. Resultados e limitações
