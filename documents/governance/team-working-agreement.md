@@ -1,92 +1,92 @@
-# Acordo de equipa
+# Team working agreement
 
-**Estado:** proposta v0.2, por ratificar · **Sprint:** 1 · **Equipa:** 5 pessoas
+**Status:** proposal v0.2, awaiting ratification · **Sprint:** 1 · **Team:** 5 people
 
-## 1. Metodologia proposta
+## 1. Proposed methodology
 
-Scrum adaptado às três sprints do enunciado, com backlog visível, incrementos demonstráveis e revisão frequente. As fases 1–3 são atividades da Sprint 1. A dimensão da equipa está confirmada em cinco pessoas; calendário, disponibilidade individual e relação com Sprint B continuam por esclarecer em DEC-03.
+Scrum adapted to the assignment's three sprints, with a visible backlog, demonstrable increments and frequent review. Phases 1–3 are Sprint 1 activities. Team size is confirmed at five people; the schedule, individual availability and relationship with Sprint B still need clarification in DEC-03.
 
-| Prática | Proposta | Evidência |
+| Practice | Proposal | Evidence |
 |---|---|---|
-| Planning | Objetivo, capacidade, dependências, DoR e seleção | Sprint backlog e ata curta |
-| Atualização diária | Assíncrona: progresso, próximo passo e bloqueios | Board/canal acordado |
-| Refinamento | Pelo menos semanal enquanto houver trabalho | Itens com critérios e estimativas |
-| Review | Demonstração por objetivo; feedback dos docentes/stakeholders | Registo de feedback e decisões |
-| Retrospetiva | Rever colaboração e escolher melhoria concreta | Ação, responsável e seguimento |
-| Revisão entre pares | PR por alteração; revisão proporcionada ao risco | PR e comentários resolvidos |
+| Planning | Objective, capacity, dependencies, DoR and selection | Sprint backlog and brief minutes |
+| Daily update | Asynchronous: progress, next step and blockers | Agreed board/channel |
+| Refinement | At least weekly while work remains | Items with criteria and estimates |
+| Review | Demonstration by objective; lecturer/stakeholder feedback | Feedback and decision register |
+| Retrospective | Review collaboration and choose a concrete improvement | Action, owner and follow-up |
+| Peer review | PR for each change; review proportionate to risk | PR and resolved comments |
 
-Cadência e canal definitivo por acordar em DEC-09. Proposta de limite: uma tarefa principal em execução por pessoa; rever se bloquear colaboração.
+Final cadence and channel to be agreed in DEC-09. Proposed limit: one main task in progress per person; review if it hinders collaboration.
 
-## 2. Papéis e atribuição
+## 2. Roles and assignment
 
-Cada pessoa tem uma área técnica principal e uma responsabilidade transversal. **P1–P5 são posições provisórias, não atribuições nominais aprovadas.** Escolher os nomes considerando experiência, interesse e disponibilidade; rever a distribuição no fim da Sprint 1.
+Each person has a primary technical area and a cross-cutting responsibility. **P1–P5 are provisional positions, not approved assignments to named people.** Choose names based on experience, interest and availability; review the distribution at the end of Sprint 1.
 
-Ser responsável por uma área significa acompanhar o seu progresso, decisões e integração. Não significa executar sozinho todo o trabalho dessa área nem ter autoridade exclusiva sobre as decisões.
+Being responsible for an area means following its progress, decisions and integration. It does not mean doing all the work alone or having exclusive authority over decisions.
 
-| Pessoa | Nome | Área técnica principal | Responsabilidade transversal | Entregas principais | Suplente / segundo elemento |
+| Person | Name | Primary technical area | Cross-cutting responsibility | Main deliverables | Backup / second member |
 |---|---|---|---|---|---|
-| P1 | Por atribuir | Frontend e experiência de utilização | BA / Product Owner | Jornadas, protótipo, interfaces, síntese da investigação e refinamento de requisitos/backlog | Por atribuir |
-| P2 | Por atribuir | Backend de ocorrências | Referência de arquitetura / Tech Lead | Relatos, estados, histórico, pertença aos edifícios, autorização e modelo de domínio | Por atribuir |
-| P3 | Por atribuir | Backend de intervenções e integrações | Coordenação do projeto / PM | Prestadores, propostas, aprovação, resposta, calendário; acompanhamento de dependências e contacto com docentes | Por atribuir |
-| P4 | Por atribuir | IA e processamento assíncrono | Avaliação de IA e qualidade dos dados | Baseline, classificação, worker, fallback, dataset e resultados de avaliação | Por atribuir |
-| P5 | Por atribuir | Infraestrutura e qualidade operacional | DevOps / QA e coordenação de segurança | Contentores, CI/CD, observabilidade, testes transversais e recuperação | Por atribuir |
+| P1 | To be assigned | Frontend and user experience | BA / Product Owner | Journeys, prototype, interfaces, research synthesis and requirements/backlog refinement | To be assigned |
+| P2 | To be assigned | Issue backend | Architecture point of contact / Tech Lead | Reports, states, history, building membership, authorisation and domain model | To be assigned |
+| P3 | To be assigned | Intervention backend and integrations | Project coordination / PM | Contractors, proposals, approval, response, calendar; dependency tracking and lecturer contact | To be assigned |
+| P4 | To be assigned | AI and asynchronous processing | AI evaluation and data quality | Baseline, classification, worker, fallback, dataset and evaluation results | To be assigned |
+| P5 | To be assigned | Infrastructure and operational quality | DevOps / QA and security coordination | Containers, CI/CD, observability, cross-cutting tests and recovery | To be assigned |
 
-### 2.1. Responsabilidades partilhadas
+### 2.1. Shared responsibilities
 
-- **Implementação e testes:** cada pessoa implementa, testa e documenta as suas alterações. P5 prepara práticas e infraestrutura de qualidade; não fica responsável por testar ou corrigir todo o sistema.
-- **Investigação:** P1 coordena guiões e síntese, mas todos participam na recolha e discussão de evidência. Sempre que possível, entrevistar a pares: uma pessoa conduz e outra toma notas.
-- **Documentação:** cada responsável mantém os contratos, decisões e instruções da sua área. P1 não concentra toda a documentação do projeto.
-- **Segurança:** P5 coordena a revisão de riscos; cada responsável implementa e verifica os controlos nos seus componentes. P2 articula o modelo de autorização com os restantes serviços.
-- **Arquitetura e prioridades:** P2 facilita decisões técnicas e P1 prepara prioridades; a equipa discute os trade-offs e regista feedback dos stakeholders.
-- **Revisões:** pelo menos outro elemento revê cada PR. O suplente acompanha decisões e alterações relevantes para conseguir dar continuidade à área.
-- **Conhecimento global:** todos devem conseguir explicar visão, jornadas, arquitetura, IA, riscos e operação (§10 do enunciado).
+- **Implementation and tests:** each person implements, tests and documents their changes. P5 prepares quality practices and infrastructure; they are not responsible for testing or fixing the entire system.
+- **Research:** P1 coordinates guides and synthesis, but everyone participates in gathering and discussing evidence. Where possible, interview in pairs: one person leads and another takes notes.
+- **Documentation:** each owner maintains their area's contracts, decisions and instructions. P1 does not handle all project documentation.
+- **Security:** P5 coordinates risk review; each owner implements and checks controls in their components. P2 coordinates the authorisation model with the other services.
+- **Architecture and priorities:** P2 facilitates technical decisions and P1 prepares priorities; the team discusses trade-offs and records stakeholder feedback.
+- **Reviews:** at least one other member reviews each PR. The backup follows relevant decisions and changes so they can keep the area moving.
+- **Overall knowledge:** everyone must be able to explain the vision, journeys, architecture, AI, risks and operations (§10 of the assignment).
 
-### 2.2. Colaboração por fatias funcionais
+### 2.2. Collaboration by functional slice
 
-A distribuição por área não cria cinco desenvolvimentos isolados. Integrar percursos completos desde cedo:
+Area ownership does not create five isolated development efforts. Integrate complete paths early:
 
-| Fatia | Colaboração principal proposta | Apoio |
+| Slice | Proposed primary collaboration | Support |
 |---|---|---|
-| Reportar e acompanhar | P1 + P2 | P5 em ambiente, testes e observabilidade |
-| Triagem assistida | P4 + P2 | P1 na apresentação/correção das sugestões; P5 nos cenários de falha |
-| Intervenção e agendamento | P3 + P1 | P2 nos contratos e estados; P5 na integração e recuperação |
-| Resiliência e operação | P5 coordena | Cada responsável trata falhas e métricas do seu componente |
+| Report and track | P1 + P2 | P5 on environment, tests and observability |
+| Assisted triage | P4 + P2 | P1 on presenting/correcting suggestions; P5 on failure scenarios |
+| Intervention and scheduling | P3 + P1 | P2 on contracts and states; P5 on integration and recovery |
+| Resilience and operations | P5 coordinates | Each owner handles failures and metrics for their component |
 
-No walking skeleton, P1 prepara formulário/consulta, P2 API/persistência, P3 apoia contratos e integração, P4 prepara fixtures sintéticas e uma baseline simples, e P5 integra contentores, CI e teste ponta a ponta. A baseline pode ser preparada em paralelo e não bloqueia a primeira demonstração de registo/consulta.
+For the walking skeleton, P1 prepares the form/query, P2 the API/persistence, P3 supports contracts and integration, P4 prepares synthetic fixtures and a simple baseline, and P5 integrates containers, CI and the end-to-end test. The baseline can be prepared in parallel and does not block the first reporting/query demonstration.
 
-### 2.3. Capacidade e revisão da divisão
+### 2.3. Capacity and review of the division
 
-As responsabilidades técnicas e transversais contam para a capacidade individual. Rever carga no planning e redistribuir trabalho quando necessário, sobretudo investigação/frontend em P1 e infraestrutura/qualidade em P5.
+Technical and cross-cutting responsibilities count towards individual capacity. Review workload during planning and redistribute when needed, especially research/frontend for P1 and infrastructure/quality for P5.
 
-A função PM pode rodar entre sprints, com passagem de contexto e manutenção do registo de decisões. A distribuição por fase e as evidências de execução pertencem ao [plano da Sprint 1](../planning/sprint-1-plan.md); responsáveis por tarefas concretas ficam nas issues e no [backlog da sprint](../planning/sprint-b-backlog.md).
+The PM role can rotate between sprints, with a context handover and maintenance of the decision register. Distribution by phase and execution evidence belong in the [Sprint 1 plan](../planning/sprint-1-plan.md); owners of specific tasks are recorded in issues and the [sprint backlog](../planning/sprint-b-backlog.md).
 
-## 3. Gestão e decisões
+## 3. Management and decisions
 
-- Ferramenta por escolher: GitHub Projects ou Jira; [convenções](issue-management.md).
-- [DoR](definition-of-ready.md) antes de selecionar implementação; [DoD](definition-of-done.md) para fechar.
-- [Protocolo Git](git-workflow.md) para alterações e revisões.
-- Decisões de produto/processo no [registo](../planning/decisions-and-feedback.md); técnicas significativas em ADR.
-- Mudanças de prioridade com stakeholders registam participantes, motivo e efeito no plano.
-- Dúvidas de arquitetura não resolvidas originam spike com pergunta, limite de esforço e resultado esperado.
+- Tool to be chosen: GitHub Projects or Jira; [conventions](issue-management.md).
+- [DoR](definition-of-ready.md) before selecting implementation work; [DoD](definition-of-done.md) for closure.
+- [Git workflow](git-workflow.md) for changes and reviews.
+- Product/process decisions in the [register](../planning/decisions-and-feedback.md); significant technical decisions in ADRs.
+- Priority changes with stakeholders record participants, reason and impact on the plan.
+- Unresolved architecture questions lead to a spike with a question, effort limit and expected outcome.
 
-## 4. Evidência individual
+## 4. Individual evidence
 
-Manter referências a issues, PRs, reviews, investigação, testes, decisões e demonstrações. Contagem de commits não mede contribuição.
+Keep references to issues, PRs, reviews, research, tests, decisions and demonstrations. Commit count does not measure contribution.
 
-| Pessoa | Sprint | Contribuição e impacto | Evidência | Aprendizagem / reflexão |
+| Person | Sprint | Contribution and impact | Evidence | Learning / reflection |
 |---|---|---|---|---|
-| A preencher pela equipa | — | — | — | — |
+| To be completed by the team | — | — | — | — |
 
-## 5. Ratificação e setup
+## 5. Ratification and setup
 
-- [x] Dimensão da equipa confirmada: cinco pessoas.
-- [ ] Nomes atribuídos a P1–P5 e responsabilidades revistas pela equipa.
-- [ ] Suplente / segundo elemento definido para cada área.
-- [ ] Disponibilidade e capacidade individual registadas no planning.
-- [ ] Metodologia e cadência revistas pela equipa.
-- [ ] Board acessível e workflow configurado.
-- [ ] DoR, DoD e protocolo Git revistos.
-- [ ] Calendário e Sprint B esclarecidos.
-- [ ] Link/data da reunião de acordo registados aqui.
+- [x] Team size confirmed: five people.
+- [ ] Names assigned to P1–P5 and responsibilities reviewed by the team.
+- [ ] Backup / second member defined for each area.
+- [ ] Individual availability and capacity recorded during planning.
+- [ ] Methodology and cadence reviewed by the team.
+- [ ] Board accessible and workflow configured.
+- [ ] DoR, DoD and Git workflow reviewed.
+- [ ] Schedule and Sprint B clarified.
+- [ ] Agreement meeting link/date recorded here.
 
-**Aprovação da equipa:** pendente. **URL do board:** por preencher. **Canal:** por decidir.
+**Team approval:** pending. **Board URL:** to be filled in. **Channel:** undecided.

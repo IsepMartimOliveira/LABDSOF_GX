@@ -1,49 +1,49 @@
 # Definition of Done (DoD)
 
-**Estado:** proposta v0.1 · ratificação pendente (DEC-09)
+**Status:** proposal v0.1 · ratification pending (DEC-09)
 
-Aplica-se por tipo de entrega. Documentação concluída não significa funcionalidade implementada, pesquisa realizada ou configuração remota ativa. Itens não aplicáveis requerem motivo; requisitos obrigatórios do enunciado não são dispensados.
+Applies by delivery type. Completed documentation does not mean implemented functionality, completed research or active remote configuration. Non-applicable items require a reason; mandatory assignment requirements are not waived.
 
-## Checklist comum
+## Common checklist
 
-- [ ] Critérios de aceitação cumpridos com evidência ligada ao item.
-- [ ] Revisão por outro elemento e comentários relevantes resolvidos.
-- [ ] Alteração integrada por PR, com referência à issue/ID do backlog.
-- [ ] Documentos, decisões e estado do board coerentes.
-- [ ] Sem segredos, dados identificadores desnecessários ou resultados inventados.
-- [ ] Limitações e trabalho restante explícitos.
-- [ ] Validação funcional pelo papel BA/PO ou revisor acordado.
+- [ ] Acceptance criteria met with evidence linked to the item.
+- [ ] Review by another member and relevant comments resolved.
+- [ ] Change merged through a PR, referencing the issue/backlog ID.
+- [ ] Documents, decisions and board status are consistent.
+- [ ] No secrets, unnecessary identifying data or invented results.
+- [ ] Limitations and remaining work are explicit.
+- [ ] Functional validation by the BA/PO role or agreed reviewer.
 
-## Código e configuração executável
+## Code and executable configuration
 
-- [ ] Build e verificações automáticas aplicáveis passam.
-- [ ] Testes proporcionais ao risco: unidade para regras, integração para persistência/contratos, E2E para jornadas críticas.
-- [ ] Testes de autorização e falha quando a mudança afeta esses comportamentos.
-- [ ] Análise estática e dependências verificadas; achados materiais tratados ou decisão justificada registada.
-- [ ] Imagem de contentor construída para componentes alterados; execução demonstrável no ambiente de teste.
-- [ ] Logs sem dados sensíveis, health checks, correlação e métricas atualizados quando aplicável.
-- [ ] Configuração, migrações e recuperação/rollback documentados quando afetados.
-- [ ] API/contratos e arquitetura atualizados se alterados.
+- [ ] Build and applicable automated checks pass.
+- [ ] Risk-proportionate tests: unit tests for rules, integration for persistence/contracts, E2E for critical journeys.
+- [ ] Authorisation and failure tests when the change affects those behaviours.
+- [ ] Static analysis and dependencies checked; material findings addressed or a justified decision recorded.
+- [ ] Container image built for changed components; demonstrable execution in the test environment.
+- [ ] Logs without sensitive data, health checks, correlation and metrics updated where applicable.
+- [ ] Configuration, migrations and recovery/rollback documented when affected.
+- [ ] API/contracts and architecture updated if changed.
 
-Uma edição apenas documental não exige criar testes de código ou imagens. Deve ter revisão de conteúdo, coerência e links.
+A documentation-only edit does not require code tests or images. It requires content, consistency and link review.
 
-## IA
+## AI
 
-- [ ] Avaliação executada nos casos relevantes, comparada com baseline e resultados registados.
-- [ ] Fallback testado; outputs inválidos não alteram decisões confirmadas.
-- [ ] Modelo/prompt/dataset identificados; custo, latência e limitações registados.
-- [ ] UI distingue sugestão e decisão humana; nenhum efeito consequente autorizado pelo modelo.
+- [ ] Evaluation run on relevant cases, compared with the baseline, and results recorded.
+- [ ] Fallback tested; invalid outputs do not change confirmed decisions.
+- [ ] Model/prompt/dataset identified; cost, latency and limitations recorded.
+- [ ] UI distinguishes suggestions from human decisions; no consequential effect authorised by the model.
 
-## Pesquisa e documentação
+## Research and documentation
 
-- [ ] Fontes e método rastreáveis; factos, hipóteses e interpretações separados.
-- [ ] Resultados e limitações correspondem ao trabalho realmente realizado.
-- [ ] Um plano de entrevistas pode estar documentado sem entrevistas concluídas; ambos têm estados separados.
-- [ ] Se houver recolha: propósito explicado, autorização registada e dados tratados conforme plano.
-- [ ] Achados ligados a decisões ou a justificação para não alterar o produto.
+- [ ] Traceable sources and method; facts, hypotheses and interpretations separated.
+- [ ] Results and limitations correspond to work actually performed.
+- [ ] An interview plan can be documented without completed interviews; both have separate statuses.
+- [ ] If data is collected: purpose explained, permission recorded and data handled according to plan.
+- [ ] Findings linked to decisions or justification for not changing the product.
 
-## Evidência e manutenção
+## Evidence and maintenance
 
-Registar na issue/PR comandos/verificações, resultados e local da demonstração. Rever a DoD nas retrospetivas sem ocultar trabalho incompleto. A review com investidores pode originar novo trabalho mesmo depois de um item cumprir DoD.
+Record commands/checks, results and demonstration location in the issue/PR. Review the DoD in retrospectives without hiding incomplete work. Investor review may lead to new work even after an item meets the DoD.
 
-Referência: [Scrum Inc — Definition of Done](https://www.scruminc.com/definition-of-done/), consultada em 2026-10-07. A DoD funciona como padrão partilhado de qualidade; os critérios concretos acima são proposta para este projeto.
+Reference: [Scrum Inc — Definition of Done](https://www.scruminc.com/definition-of-done/), accessed on 2026-10-07. The DoD acts as a shared quality standard; the specific criteria above are a proposal for this project.

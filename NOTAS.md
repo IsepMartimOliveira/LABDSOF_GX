@@ -1,24 +1,24 @@
-> **Notas exploratórias do autor — contextualização em 2026-10-07.** O conteúdo original abaixo é preservado para discussão; não constitui âmbito aprovado nem verificação atual de fornecedores, preços, limites ou capacidades.
+> **Author's exploratory notes — contextualised on 2026-10-07.** The original content below is preserved for discussion; it does not constitute approved scope or current verification of providers, prices, limits or capabilities.
 >
-> - IoT e a jornada de monitorização: **DEC-01**, alternativa à base centrada na coordenação de avarias.
-> - Vários fornecedores, solvers e instruções para IA: **DEC-05**, hipóteses a comparar com baseline simples. Instruções textuais não substituem controlos em código.
-> - Separação de serviços: **DEC-04** e ADR-001; subscrições não pertencem à base do MVP.
-> - A sugestão atribuída ao Gemini é uma recomendação exploratória, não evidência de adequação ou decisão da equipa.
-> - Fontes/valores das tabelas precisam de confirmação datada antes de orientar implementação ou orçamento.
+> - IoT and the monitoring journey: **DEC-01**, an alternative to the baseline focused on fault coordination.
+> - Multiple providers, solvers and AI instructions: **DEC-05**, hypotheses to compare with a simple baseline. Textual instructions do not replace controls in code.
+> - Service separation: **DEC-04** and ADR-001; subscriptions are outside the MVP baseline.
+> - The suggestion attributed to Gemini is an exploratory recommendation, not evidence of suitability or a team decision.
+> - Table sources/values require dated confirmation before guiding implementation or budgeting.
 >
-> Consultar [decisões pendentes](documents/planning/decisions-and-feedback.md), [visão harmonizada](documents/04-product-vision.md) e [AI Assessment](documents/07-responsible-ai-assessment.md).
+> See [pending decisions](documents/planning/decisions-and-feedback.md), [harmonised vision](documents/04-product-vision.md) and [AI Assessment](documents/07-responsible-ai-assessment.md).
 
-# Análise do enunciado
+# Assignment analysis
 
-## 1. Uso de AI e alternativas
+## 1. AI use and alternatives
 
-O uso de AI nesta ideia (building maintainance) está associado com o apoio à decisão e sugestão de relatórios. Porém deve se ter em conta uma alternativa e fazer as efetivas comparações de forma a verificar se o uso de ia é superior (podendo até usar a segunda como fallback) - _'Non-AI baseline or fallback'_ . Custos de uso/esforço devem ser considerados. 
+AI use in this idea (building maintenance) is associated with decision support and report suggestions. However, an alternative should be considered and actual comparisons made to check whether AI performs better (the alternative could also serve as a fallback) — _'Non-AI baseline or fallback'_. Usage costs and effort should be considered.
 
-**Ideias:** 
-- Usar várias apis de ai até ao limite gratuito ou até orquestrar o uso de apis.
-- Criar um documento com regras explicitas de execução das ia (leitura obrigatória e autónuma das mesmas antes de todas as ações)
-- A baseline pose começar num simples filtro, prgredir para um algoritmo com diferentes metodos de busca, e numa versão mais avançada até usar solvers (ex: gurobi)
+**Ideas:**
 
+- Use several AI APIs up to their free limits, or even orchestrate API usage.
+- Create a document with explicit AI execution rules (mandatory autonomous reading before every action).
+- The baseline could start with a simple filter, progress to an algorithm with different search methods and, in a more advanced version, even use solvers (e.g. Gurobi).
 
 | API Provider | Free Core Models Offered | Core Constraints & Limitations |
 |---|---|---|
@@ -31,42 +31,41 @@ O uso de AI nesta ideia (building maintainance) está associado com o apoio à d
 
 ---
 
-## 2. Uso de serviços externos
+## 2. Use of external services
 
 _'The product must integrate with at least one external system or a realistic simulator of an external
 system.'_
 
+For our idea, APIs simulating IoT devices or smart homes could be used to simulate condominium apartments (aiming to include as many household devices/systems as possible).
 
-No caso da nossa ideia, de forma a simular os apartamentos dos condomínios pode-se usar apis de simulação de dispositivos iot ou mesmo smart houses (que procurem incluir o máximo de dispositivos/sistemas domésticos).
+The objective is to simulate a collection of homes as a condominium and monitor data from their devices and meters (studying behaviour and identifying anomalies).
 
-O objetivo é simular um conjunto de casas como se fosse um condomínio e acompanhar os dados sobre os seus dispositivos e contadores (estudanto comportamentos e identificando anomalias)
-
-
-| Plataforma / Ferramenta | Tipo de Solução | Facilidade para Criar "Condomínios" (Múltiplas Casas) | Como funciona a Simulação de Dados | Facilidade de Visualização (Dashboards) | Onde corre (Hospedagem) |
+| Platform / Tool | Solution Type | Ease of Creating “Condominiums” (Multiple Homes) | How Data Simulation Works | Ease of Visualisation (Dashboards) | Where It Runs (Hosting) |
 |---|---|---|---|---|---|
-| ThingsBoard Community Edition[](https://thingsboard.io/) | Plataforma IoT Completa | Excelente. Permite criar perfis de entidades hierárquicas (Condomínio > Casas > Dispositivos). | Automática (via motor de regras interno ou geradores virtuais). | Excelente. Dashboards avançados nativos com gráficos de consumo. | Local (Docker/PC) ou Nuvem (Demo). |
-| Node-RED[](https://nodered.org/) | Motor de Fluxos / Integração | Boa. Podes duplicar fluxos ou usar variáveis para simular várias casas em massa. | Totalmente personalizável (geras qualquer lógica de consumo/picos em JavaScript). | Média. Requer instalar o módulo node-red-dashboard. | Local (Node.js / Docker). |
-| Home Assistant[](https://www.home-assistant.io/) | Plataforma de Smart Home | Média. Focada numa casa, mas podes criar "Zonas" ou "Áreas" para representar diferentes frações. | Requer integração com geradores externos (ex: Node-RED ou MQTT fictício). | Excelente. Focada na interface de uma smart house realista. | Local (Raspberry Pi, PC ou Máquina Virtual). |
-| TagoIO[](https://tago.io/) / Ubidots[](https://ubidots.com/) | Plataforma IoT Cloud | Boa. Permite agrupar dispositivos por tags (ex: casa: 01, bloco: A). | Através de simuladores internos na nuvem ou scripts simples. | Boa. Dashboards fáceis de arrastar e largar (plano grátis limitado a poucos dispositivos). | Nuvem (Cloud). |
-| MQTTX CLI[](https://mqttx.app/cli) | Simulador de Protocolo (CLI) | Excelente (para volume). Um único comando pode simular 100 contadores a enviar dados ao mesmo tempo. | Baseada em scripts de texto/comandos que enviam JSONs periódicos. | Não tem. Apenas envia os dados. Requer outra ferramenta para os ver. | Local (Linha de comandos). |
+| ThingsBoard Community Edition[](https://thingsboard.io/) | Complete IoT platform | Excellent. Allows hierarchical entity profiles (Condominium > Homes > Devices). | Automatic (through the internal rules engine or virtual generators). | Excellent. Advanced native dashboards with consumption charts. | Local (Docker/PC) or cloud (demo). |
+| Node-RED[](https://nodered.org/) | Flow / integration engine | Good. Flows can be duplicated or variables used to simulate many homes at once. | Fully customisable (generate any consumption/spike logic in JavaScript). | Medium. Requires installing the node-red-dashboard module. | Local (Node.js / Docker). |
+| Home Assistant[](https://www.home-assistant.io/) | Smart home platform | Medium. Focused on one home, but “Zones” or “Areas” can represent different units. | Requires integration with external generators (e.g. Node-RED or simulated MQTT). | Excellent. Focused on a realistic smart home interface. | Local (Raspberry Pi, PC or virtual machine). |
+| TagoIO[](https://tago.io/) / Ubidots[](https://ubidots.com/) | Cloud IoT platform | Good. Allows grouping devices by tags (e.g. home: 01, block: A). | Through internal cloud simulators or simple scripts. | Good. Easy drag-and-drop dashboards (free plan limited to a few devices). | Cloud. |
+| MQTTX CLI[](https://mqttx.app/cli) | Protocol simulator (CLI) | Excellent (for volume). A single command can simulate 100 meters sending data simultaneously. | Based on text scripts/commands sending periodic JSON. | None. Only sends data. Requires another tool to view it. | Local (command line). |
 
-**Recomendação Direta do Gemini:**
-'Se queres o cenário mais realista e profissional para gerir o condomínio, opta pelo ThingsBoard. A capacidade de criar uma "Relação" (dizer que o Contador X pertence à Casa Y, que por sua vez pertence ao Condomínio Z) é exatamente o que procuras.'
+**Direct recommendation from Gemini:**
+
+'If you want the most realistic and professional scenario for managing the condominium, choose ThingsBoard. The ability to create a “Relationship” (saying that Meter X belongs to Home Y, which in turn belongs to Condominium Z) is exactly what you are looking for.'
 
 ---
 
-### 3. Separação de deploy
+### 3. Deployment separation
 
 'The solution must contain at least two independently deployable backend components'
 
-Dois agregados de domínios que pode fazer sentido separar são os dados gerados pelos dispositivos das casas, todo o domínio que envolva o condominio, e a gestão de processos de contratação, profissionais, etc.
+Two domain aggregates that might make sense to separate are data generated by home devices and the entire condominium domain, and the management of contracting processes, professionals, etc.
 
-Gestão de subscrições de todos os tipos de roles do sistema como um serviço separado também pode ser considerado.
+Managing subscriptions for all types of system roles as a separate service could also be considered.
 
 ---
 
 ### 4. User journey
 
-Acho pertinente haver uma jornada que permita analisar o comportamento dos dispositivos live ou histórico por parte de um user com role adequado. Métricas e comportamentos devem ser estudados de forma a identificar/prever anomalias e ou anomalias e até categorizar as mesmas. Esta  funcionalidade pode também ser permitida a profissionais contratados de forma a estudar a razão da anómalia. O dono da casa também poderá ver os dados da própria casa. Resumindo estudar possibilidades da funcionalidade. 
+I think it would be useful to have a journey that allows a user with the appropriate role to analyse live or historical device behaviour. Metrics and behaviour should be studied to identify/predict anomalies and even categorise them. This functionality could also be made available to contracted professionals to investigate the cause of an anomaly. Homeowners could also view data for their own homes. In summary, explore the possibilities of this functionality.
 
 ---

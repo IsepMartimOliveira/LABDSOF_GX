@@ -1,39 +1,39 @@
 # Definition of Ready (DoR)
 
-**Estado:** proposta v0.1 · ratificação pendente (DEC-09)
+**Status:** proposal v0.1 · ratification pending (DEC-09)
 
-A DoR é o acordo para selecionar trabalho com clareza suficiente. Ter um template preenchido não prova que a equipa o discutiu. Itens ainda incertos permanecem em Backlog/Refinement; investigação pode ser planeada como tarefa ou spike com resultado verificável.
+The DoR is the agreement for selecting work with sufficient clarity. A completed template does not prove that the team discussed it. Uncertain items remain in Backlog/Refinement; research can be planned as a task or spike with a verifiable outcome.
 
-## Checklist comum
+## Common checklist
 
-- [ ] ID estável, título, tipo e ligação ao épico/objetivo.
-- [ ] Problema, beneficiário ou resultado técnico explícito; origem identificada (enunciado, hipótese, achado).
-- [ ] Âmbito incluído/excluído e critérios de aceitação observáveis.
-- [ ] Prioridade proposta discutida; alterações com cliente/stakeholders registadas.
-- [ ] Dependências e decisões bloqueantes resolvidas, ou trabalho reduzido a uma investigação delimitada.
-- [ ] Riscos relevantes de dados, acesso, falhas e qualidade identificados.
-- [ ] Estratégia de verificação adequada e dados/ambiente acessíveis.
-- [ ] Estimativa feita pela equipa; cabe na capacidade e no período selecionado.
-- [ ] Responsável e revisor acordados no planning.
-- [ ] Equipa compreende o item e regista data/autor da verificação DoR.
+- [ ] Stable ID, title, type and link to the epic/objective.
+- [ ] Explicit problem, beneficiary or technical outcome; source identified (assignment, hypothesis, finding).
+- [ ] Included/excluded scope and observable acceptance criteria.
+- [ ] Proposed priority discussed; changes with the customer/stakeholders recorded.
+- [ ] Dependencies and blocking decisions resolved, or work reduced to a bounded investigation.
+- [ ] Relevant data, access, failure and quality risks identified.
+- [ ] Appropriate verification strategy and accessible data/environment.
+- [ ] Estimate made by the team; fits the selected capacity and period.
+- [ ] Owner and reviewer agreed during planning.
+- [ ] Team understands the item and records the date/author of the DoR check.
 
-## Complementos por tipo
+## Additional criteria by type
 
-| Tipo | Antes de Ready |
+| Type | Before Ready |
 |---|---|
-| História | «Como… quero… para…», exemplos de sucesso, erro e acesso negado |
-| Integração | Contrato, autenticação, timeout e comportamento com dados inválidos/duplicados definidos |
-| IA | Inputs/outputs de exemplo, baseline/fallback, critérios de avaliação e versão de prompt/modelo planeados |
-| Pesquisa | Pergunta, método, recrutamento, cuidados com participantes e local/retenção dos dados definidos |
-| Spike | Pergunta a resolver, limite de esforço e artefacto esperado; não promete implementação de uma solução desconhecida |
-| Documentação | Público, decisão que apoia, fontes e revisor definidos |
+| Story | “As a… I want… so that…”, examples of success, error and denied access |
+| Integration | Contract, authentication, timeout and behaviour with invalid/duplicate data defined |
+| AI | Example inputs/outputs, baseline/fallback, evaluation criteria and planned prompt/model version |
+| Research | Question, method, recruitment, participant safeguards and data location/retention defined |
+| Spike | Question to resolve, effort limit and expected artefact; does not promise implementation of an unknown solution |
+| Documentation | Audience, decision it supports, sources and reviewer defined |
 
-## Registo da verificação
+## Verification record
 
-| Item | Critérios em falta | Decisão bloqueante | Estimativa | Responsável/revisor | Ready confirmado por/data |
+| Item | Missing criteria | Blocking decision | Estimate | Owner/reviewer | Ready confirmed by/date |
 |---|---|---|---|---|---|
-| A preencher no refinamento | — | — | — | — | — |
+| To be completed during refinement | — | — | — | — | — |
 
-**Não selecionar como compromisso itens que não cumpram a DoR.** Uma investigação pode cumprir a sua própria DoR sem resolver previamente a pergunta que pretende investigar.
+**Do not select items that fail the DoR as commitments.** An investigation can meet its own DoR without first resolving the question it is intended to investigate.
 
-Referência indicada no planeamento: [Scrum Inc — Definition of Ready](https://www.scruminc.com/definition-of-ready/). O endereço devolveu 404 na consulta de 2026-10-07; a checklist acima é uma proposta específica da equipa, não uma transcrição da fonte.
+Reference indicated in planning: [Scrum Inc — Definition of Ready](https://www.scruminc.com/definition-of-ready/). The address returned 404 when accessed on 2026-10-07; the checklist above is a team-specific proposal, not a transcription of the source.

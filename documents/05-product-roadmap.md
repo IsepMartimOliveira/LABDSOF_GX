@@ -1,100 +1,100 @@
 # 5. Product Roadmap
 
-**Estado:** proposta v0.3 · **Fase atual:** Sprint 1 · **Revisão:** 2026-10-09
+**Status:** proposal v0.3 · **Current stage:** Sprint 1 · **Reviewed:** 2026-10-09
 
-Preserva-se o nome deste ficheiro, mas **não é o entregável Product Backlog**: esse está em [06-product-backlog.md](06-product-backlog.md). A numeração dos ficheiros não corresponde necessariamente à dos entregáveis.
+This filename is retained, but this is **not the Product Backlog deliverable**: that is [06-product-backlog.md](06-product-backlog.md). File numbering does not necessarily match deliverable numbering.
 
-## 1. Horizontes
+## 1. Horizons
 
-| Marco do enunciado | Objetivo | Evidência pretendida |
+| Assignment milestone | Objective | Intended evidence |
 |---|---|---|
-| Sprint 1 | Descobrir, validar e desenhar | Pesquisa, visão, backlog, AI Assessment, desenho, ADRs, segurança e walking skeleton |
-| Sprint 2 | Construir e operar primeira versão do ciclo completo | Aplicação, persistência, permissões, IA/fallback, integração, testes, CI/CD e falha demonstrada |
-| Sprint 3 | Completar, avaliar e robustecer | Resultados de IA, usabilidade, acessibilidade, segurança, desempenho, resiliência e apresentação |
-| Pós-MVP | Explorar extensões com procura comprovada | Novo planeamento, sem compromisso para o semestre |
+| Sprint 1 | Discover, validate and design | Research, vision, backlog, AI Assessment, design, ADRs, security and walking skeleton |
+| Sprint 2 | Build and operate the first version of the complete cycle | Application, persistence, permissions, AI/fallback, integration, tests, CI/CD and demonstrated failure |
+| Sprint 3 | Complete, evaluate and strengthen | AI, usability, accessibility, security, performance and resilience results, and presentation |
+| Post-MVP | Explore extensions with proven demand | New planning, with no commitment for the semester |
 
-Datas, duração e capacidade por confirmar (DEC-03). **Phase 1–3 são atividades da Sprint 1**, não as três sprints oficiais. A relação de «Sprint B» com o calendário oficial também está por confirmar; ver [proposta Sprint B](planning/sprint-b-backlog.md).
+Dates, duration and capacity need confirmation (DEC-03). **Phases 1–3 are Sprint 1 activities**, not the three official sprints. The relationship between “Sprint B” and the official schedule also needs confirmation; see the [Sprint B proposal](planning/sprint-b-backlog.md).
 
 ## 2. Sprint 1
 
-As fases podem sobrepor-se; o walking skeleton pode começar enquanto decorre investigação.
+Phases may overlap; the walking skeleton can begin while research is underway.
 
-| Fase | Trabalho | Saída |
+| Phase | Work | Output |
 |---|---|---|
-| Phase 1 | Git, board, metodologia, DoR/DoD e papéis | Acordo revisto e configurações verificadas |
-| Phase 2 | Domínio, alternativas, perguntas, entrevistas, requisitos | Evidência ou limitações, achados e decisões |
-| Phase 3 | Visão, personas, fluxo, domínio, backlog, MoSCoW com stakeholders, Sprint B | Âmbito revisto e seleção que cumpra DoR |
-| Transversal | IA, arquitetura, ADRs, segurança e walking skeleton | Desenho justificável e implementação mínima executável |
+| Phase 1 | Git, board, methodology, DoR/DoD and roles | Reviewed agreement and verified configuration |
+| Phase 2 | Domain, alternatives, questions, interviews, requirements | Evidence or limitations, findings and decisions |
+| Phase 3 | Vision, personas, workflow, domain, backlog, MoSCoW with stakeholders, Sprint B | Revised scope and selection meeting the DoR |
+| Throughout | AI, architecture, ADRs, security and walking skeleton | Justifiable design and minimal runnable implementation |
 
-Checklist: [plano Sprint 1](planning/sprint-1-plan.md). Na review, verificar valor do problema e dimensão do MVP. Limitações documentadas não contam como validação positiva. Registar feedback real e pelo menos uma decisão revista durante o projeto (§5.7).
+Checklist: [Sprint 1 plan](planning/sprint-1-plan.md). At the review, assess the value of the problem and the size of the MVP. Documented limitations do not count as positive validation. Record actual feedback and at least one revised decision during the project (§5.7).
 
-## 3. Sprint 2 — sequência proposta
+## 3. Sprint 2 — proposed sequence
 
-Os marcos abaixo concretizam os [épicos EP-01–EP-04](06-product-backlog.md#2-épicos); não definem uma segunda lista de épicos. São objetivos propostos, não entregas concluídas.
+The milestones below put [epics EP-01–EP-04](06-product-backlog.md#2-epics) into practice; they do not define a second list of epics. They are proposed objectives, not completed deliveries.
 
-| Marco | Incremento demonstrável | Itens principais |
+| Milestone | Demonstrable increment | Main items |
 |---|---|---|
-| M2.1 | Relato persistido, consulta autorizada e triagem manual | US-01/02 |
-| M2.2 | Classificação assíncrona com IA, regras, fallback e idempotência | US-03 |
-| M2.3 | Resumo comum, confirmação de impacto e seleção de prestador | US-04/06; US-05 condicionada |
-| M2.4 | Pedido aprovado, resposta do prestador e marcação confirmada ou pendente/manual explícita | US-07/08 |
-| M2.5 | Atualizações, conclusão, encerramento e histórico | US-09/10; US-11 condicionada |
+| M2.1 | Persisted report, authorised access and manual triage | US-01/02 |
+| M2.2 | Asynchronous AI classification, rules, fallback and idempotency | US-03 |
+| M2.3 | Shared summary, impact confirmation and contractor selection | US-04/06; US-05 conditional |
+| M2.4 | Approved request, contractor response and confirmed booking or explicit pending/manual status | US-07/08 |
+| M2.5 | Updates, completion, closure and history | US-09/10; US-11 conditional |
 
-Testes, contratos, logs, métricas e CI/CD acompanham cada fatia. Deploy e observabilidade começam cedo.
+Tests, contracts, logs, metrics and CI/CD accompany each slice. Deployment and observability start early.
 
-**Saída pretendida:** ciclo completo com permissões, sem intervenção técnica da equipa. Demonstrar IA indisponível e falha externa sem falsa confirmação nem efeitos duplicados. Critérios no [backlog](06-product-backlog.md).
+**Intended outcome:** a complete cycle with permissions, without technical intervention from the team. Demonstrate AI unavailability and external failure without false confirmations or duplicate effects. Criteria are in the [backlog](06-product-backlog.md).
 
 ## 4. Sprint 3
 
-- Completar J1–J3 e incorporar feedback.
-- Executar avaliação de IA contra baseline, com custo, latência, erros e limitações.
-- Avaliar usabilidade/acessibilidade, autorização, desempenho e recuperação.
-- Demonstrar dashboard operacional e continuidade.
-- Atualizar arquitetura, ADRs, dívida técnica, operação, roadmap e evidências individuais.
-- Preparar pitch, demonstração e release reproduzível.
+- Complete J1–J3 and incorporate feedback.
+- Evaluate AI against the baseline, including cost, latency, errors and limitations.
+- Evaluate usability/accessibility, authorisation, performance and recovery.
+- Demonstrate the operational dashboard and continuity.
+- Update architecture, ADRs, technical debt, operations, roadmap and individual contribution evidence.
+- Prepare the pitch, demonstration and reproducible release.
 
-Fotos, gráficos de custos e resumos narrativos **não são compromissos da Sprint 3**.
+Photos, cost charts and narrative summaries **are not Sprint 3 commitments**.
 
-## 5. Cortes e extensões
+## 5. Cuts and extensions
 
-| Opção | Tratamento |
+| Option | Treatment |
 |---|---|
-| Segundo canal de notificações | Could; cortar antes do canal principal |
-| Ranking avançado e embeddings | Should; simplificar mantendo seleção e confirmação manual |
-| Calendário real | Could; manter simulador realista |
-| Fotos, análises e resumos | Pós-MVP, dependentes de investigação |
-| IoT num cenário | DEC-01; rever âmbito e integração antes de adicionar |
-| Monitorização abrangente, previsão, pagamentos, subscrições | Fora da base |
+| Second notification channel | Could; cut before the primary channel |
+| Advanced ranking and embeddings | Should; simplify while retaining selection and manual confirmation |
+| Real calendar | Could; retain a realistic simulator |
+| Photos, analytics and summaries | Post-MVP, dependent on research |
+| IoT in one scenario | DEC-01; review scope and integration before adding |
+| Comprehensive monitoring, prediction, payments, subscriptions | Outside the baseline |
 
-Não remover requisitos obrigatórios para acomodar extras. Atualizar visão, requisitos, backlog e decisões em conjunto.
+Do not remove mandatory requirements to accommodate extras. Update the vision, requirements, backlog and decisions together.
 
-### Extensões pós-MVP, condicionadas a evidência
+### Post-MVP extensions, conditional on evidence
 
-| Candidato | Condição para novo planeamento |
+| Candidate | Condition for new planning |
 |---|---|
-| Piloto com um edifício | Parceiro, responsabilidades e tratamento de dados definidos; MVP avaliado |
-| Análises de custos e resumos | Dados suficientes e decisões que beneficiem da análise; números calculados a partir dos registos |
-| Upload de fotos | Necessidade confirmada e política de acesso/retenção definida |
-| Análise visual por IA | Avaliação própria de qualidade, custo, latência e privacidade |
-| Relatórios para assembleia | Procura confirmada e informação autorizada |
-| App nativa, push ou multilingue | Evidência de utilização que justifique investimento |
-| Comissão/parceria com prestadores | Validação comercial; sem pressupor marketplace |
-| Manutenção preventiva | Procura e oportunidade demonstradas; revisão do foco |
+| Pilot with one building | Partner, responsibilities and data handling defined; MVP evaluated |
+| Cost analytics and summaries | Sufficient data and decisions that benefit from analysis; figures calculated from records |
+| Photo upload | Confirmed need and defined access/retention policy |
+| AI visual analysis | Separate evaluation of quality, cost, latency and privacy |
+| Assembly reports | Confirmed demand and authorised information |
+| Native app, push notifications or multilingual support | Usage evidence justifying the investment |
+| Contractor commissions/partnerships | Commercial validation; no assumed marketplace |
+| Preventive maintenance | Demonstrated demand and opportunity; review of focus |
 
-Estes candidatos preservam ideias de evolução sem prometer datas nem alterar o MVP.
+These candidates preserve ideas for evolution without promising dates or changing the MVP.
 
-## 6. Métricas e dependências
+## 6. Metrics and dependencies
 
-| Avaliação | Sprint 1 | Sprint 2 | Sprint 3 |
+| Evaluation | Sprint 1 | Sprint 2 | Sprint 3 |
 |---|---|---|---|
-| Valor e esforço administrativo | Recolher estimativas e definir comparação | Medir tarefas e registar aceitação/correções | Comparar resultados e explicar limitações |
-| Qualidade de IA/duplicados, quando aplicável | Definir dataset e critérios | Primeira avaliação | Resultados contra baseline, custo e latência |
-| Continuidade e operação | Definir cenários e instrumentação | Demonstrar falhas e dashboard inicial | Repetir cenários relevantes e apresentar evidências |
+| Value and administrative effort | Gather estimates and define the comparison | Measure tasks and record acceptance/corrections | Compare results and explain limitations |
+| AI/duplicate detection quality, where applicable | Define dataset and criteria | Initial evaluation | Results against baseline, cost and latency |
+| Continuity and operations | Define scenarios and instrumentation | Demonstrate failures and initial dashboard | Repeat relevant scenarios and present evidence |
 
-Definições de produto na [visão](04-product-vision.md#5-métricas-e-sucesso); protocolo/limiares de IA no [AI Assessment](07-responsible-ai-assessment.md#4-critérios-provisórios); metas operacionais nos [NFRs](requirements.md#requisitos-não-funcionais--restrições). Não copiar esses limiares aqui nem apresentar simulação como impacto real.
+Product definitions are in the [vision](04-product-vision.md#5-metrics-and-success); AI protocol/thresholds in the [AI Assessment](07-responsible-ai-assessment.md#4-provisional-criteria); operational targets in the [NFRs](requirements.md#non-functional-requirements--constraints). Do not copy those thresholds here or present simulation as real impact.
 
-Dependências: acesso a profissionais, capacidade, âmbito, stack, visibilidade e ambiente de avaliação. Ver [decisões](planning/decisions-and-feedback.md) e [visão](04-product-vision.md).
+Dependencies: access to professionals, capacity, scope, stack, visibility and evaluation environment. See [decisions](planning/decisions-and-feedback.md) and [vision](04-product-vision.md).
 
-## 7. Revisão do roadmap
+## 7. Roadmap review
 
-Rever após cada sprint e feedback de stakeholders. Registar mudanças de âmbito, prioridade e motivo no [registo de decisões](planning/decisions-and-feedback.md), atualizando visão e backlog afetados. Detalhes de capacidade e tarefas pertencem ao backlog da sprint; a checklist da Sprint 1 permanece no respetivo plano.
+Review after each sprint and stakeholder feedback. Record scope/priority changes and their reasons in the [decision register](planning/decisions-and-feedback.md), updating the affected vision and backlog. Capacity and task details belong in the sprint backlog; the Sprint 1 checklist remains in its plan.

@@ -1,56 +1,56 @@
-# Decisões pendentes e feedback
+# Pending decisions and feedback
 
-**Estado:** registo inicial · **Revisão:** 2026-10-07
+**Status:** initial register · **Reviewed:** 2026-10-07
 
-Base provisória permite elaborar documentos coerentes; não significa aprovação. Nomes e datas-limite são atribuídos pela equipa. Ao decidir, registar evidência, autor, data e documentos afetados.
+A provisional baseline enables consistent documents; it does not mean approval. Names and deadlines are assigned by the team. When deciding, record evidence, author, date and affected documents.
 
-## 1. Decisões abertas
+## 1. Open decisions
 
-| ID | Questão | Base provisória / alternativas | Participantes (nomes por atribuir) | Momento | Estado |
+| ID | Question | Provisional baseline / alternatives | Participants (names to be assigned) | Timing | Status |
 |---|---|---|---|---|---|
-| DEC-01 | Coordenação ou IoT? | Coordenação; um cenário IoT possível; monitorização ampla exige novo âmbito | Equipa, BA/PO, docentes | Antes de fechar MVP | Por decidir |
-| DEC-02 | Segmento e modelo comercial | Empresas de administração; voluntários secundários; SaaS é hipótese | BA/PO, administradores | Após investigação inicial | Por validar |
-| DEC-03 | Equipa, calendário, capacidade e Sprint B | Três sprints oficiais; fases 1–3 dentro da Sprint 1; não assumir B = Sprint 2 | PM, equipa, docentes | Antes de comprometer Sprint B | Por decidir |
-| DEC-04 | Stack, fronteiras e infraestrutura | Issue + Dispatch independentes; worker/fila; alternativa modular sujeita a aceitação | Tech Lead, DevOps, equipa | Antes do skeleton | Proposta ADR-001 |
-| DEC-05 | Workflow, fornecedor e avaliação de IA | Classificação textual, baseline/fallback, um fornecedor; embeddings opcionais | AI, QA, BA/PO | Antes da história IA cumprir DoR | Por decidir |
-| DEC-06 | Integração e notificações | Calendário simulado realista; real opcional; um canal in-app proposto | Tech Lead, BA/PO | Antes da integração | Por decidir |
-| DEC-07 | Visibilidade e ciclo de vida dos dados | Relatos privados, resumo comum publicado, extrato ao prestador, dados sintéticos | QA/Segurança, BA/PO | Antes de implementar permissões | Por validar |
-| DEC-08 | Baselines e alvos | Esforço administrativo principal; metas técnicas provisórias | QA, BA/PO, AI | Antes da avaliação formal | Por calibrar |
-| DEC-09 | Metodologia, board e Git | Scrum adaptado, GitHub Projects ou Jira, branches curtas e PR revisto | Equipa | Phase 1 | Por ratificar/configurar |
-| DEC-10 | Aprovação e confirmação | Administrador aprova pedido; prestador aceita; calendário/manual confirma; administrador encerra | BA/PO, administradores e prestadores | Antes de US-07–US-09 | Por validar |
+| DEC-01 | Coordination or IoT? | Coordination; one possible IoT scenario; broad monitoring requires a new scope | Team, BA/PO, lecturers | Before finalising the MVP | Undecided |
+| DEC-02 | Segment and commercial model | Property management companies; volunteers secondary; SaaS is a hypothesis | BA/PO, administrators | After initial research | To be validated |
+| DEC-03 | Team, schedule, capacity and Sprint B | Three official sprints; phases 1–3 within Sprint 1; do not assume B = Sprint 2 | PM, team, lecturers | Before committing to Sprint B | Undecided |
+| DEC-04 | Stack, boundaries and infrastructure | Independent Issue + Dispatch; worker/queue; modular alternative subject to acceptance | Tech Lead, DevOps, team | Before the skeleton | Proposed ADR-001 |
+| DEC-05 | AI workflow, provider and evaluation | Text classification, baseline/fallback, one provider; optional embeddings | AI, QA, BA/PO | Before the AI story meets DoR | Undecided |
+| DEC-06 | Integration and notifications | Realistic simulated calendar; real optional; one proposed in-app channel | Tech Lead, BA/PO | Before integration | Undecided |
+| DEC-07 | Visibility and data lifecycle | Private reports, published shared summary, extract for contractor, synthetic data | QA/Security, BA/PO | Before implementing permissions | To be validated |
+| DEC-08 | Baselines and targets | Administrative effort as primary metric; provisional technical targets | QA, BA/PO, AI | Before formal evaluation | To be calibrated |
+| DEC-09 | Methodology, board and Git | Adapted Scrum, GitHub Projects or Jira, short-lived branches and reviewed PRs | Team | Phase 1 | To be ratified/configured |
+| DEC-10 | Approval and confirmation | Administrator approves request; contractor accepts; calendar/manual confirmation; administrator closes | BA/PO, administrators and contractors | Before US-07–US-09 | To be validated |
 
-## 2. Harmonizações editoriais
+## 2. Editorial harmonisation
 
-Não são feedback de investidores nem escolhas validadas por utilizadores.
+These are neither investor feedback nor user-validated choices.
 
-| Conflito | Tratamento em 2026-10-07 |
+| Conflict | Treatment on 2026-10-07 |
 |---|---|
-| 05 tratado como backlog | Preservado roadmap; criado 06-product-backlog |
-| MVP terminava na notificação | Explicitados conclusão, encerramento e histórico |
-| Aprovação confundida com agendamento | Separadas aprovação, aceitação e confirmação |
-| Fotos/custos/resumos na Sprint 3 e pós-curso | Pós-MVP, sem compromisso Sprint 3 |
-| Autoaprovação vs aprovação humana | Autoaprovação fora da base |
-| 100% de críticos como garantia | Critério restrito ao conjunto de testes |
-| Não encontrado = inexistente | Comparação marcada como preliminar/não confirmada |
-| IoT nas notas vs âmbito da visão | Preservado para DEC-01 |
-| Proteções Git e board como factos | Configurações propostas sem evidência remota |
+| 05 treated as backlog | Roadmap retained; 06-product-backlog created |
+| MVP ended at notification | Completion, closure and history made explicit |
+| Approval confused with scheduling | Approval, acceptance and confirmation separated |
+| Photos/costs/summaries in Sprint 3 and after the course | Post-MVP, without Sprint 3 commitment |
+| Automatic vs human approval | Automatic approval outside baseline |
+| 100% of critical cases as a guarantee | Criterion restricted to the test set |
+| Not found = nonexistent | Comparison marked preliminary/unconfirmed |
+| IoT in notes vs vision scope | Preserved for DEC-01 |
+| Git protections and board as facts | Proposed configurations without remote evidence |
 
-## 3. Feedback de stakeholders/investidores
+## 3. Stakeholder/investor feedback
 
-**Nenhuma sessão ou decisão revista por feedback está registada.**
+**No session or decision revised through feedback has been recorded.**
 
-| ID | Data/participantes | Feedback e evidência | Decisão anterior → revista | Motivo | Documentos/issues | Responsável/estado |
+| ID | Date/participants | Feedback and evidence | Previous → revised decision | Reason | Documents/issues | Owner/status |
 |---|---|---|---|---|---|---|
-| A preencher após sessão | — | — | — | — | — | — |
+| To be completed after a session | — | — | — | — | — | — |
 
-Usar [template](../templates/investor-review.md). Pelo menos uma decisão deve ser efetivamente revista em resposta aos docentes (§5.7). Ata sem mudança não satisfaz esse requisito.
+Use the [template](../templates/investor-review.md). At least one decision must actually be revised in response to lecturers (§5.7). Minutes without a change do not meet that requirement.
 
-## 4. Limitações e dívida técnica
+## 4. Limitations and technical debt
 
-| ID | Limitação | Impacto | Próxima ação | Responsável |
+| ID | Limitation | Impact | Next action | Owner |
 |---|---|---|---|---|
-| LIM-01 | Sem pesquisa primária registada | Valor e adoção por validar | DISC-01 | Por atribuir |
-| LIM-02 | Fontes concorrenciais incompletas | Diferenciação não demonstrada | DISC-02 | Por atribuir |
-| LIM-03 | Sem código, CI ou deploy nesta base | Requisitos técnicos não demonstrados | EN-01, EN-02 | Por atribuir |
+| LIM-01 | No primary research recorded | Value and adoption need validation | DISC-01 | To be assigned |
+| LIM-02 | Incomplete competitor sources | Differentiation not demonstrated | DISC-02 | To be assigned |
+| LIM-03 | No code, CI or deployment in this baseline | Technical requirements not demonstrated | EN-01, EN-02 | To be assigned |
 
-Adicionar dívida de implementação quando existir; funcionalidades futuras não são automaticamente dívida técnica.
+Add implementation debt when it exists; future features are not automatically technical debt.

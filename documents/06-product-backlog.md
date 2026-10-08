@@ -1,199 +1,199 @@
 # Product Backlog
 
-**Estado:** proposta v0.2 · **Sprint:** 1 · **Prioridade:** ainda não validada com cliente/docentes
+**Status:** proposal v0.2 · **Sprint:** 1 · **Priority:** not yet validated with the customer/lecturers
 
-Corresponde ao entregável 5 do §7.1.2. O [roadmap](05-product-roadmap.md) define horizontes; este documento define itens. Nenhuma issue remota, estimativa, atribuição ou implementação é presumida.
+Corresponds to deliverable 5 in §7.1.2. The [roadmap](05-product-roadmap.md) defines horizons; this document defines items. No remote issues, estimates, assignments or implementations are assumed.
 
-## 1. Convenções e priorização
+## 1. Conventions and prioritisation
 
-MoSCoW refere-se à **release académica**: Must = essencial para ciclo/obrigações; Should = valioso mas simplificável; Could = opcional; Won't = fora desta release. Esta é uma proposta para a sessão de priorização, não o resultado dessa sessão.
+MoSCoW refers to the **academic release**: Must = essential for the cycle/obligations; Should = valuable but can be simplified; Could = optional; Won't = outside this release. This is a proposal for the prioritisation session, not its outcome.
 
-Todos os itens estão em **Backlog**, com **estimativa, responsável, revisor e URL de issue por atribuir**; nenhum foi declarado Ready. Discussão de capacidade e DoR em [Sprint B](planning/sprint-b-backlog.md).
+All items are in **Backlog**, with **estimate, owner, reviewer and issue URL yet to be assigned**; none has been declared Ready. Capacity and DoR discussion: [Sprint B](planning/sprint-b-backlog.md).
 
-Ordem inicial: DISC/EN de descoberta e fundações → US-01/02 → US-03/04 → US-06/07/08/09/10 → Should/Could conforme evidência. EN-03 acompanha implementação e EN-04 a avaliação.
+Initial order: DISC/EN discovery and foundations → US-01/02 → US-03/04 → US-06/07/08/09/10 → Should/Could according to evidence. EN-03 accompanies implementation and EN-04 evaluation.
 
-## 2. Épicos
+## 2. Epics
 
-| ID | Resultado / fronteira | Itens | Origem |
+| ID | Outcome / boundary | Items | Source |
 |---|---|---|---|
-| EP-00 | Descoberta e planeamento justificáveis | DISC-01–03 | §5.1–5.4, §5.7 |
-| EP-01 | Morador reporta e acompanha com visibilidade adequada | US-01/02/04/10 | J1, P1/P5 |
-| EP-02 | Triagem assistida e associações revistas | US-03/05 | J2, P2/P3/P7 |
-| EP-03 | Intervenção do pedido ao encerramento | US-06–09/11–13 | J2–J3, P6 |
-| EP-04 | Sistema entregável, seguro, observável e avaliável | EN-01–04 | §6–§8 |
+| EP-00 | Justifiable discovery and planning | DISC-01–03 | §5.1–5.4, §5.7 |
+| EP-01 | Residents report and track issues with appropriate visibility | US-01/02/04/10 | J1, P1/P5 |
+| EP-02 | Assisted triage and reviewed links | US-03/05 | J2, P2/P3/P7 |
+| EP-03 | Intervention from request to closure | US-06–09/11–13 | J2–J3, P6 |
+| EP-04 | Deliverable, secure, observable and evaluable system | EN-01–04 | §6–§8 |
 
-## 3. Descoberta e engenharia
+## 3. Discovery and engineering
 
-| ID / prioridade | Resultado e critérios de aceitação | Dependências | Horizonte |
+| ID / priority | Outcome and acceptance criteria | Dependencies | Horizon |
 |---|---|---|---|
-| DISC-01 / Must | Recolher evidência: método/participantes reais registados; achados ligados a P1–P7; limitações e decisões explícitas. Se acesso falhar, documentar tentativas e evidência alternativa, sem afirmar validação | Plano de pesquisa, acesso/retenção | S1 |
-| DISC-02 / Must | Completar comparação: fontes exatas e datadas; critérios §5.2; incluir alternativa informal e comparável de manutenção/helpdesk; conclusão separa evidência de inferência | Seleção de comparáveis | S1 |
-| DISC-03 / Must | Ratificar organização e rever âmbito/prioridades: papéis/board/DoR/DoD; DEC-01/03/09 e discussão DEC-10; feedback real registado. Documentar pelo menos uma revisão de decisão pelos docentes ao longo do projeto | Disponibilidade da equipa e stakeholders | S1, seguimento S2/S3 |
-| EN-01 / Must | Consolidar desenho: contexto, componentes, modelo, API/eventos, propriedade de dados, deploy e ameaças; ADRs registam alternativas e decisões efetivas | DEC-04/07, visão | S1 |
-| EN-02 / Must | Walking skeleton: cliente→backend→persistência→consulta após reinício; build automático, teste inicial e contentores com instruções reproduzíveis; evidência ligada | EN-01 | S1 |
-| EN-03 / Must | Entrega/qualidade: componentes independentes ou exceção aceite; CI/CD, testes de autorização/contratos/jornadas, logs/health/metrics/correlação, falhas de fila/IA/calendário e backup/restore; evidência dos NFRs aplicáveis | EN-01/02; acompanha histórias | S2, reforço S3 |
-| EN-04 / Must | Avaliação final: IA/baseline, usabilidade, acessibilidade, segurança, desempenho, dashboard, evolução de arquitetura, limitações, roadmap e contribuições; resultados e ambiente reproduzíveis | Incremento operacional, DEC-08 | S3 |
+| DISC-01 / Must | Gather evidence: actual method/participants recorded; findings linked to P1–P7; explicit limitations and decisions. If access fails, document attempts and alternative evidence without claiming validation | Research plan, access/retention | S1 |
+| DISC-02 / Must | Complete comparison: exact, dated sources; §5.2 criteria; include an informal alternative and a comparable maintenance/helpdesk product; conclusion separates evidence from inference | Selection of comparables | S1 |
+| DISC-03 / Must | Ratify organisation and review scope/priorities: roles/board/DoR/DoD; DEC-01/03/09 and DEC-10 discussion; actual feedback recorded. Document at least one decision revised following lecturer feedback during the project | Team and stakeholder availability | S1, follow-up S2/S3 |
+| EN-01 / Must | Consolidate design: context, components, model, API/events, data ownership, deployment and threats; ADRs record alternatives and actual decisions | DEC-04/07, vision | S1 |
+| EN-02 / Must | Walking skeleton: client→backend→persistence→query after restart; automated build, initial test and containers with reproducible instructions; linked evidence | EN-01 | S1 |
+| EN-03 / Must | Delivery/quality: independent components or accepted exception; CI/CD, authorisation/contract/journey tests, logs/health/metrics/correlation, queue/AI/calendar failures and backup/restore; evidence for applicable NFRs | EN-01/02; accompanies stories | S2, strengthened in S3 |
+| EN-04 / Must | Final evaluation: AI/baseline, usability, accessibility, security, performance, dashboard, architecture evolution, limitations, roadmap and contributions; reproducible results and environment | Operational increment, DEC-08 | S3 |
 
-## 4. Histórias e critérios
+## 4. Stories and criteria
 
-Os critérios abaixo aplicam as necessidades a cada entrega. Definições detalhadas são mantidas na [avaliação de IA](07-responsible-ai-assessment.md#4-critérios-provisórios), nos [estados de domínio](08-technical-design.md#3-estados-e-regras-de-negócio), na [matriz de acesso](09-security-privacy.md#2-matriz-de-acesso-proposta) e nos [NFRs](requirements.md#requisitos-não-funcionais--restrições). Alterações nessas definições exigem rever as histórias afetadas.
+The criteria below apply the needs to each delivery. Detailed definitions are maintained in the [AI assessment](07-responsible-ai-assessment.md#4-provisional-criteria), [domain states](08-technical-design.md#3-states-and-business-rules), [access matrix](09-security-privacy.md#2-proposed-access-matrix) and [NFRs](requirements.md#non-functional-requirements--constraints). Changes to those definitions require a review of the affected stories.
 
-### US-01 — Registar e consultar relato · Must · EP-01
+### US-01 — Record and view a report · Must · EP-01
 
-Como morador, quero reportar uma avaria no meu edifício para que a administração possa acompanhá-la.
+As a resident, I want to report a fault in my building so that management can track it.
 
-- Com pertença válida, texto e zona válidos, guardar relato/ocorrência e devolver ID e estado «recebida», sem esperar pela IA.
-- Entrada inválida produz erro compreensível sem criar registo parcial.
-- Outro edifício não lê nem altera o relato, mesmo chamando diretamente a API.
-- Repetição do mesmo pedido com a mesma chave não cria duas ocorrências.
-- Consulta após reinício mantém o registo.
+- With valid membership, text and area, save the report/issue and return an ID and “received” status without waiting for AI.
+- Invalid input produces an understandable error without creating a partial record.
+- Another building cannot read or modify the report, even through direct API calls.
+- Repeating the same request with the same key does not create two issues.
+- Querying after a restart returns the persisted record.
 
-**Origem:** RF-01; NFR-01/02/05/07/09. **Dependências:** EN-01/02, DEC-07. **Horizonte:** S2, fatia mínima no skeleton.
+**Source:** RF-01; NFR-01/02/05/07/09. **Dependencies:** EN-01/02, DEC-07. **Horizon:** S2, minimal slice in the skeleton.
 
-### US-02 — Triar manualmente e acompanhar estados · Must · EP-01
+### US-02 — Triage manually and track states · Must · EP-01
 
-Como administrador, quero rever ocorrências e o seu histórico para decidir o próximo passo.
+As an administrator, I want to review issues and their history to decide the next step.
 
-- Listar apenas edifícios geridos, com categoria/urgência pendentes explícitas.
-- Alterar categoria/urgência manualmente regista ator, instante e motivo.
-- Rejeitar transições inválidas e alterações concorrentes sobre versão desatualizada.
-- Morador vê estado autorizado e histórico público, sem notas internas.
+- List only managed buildings, with pending category/urgency explicit.
+- Manually changing category/urgency records the actor, timestamp and reason.
+- Reject invalid transitions and concurrent changes based on an outdated version.
+- Residents see authorised status and public history, without internal notes.
 
-**Origem:** RF-02; NFR-01/06. **Dependências:** US-01, DEC-07/10. **Horizonte:** S2.
+**Source:** RF-02; NFR-01/06. **Dependencies:** US-01, DEC-07/10. **Horizon:** S2.
 
-### US-03 — Classificar com IA e fallback · Must · EP-02
+### US-03 — Classify with AI and fallback · Must · EP-02
 
-Como administrador, quero uma sugestão de categoria e urgência para reduzir esforço de triagem.
+As an administrator, I want a category and urgency suggestion to reduce triage effort.
 
-- Evento de relato é processado assincronamente; sugestão válida guarda origem/versão e motivo, visíveis como não verificados.
-- Regras de sinais críticos executam independentemente da IA; resultado do modelo não remove um alerta nem sobrescreve decisão humana posterior.
-- Falha, timeout ou resposta inválida deixam regras/triagem manual disponíveis e estado visível.
-- Reentrega de evento não duplica sugestão nem efeitos; tentativas esgotadas ficam observáveis.
-- Avaliação compara IA, baseline e resultado combinado no dataset versionado, segundo os [critérios de IA](07-responsible-ai-assessment.md#4-critérios-provisórios) acordados.
+- Report events are processed asynchronously; a valid suggestion records its source/version and rationale, visibly marked as unverified.
+- Critical-signal rules run independently of AI; model output does not remove an alert or overwrite a later human decision.
+- Failure, timeout or invalid responses leave rules/manual triage available with a visible status.
+- Event redelivery does not duplicate suggestions or effects; exhausted attempts remain observable.
+- Evaluation compares AI, baseline and combined results on the versioned dataset against the agreed [AI criteria](07-responsible-ai-assessment.md#4-provisional-criteria).
 
-**Origem:** RF-03; NFR-03/04/10. **Dependências:** US-01/02, DEC-05/08. **Horizonte:** S2.
+**Source:** RF-03; NFR-03/04/10. **Dependencies:** US-01/02, DEC-05/08. **Horizon:** S2.
 
-### US-04 — Publicar ocorrência comum e confirmar impacto · Must · EP-01
+### US-04 — Publish a shared issue and confirm impact · Must · EP-01
 
-Como morador, quero confirmar que um problema comum me afeta para dar informação útil sem repetir o relato.
+As a resident, I want to confirm that a shared problem affects me to provide useful information without repeating the report.
 
-- Só resumo explicitamente publicado pelo administrador fica visível ao mesmo edifício.
-- Confirmar duas vezes mantém uma contribuição; retirar remove a contribuição.
-- Identidade e texto privado não aparecem a outros moradores; outro edifício não confirma.
-- Contador não altera urgência automaticamente; subscrição opcional pode ser desligada.
-- Criar relato separado continua possível.
+- Only a summary explicitly published by the administrator is visible to the same building.
+- Confirming twice retains one contribution; withdrawing removes it.
+- Identity and private text are not shown to other residents; another building cannot confirm.
+- The counter does not automatically change urgency; optional subscriptions can be disabled.
+- Creating a separate report remains possible.
 
-**Origem:** RF-04 / §5.5; NFR-01/02/07. **Dependências:** US-01/02, DEC-07. **Horizonte:** S2.
+**Source:** RF-04 / §5.5; NFR-01/02/07. **Dependencies:** US-01/02, DEC-07. **Horizon:** S2.
 
-### US-05 — Rever sugestões de duplicados · Should · EP-02
+### US-05 — Review duplicate suggestions · Should · EP-02
 
-Como administrador, quero identificar relatos da mesma avaria para coordenar uma única resposta.
+As an administrator, I want to identify reports of the same fault to coordinate a single response.
 
-- Candidatos respeitam edifício, zona e janela temporal; explicam porque foram sugeridos.
-- Associação exige confirmação, conserva originais e pode ser desfeita com auditoria.
-- Não expor texto privado na pesquisa de moradores nem misturar edifícios.
-- Medir precisão/recall em pares anotados; escolher regras ou embeddings após avaliação.
+- Candidates respect building, area and time window; they explain why they were suggested.
+- Linking requires confirmation, preserves originals and can be undone with an audit trail.
+- Do not expose private text in resident searches or mix buildings.
+- Measure precision/recall on annotated pairs; choose rules or embeddings after evaluation.
 
-**Origem:** RF-05; NFR-01/10. **Dependências:** US-01/02, P2, DEC-05. **Horizonte:** S2/S3 se capacidade.
+**Source:** RF-05; NFR-01/10. **Dependencies:** US-01/02, P2, DEC-05. **Horizon:** S2/S3 if capacity allows.
 
-### US-06 — Selecionar prestador · Must · EP-03
+### US-06 — Select a contractor · Must · EP-03
 
-Como administrador, quero selecionar um prestador elegível para preparar a intervenção.
+As an administrator, I want to select an eligible contractor to prepare the intervention.
 
-- Catálogo sintético informa especialidade e cobertura; filtros eliminam candidatos incompatíveis.
-- Ordenação simples e determinística explica critérios disponíveis; dados desconhecidos não são inventados.
-- Administrador pode alterar seleção; sem elegíveis vê pendência e opção de coordenação manual.
-- Seleção não envia pedido nem confirma disponibilidade real.
+- The synthetic catalogue provides specialisation and coverage; filters eliminate incompatible candidates.
+- Simple, deterministic ordering explains available criteria; unknown data is not invented.
+- The administrator can change the selection; when none are eligible, they see a pending state and a manual coordination option.
+- Selection does not send a request or confirm actual availability.
 
-**Origem:** RF-06; NFR-01. **Dependências:** US-02, DEC-10. **Horizonte:** S2.
+**Source:** RF-06; NFR-01. **Dependencies:** US-02, DEC-10. **Horizon:** S2.
 
-### US-07 — Aprovar pedido e obter resposta · Must · EP-03
+### US-07 — Approve a request and obtain a response · Must · EP-03
 
-Como administrador, quero autorizar um pedido e conhecer a resposta do prestador para coordenar a intervenção.
+As an administrator, I want to authorise a request and know the contractor's response to coordinate the intervention.
 
-- Apenas administrador do edifício aprova; registar proposta, condições e versão.
-- Aprovação repetida não envia dois pedidos.
-- Apenas prestador atribuído aceita, recusa ou contrapropõe; contraproposta exige nova aprovação.
-- Aprovação do pedido não apresenta a marcação como confirmada.
-- Condições alteradas invalidam aprovação da versão anterior.
+- Only the building administrator can approve; record the proposal, terms and version.
+- Repeated approval does not send two requests.
+- Only the assigned contractor can accept, decline or counterpropose; a counterproposal requires new approval.
+- Request approval does not show the booking as confirmed.
+- Changed terms invalidate approval of the previous version.
 
-**Origem:** RF-07; NFR-01/04. **Dependências:** US-06, DEC-10. **Horizonte:** S2.
+**Source:** RF-07; NFR-01/04. **Dependencies:** US-06, DEC-10. **Horizon:** S2.
 
-### US-08 — Confirmar calendário e tratar falhas · Must · EP-03
+### US-08 — Confirm calendar booking and handle failures · Must · EP-03
 
-Como administrador, quero saber se a marcação foi efetivamente registada para evitar comunicar uma data falsa.
+As an administrator, I want to know whether the booking was actually recorded to avoid communicating a false date.
 
-- Apenas pedido aprovado e aceite é enviado ao calendário/simulador.
-- Resposta válida guarda referência externa e confirma; timeout/dados inválidos deixam pendência explícita.
-- Retry/evento duplicado não cria segunda marcação; resultado externo incerto é reconciliado.
-- Confirmação manual exige administrador, data e motivo/origem; não a apresentar como sincronizada.
-- Repetir depois da ação manual não cria marcação duplicada.
+- Only an approved and accepted request is sent to the calendar/simulator.
+- A valid response stores the external reference and confirms; timeout/invalid data leaves an explicit pending state.
+- A retry/duplicate event does not create a second booking; uncertain external outcomes are reconciled.
+- Manual confirmation requires an administrator, date and reason/source; do not present it as synchronised.
+- Retrying after manual action does not create a duplicate booking.
 
-**Origem:** RF-08; NFR-04/11. **Dependências:** US-07, DEC-06/10. **Horizonte:** S2.
+**Source:** RF-08; NFR-04/11. **Dependencies:** US-07, DEC-06/10. **Horizon:** S2.
 
-### US-09 — Concluir, encerrar e reabrir · Must · EP-03
+### US-09 — Complete, close and reopen · Must · EP-03
 
-Como administrador, quero verificar a conclusão para encerrar a ocorrência com histórico.
+As an administrator, I want to verify completion to close the issue with a history.
 
-- Prestador atribuído comunica conclusão; ocorrência fica «aguarda validação».
-- Administrador encerra ou devolve para execução com motivo; pode também encerrar manualmente justificando.
-- Reabertura regista motivo e preserva histórico; transições inválidas são rejeitadas.
-- Custo desconhecido não impede encerramento; nenhuma conclusão financeira é inventada.
+- The assigned contractor reports completion; the issue becomes “awaiting validation”.
+- The administrator closes it or returns it for execution with a reason; they can also close it manually with justification.
+- Reopening records a reason and preserves history; invalid transitions are rejected.
+- Unknown cost does not prevent closure; no financial conclusion is invented.
 
-**Origem:** RF-09; NFR-01/09. **Dependências:** US-02/07/08, DEC-10. **Horizonte:** S2, refinamento S3.
+**Source:** RF-09; NFR-01/09. **Dependencies:** US-02/07/08, DEC-10. **Horizon:** S2, refined in S3.
 
-### US-10 — Notificar alterações · Must · EP-01
+### US-10 — Notify changes · Must · EP-01
 
-Como interveniente, quero receber atualizações autorizadas para acompanhar a ocorrência.
+As a participant, I want to receive authorised updates to track the issue.
 
-- Um canal proposto in-app; eventos de estado originam notificações com ID único.
-- Destinatários e conteúdo respeitam visibilidade e preferências opcionais.
-- Retry não duplica notificação; falha fica observável sem desfazer estado da ocorrência.
-- Consulta de estado funciona mesmo se a notificação falhar.
+- One proposed in-app channel; state events generate notifications with unique IDs.
+- Recipients and content respect visibility and optional preferences.
+- Retries do not duplicate notifications; failure is observable without rolling back issue state.
+- Status queries work even if notifications fail.
 
-**Origem:** RF-10; NFR-01/04/06. **Dependências:** US-02/04/07, DEC-06. **Horizonte:** S2.
+**Source:** RF-10; NFR-01/04/06. **Dependencies:** US-02/04/07, DEC-06. **Horizon:** S2.
 
-### US-11 — Registar custo básico · Should · EP-03
+### US-11 — Record a basic cost · Should · EP-03
 
-Como administrador, quero registar custo conhecido para manter histórico da intervenção.
+As an administrator, I want to record known costs to maintain intervention history.
 
-- Valor não negativo, moeda e origem; campo pode estar vazio.
-- Prestador pode propor custo do seu trabalho; confirmação/correção pelo administrador fica auditada.
-- Moradores não recebem custos/dados privados por defeito.
-- Não inclui pagamentos, agregações ou resumo de IA.
+- Non-negative amount, currency and source; the field may be empty.
+- The contractor can propose the cost of their work; administrator confirmation/correction is audited.
+- Residents do not receive costs/private data by default.
+- Does not include payments, aggregations or AI summaries.
 
-**Origem:** RF-11; NFR-01/02. **Dependências:** US-09, DEC-07/10. **Horizonte:** S2/S3 se capacidade.
+**Source:** RF-11; NFR-01/02. **Dependencies:** US-09, DEC-07/10. **Horizon:** S2/S3 if capacity allows.
 
-### US-12 — Refinar ranking · Should · EP-03
+### US-12 — Refine ranking · Should · EP-03
 
-Como administrador, quero comparar critérios adicionais para selecionar entre prestadores elegíveis.
+As an administrator, I want to compare additional criteria to select among eligible contractors.
 
-- Pesos documentados; justificar origem/atualidade de preço, distância e disponibilidade.
-- Dados ausentes não significam preço zero nem disponibilidade confirmada.
-- Testes demonstram ordenação e desempate; aprovação continua humana.
+- Documented weights; justify the source/freshness of price, distance and availability.
+- Missing data does not mean zero price or confirmed availability.
+- Tests demonstrate ordering and tie-breaking; approval remains human.
 
-**Origem:** P6 / RF-06. **Dependências:** US-06, evidência de utilidade e dados. **Horizonte:** S3 se capacidade.
+**Source:** P6 / RF-06. **Dependencies:** US-06, evidence of usefulness and data. **Horizon:** S3 if capacity allows.
 
-### US-13 — Integrar calendário real · Could · EP-03
+### US-13 — Integrate a real calendar · Could · EP-03
 
-Como administrador, quero sincronizar com o calendário usado na operação.
+As an administrator, I want to synchronise with the calendar used in operations.
 
-- Adaptador respeita contrato e cenários já demonstrados pelo simulador.
-- Credenciais ficam fora do Git; permissões e revogação documentadas.
-- Testar disponibilidade e falha sem comprometer avaliação reproduzível.
+- The adapter respects the contract and scenarios already demonstrated by the simulator.
+- Credentials stay outside Git; permissions and revocation are documented.
+- Test availability and failure without compromising reproducible evaluation.
 
-**Origem:** RF-08. **Dependências:** US-08, DEC-06, acesso ao fornecedor. **Horizonte:** se capacidade.
+**Source:** RF-08. **Dependencies:** US-08, DEC-06, provider access. **Horizon:** if capacity allows.
 
-## 5. Won't nesta base / alternativas
+## 5. Won't in this baseline / alternatives
 
-Fotografias e análise visual, gráficos/resumos de custos, pagamentos, marketplace, apps nativas, autoaprovação e subscrições. IoT é **alternativa por decidir em DEC-01**; não recebe compromisso de implementação enquanto não houver revisão de âmbito.
+Photos and visual analysis, cost charts/summaries, payments, marketplace, native apps, automatic approval and subscriptions. IoT is an **alternative awaiting a decision in DEC-01**; no implementation commitment is made until the scope is reviewed.
 
-## 6. Validação com stakeholders e release
+## 6. Stakeholder validation and release
 
-- Sessão de MoSCoW: **não realizada/registada**; data e participantes por preencher.
-- Levar valor por item, custo/risco estimado e trade-offs; registar mudança e motivo em [feedback](planning/decisions-and-feedback.md).
-- Objetivos e plano de release no [roadmap](05-product-roadmap.md#1-horizontes); datas por confirmar.
-- [Sprint B](planning/sprint-b-backlog.md): seleção apenas após DoR/capacidade.
-- Templates e campos: [gestão de issues](governance/issue-management.md).
+- MoSCoW session: **not held/recorded**; date and participants to be filled in.
+- Bring per-item value, estimated cost/risk and trade-offs; record changes and reasons in [feedback](planning/decisions-and-feedback.md).
+- Release objectives and plan in the [roadmap](05-product-roadmap.md#1-horizons); dates to be confirmed.
+- [Sprint B](planning/sprint-b-backlog.md): selection only after DoR/capacity checks.
+- Templates and fields: [issue management](governance/issue-management.md).
 
-Referência: [MoSCoW — ProductPlan](https://www.productplan.com/glossary/moscow-prioritization), consultada em 2026-10-07. A classificação acima é uma proposta de prioridades para o BMC.
+Reference: [MoSCoW — ProductPlan](https://www.productplan.com/glossary/moscow-prioritization), accessed on 2026-10-07. The classification above is a proposed set of priorities for BMC.

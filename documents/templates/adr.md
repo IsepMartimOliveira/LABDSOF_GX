@@ -1,34 +1,34 @@
-# ADR-NNN — Título
+# ADR-NNN — Title
 
-**Estado:** Proposta / Aceite / Rejeitada / Substituída
-**Data:** a preencher
-**Participantes:** a preencher
-**Decisão relacionada:** DEC-XX
-**Substitui / substituída por:** se aplicável
+**Status:** Proposed / Accepted / Rejected / Superseded
+**Date:** to be filled in
+**Participants:** to be filled in
+**Related decision:** DEC-XX
+**Supersedes / superseded by:** if applicable
 
-## Contexto
+## Context
 
-Problema, restrições do enunciado/produto, atributos de qualidade e evidência.
+Problem, assignment/product constraints, quality attributes and evidence.
 
-## Alternativas
+## Alternatives
 
-| Opção | Benefícios | Custos/riscos | Evidência |
+| Option | Benefits | Costs/risks | Evidence |
 |---|---|---|---|
 | A | | | |
 | B | | | |
 
-## Decisão proposta ou aceite
+## Proposed or accepted decision
 
-Distinguir hipótese de escolha efetiva. Se exceção ao enunciado, ligar justificação e resposta dos docentes.
+Distinguish a hypothesis from an actual choice. For an exception to the assignment, link the justification and lecturer response.
 
-## Consequências
+## Consequences
 
-Propriedade de dados, comunicação, deployment, falhas, segurança e esforço quando relevantes.
+Data ownership, communication, deployment, failures, security and effort where relevant.
 
-## Verificação e revisão
+## Verification and review
 
-Como saber se a decisão funciona? Quando a rever?
+How will we know whether the decision works? When should it be reviewed?
 
-## Registo
+## Record
 
-Data, decisores, motivo, evidências, PR/issue e documentos afetados.
+Date, decision-makers, reason, evidence, PR/issue and affected documents.

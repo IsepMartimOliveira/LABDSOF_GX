@@ -1,59 +1,59 @@
-# Requisitos iniciais e atributos de qualidade
+# Initial requirements and quality attributes
 
-**Estado:** proposta v0.1 · Sprint 1, Phase 2–3 · validação pendente
+**Status:** proposal v0.1 · Sprint 1, Phases 2–3 · validation pending
 
-Origem: [enunciado](../LABDSOF-26-27-Assignment.md), [hipóteses P1–P7](01-problem-and-opportunity-report.md) e [visão J1–J3](04-product-vision.md). Não há ainda requisitos confirmados por entrevistas. «Must» no backlog é prioridade proposta para a release académica, não aprovação do cliente.
+Sources: [assignment](../LABDSOF-26-27-Assignment.md), [hypotheses P1–P7](01-problem-and-opportunity-report.md) and [vision J1–J3](04-product-vision.md). No requirements have yet been confirmed through interviews. “Must” in the backlog is a proposed priority for the academic release, not customer approval.
 
-## Requisitos funcionais
+## Functional requirements
 
-Consultar a [tabela de épicos no Product Backlog](06-product-backlog.md#2-épicos) para o âmbito e os itens associados a cada épico.
+See the [epics table in the Product Backlog](06-product-backlog.md#2-epics) for the scope and items associated with each epic.
 
-| ID | Requisito proposto | Origem | Backlog / épico |
+| ID | Proposed requirement | Source | Backlog / epic |
 |---|---|---|---|
-| RF-01 | Registar relato por texto em edifício autorizado e devolver ID persistente | P1, P5 / J1 | US-01 / EP-01 |
-| RF-02 | Consultar estado e histórico, triar manualmente e controlar transições | P1 / J1–J2 | US-02 / EP-01 |
-| RF-03 | Sugerir categoria/urgência por IA com proveniência, correção e fallback | P3, P7 / §5.6 | US-03 / EP-02 |
-| RF-04 | Publicar resumo comum e permitir confirmar/retirar impacto sem expor identidade | P2, P5 / §5.5 | US-04 / EP-01 |
-| RF-05 | Sugerir e rever associação de relatos semelhantes preservando originais | P2 / J2 | US-05 / EP-02 |
-| RF-06 | Consultar catálogo, filtrar elegibilidade e selecionar prestador | P1, P6 / J2 | US-06 / EP-03 |
-| RF-07 | Aprovar pedido, receber aceitação/recusa/contraproposta e registar revisão | P6 / J2–J3 | US-07 / EP-03 |
-| RF-08 | Sincronizar calendário externo/simulador e registar pendência ou confirmação manual | P6 / §6.5 | US-08 / EP-03 |
-| RF-09 | Receber conclusão, encerrar/reabrir pelo administrador com histórico | P1 / J2–J3 | US-09 / EP-03 |
-| RF-10 | Notificar estados num canal e respeitar preferências opcionais | P5 / J1–J3 | US-10 / EP-01 |
-| RF-11 | Registar custo básico opcional com origem, moeda e correção auditada | P1 / J2–J3 | US-11 / EP-03 |
+| RF-01 | Record a text report in an authorised building and return a persistent ID | P1, P5 / J1 | US-01 / EP-01 |
+| RF-02 | View status and history, triage manually and control transitions | P1 / J1–J2 | US-02 / EP-01 |
+| RF-03 | Suggest category/urgency using AI with provenance, correction and fallback | P3, P7 / §5.6 | US-03 / EP-02 |
+| RF-04 | Publish a shared summary and allow impact confirmation/withdrawal without exposing identity | P2, P5 / §5.5 | US-04 / EP-01 |
+| RF-05 | Suggest and review links between similar reports while preserving originals | P2 / J2 | US-05 / EP-02 |
+| RF-06 | Browse the catalogue, filter eligibility and select a contractor | P1, P6 / J2 | US-06 / EP-03 |
+| RF-07 | Approve a request, receive acceptance/rejection/counterproposal and record review | P6 / J2–J3 | US-07 / EP-03 |
+| RF-08 | Synchronise an external calendar/simulator and record a pending state or manual confirmation | P6 / §6.5 | US-08 / EP-03 |
+| RF-09 | Receive completion reports and let the administrator close/reopen with history | P1 / J2–J3 | US-09 / EP-03 |
+| RF-10 | Notify status changes through one channel and respect optional preferences | P5 / J1–J3 | US-10 / EP-01 |
+| RF-11 | Record an optional basic cost with source, currency and audited correction | P1 / J2–J3 | US-11 / EP-03 |
 
-Seleção por preço/distância e embeddings são refinamentos condicionados, não dados garantidamente disponíveis. IoT e previsão não entram nesta lista enquanto DEC-01 estiver aberta.
+Price/distance selection and embeddings are conditional refinements, not guaranteed available data. IoT and prediction are excluded from this list while DEC-01 remains open.
 
-## Requisitos não funcionais / restrições
+## Non-functional requirements / constraints
 
-Os alvos numéricos abaixo são propostas para discussão (DEC-08), não resultados ou SLAs de produção. Congelar cenário, ambiente e limiares antes de medir.
+The numerical targets below are proposals for discussion (DEC-08), not results or production SLAs. Freeze the scenario, environment and thresholds before measuring.
 
-| ID | Qualidade / cenário | Critério de verificação proposto | Itens |
+| ID | Quality / scenario | Proposed verification criterion | Items |
 |---|---|---|---|
-| NFR-01 | Autorização e isolamento | Todos os testes da matriz autor/admin/prestador/outro edifício negam acessos indevidos no backend; identidade mock não elimina autorização | US-01–US-11, EN-03 |
-| NFR-02 | Privacidade | Dados sintéticos na demo; payloads/logs sem campos pessoais desnecessários; retenção e eliminação definidas antes de recolha real | DISC-01, EN-01/03 |
-| NFR-03 | Resiliência de IA | Registo funciona com IA desligada; timeout proposto de 10 s por tentativa; fallback/pending visível e correção manual disponível | US-03, EN-03 |
-| NFR-04 | Entrega assíncrona | Reentrega do mesmo evento não duplica efeitos; retries limitados e falha final observável; testar crash entre persistência e publicação | US-03/08/10, EN-03 |
-| NFR-05 | Desempenho | Proposta: p95 ≤ 2 s no registo/consulta, 10 utilizadores concorrentes e 1 000 ocorrências sintéticas; excluir tempo externo de IA e documentar hardware | EN-03/04 |
-| NFR-06 | Observabilidade | Logs estruturados, health checks, métricas, correlation ID e erro rastreável num dashboard; demonstrar um percurso completo | EN-02/03 |
-| NFR-07 | Usabilidade/acessibilidade | Jornadas por teclado, foco visível, labels e erros compreensíveis, estado sem depender só de cor; teste de reporte em ≤ 2 min como alvo a validar | US-01/02, EN-04 |
-| NFR-08 | Entrega e manutenção | Builds reproduzíveis, contentores, testes/CI, configuração sem segredos no Git, instruções e recuperação exercitada | EN-02/03 |
-| NFR-09 | Persistência/recuperação | Ocorrências sobrevivem a reinício; ensaio backup/restore com contagens e integridade; RPO/RTO propostos após conhecer ambiente | EN-02/03 |
-| NFR-10 | Qualidade/custo de IA | Dataset e versões rastreáveis; métricas por classe, latência e custo; budget e limites antes de Ready | US-03, EN-04 |
-| NFR-11 | Integração | Falha/atraso/dados incompletos ou inválidos não produzem confirmação falsa; repetição não duplica marcação | US-08, EN-03 |
+| NFR-01 | Authorisation and isolation | All tests of the author/admin/contractor/other-building matrix deny unauthorised backend access; mock identity does not remove authorisation | US-01–US-11, EN-03 |
+| NFR-02 | Privacy | Synthetic demo data; payloads/logs exclude unnecessary personal fields; retention and deletion defined before real collection | DISC-01, EN-01/03 |
+| NFR-03 | AI resilience | Reporting works with AI disabled; proposed timeout of 10 s per attempt; visible fallback/pending state and manual correction available | US-03, EN-03 |
+| NFR-04 | Asynchronous delivery | Redelivery of the same event does not duplicate effects; limited retries and observable final failure; test crashes between persistence and publication | US-03/08/10, EN-03 |
+| NFR-05 | Performance | Proposal: p95 ≤ 2 s for reporting/viewing, 10 concurrent users and 1,000 synthetic issues; exclude external AI time and document hardware | EN-03/04 |
+| NFR-06 | Observability | Structured logs, health checks, metrics, correlation ID and traceable errors in a dashboard; demonstrate one complete path | EN-02/03 |
+| NFR-07 | Usability/accessibility | Keyboard journeys, visible focus, labels and understandable errors, status not conveyed by colour alone; reporting task in ≤ 2 min as a target to validate | US-01/02, EN-04 |
+| NFR-08 | Delivery and maintenance | Reproducible builds, containers, tests/CI, configuration without secrets in Git, instructions and exercised recovery | EN-02/03 |
+| NFR-09 | Persistence/recovery | Issues survive restart; backup/restore exercise with counts and integrity checks; RPO/RTO proposed after the environment is known | EN-02/03 |
+| NFR-10 | AI quality/cost | Traceable dataset and versions; per-class metrics, latency and cost; budget and limits defined before Ready | US-03, EN-04 |
+| NFR-11 | Integration | Failure/delay/incomplete or invalid data produces no false confirmation; repetition does not duplicate bookings | US-08, EN-03 |
 
-## Prioridades, aceitação e rastreabilidade
+## Priorities, acceptance and traceability
 
-[Backlog](06-product-backlog.md) contém MoSCoW proposto e critérios por item. Uma necessidade identificada por investigação deve referir E/F do registo de evidências e atualizar esta tabela. Alteração técnica significativa gera ADR.
+The [backlog](06-product-backlog.md) contains proposed MoSCoW priorities and item-level criteria. A need identified through research must reference E/F in the evidence register and update this table. A significant technical change requires an ADR.
 
-Modelo e estados: [desenho técnico](08-technical-design.md). Políticas de acesso/dados: [segurança](09-security-privacy.md).
+Model and states: [technical design](08-technical-design.md). Access/data policies: [security](09-security-privacy.md).
 
-## Por decidir
+## Open decisions
 
-- Metas quantitativas e ambiente (DEC-08).
-- Dados visíveis, retenção e meios de exercício da eliminação (DEC-07).
-- Regras de negócio de agendamento e encerramento (DEC-10).
-- Suporte a relatos privados de frações no piloto; base mantém relato bruto restrito.
-- Alternativa assistida para moradores sem acesso digital, a investigar antes de ampliar o MVP.
+- Quantitative targets and environment (DEC-08).
+- Visible data, retention and ways to request deletion (DEC-07).
+- Scheduling and closure business rules (DEC-10).
+- Support for private reports about individual units in the pilot; the baseline keeps raw reports restricted.
+- Assisted access for residents without digital access, to investigate before expanding the MVP.
 
-Referência: [Nonfunctional Requirements — Scaled Agile](https://framework.scaledagile.com/nonfunctional-requirements/), consultada em 2026-10-07. Os cenários e valores acima são propostas próprias para este projeto.
+Reference: [Nonfunctional Requirements — Scaled Agile](https://framework.scaledagile.com/nonfunctional-requirements/), accessed on 2026-10-07. The scenarios and values above are proposals specific to this project.

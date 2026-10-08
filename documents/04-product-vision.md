@@ -1,114 +1,114 @@
 # 4. Product Vision
 
-**Estado:** proposta v0.3 · **Sprint:** 1 · **Revisão:** 2026-10-09
+**Status:** proposal v0.3 · **Sprint:** 1 · **Reviewed:** 2026-10-09
 
-Personas, prioridades e metas são hipóteses. Esta é a **fonte do âmbito funcional proposto**; alterações devem refletir-se no [backlog](06-product-backlog.md), [requisitos](requirements.md) e [decisões](planning/decisions-and-feedback.md).
+Personas, priorities and targets are hypotheses. This is the **source of the proposed functional scope**; changes must be reflected in the [backlog](06-product-backlog.md), [requirements](requirements.md) and [decisions](planning/decisions-and-feedback.md).
 
-## 1. Visão e proposta de valor
+## 1. Vision and value proposition
 
-> Ajudar comunidades residenciais a recuperar de avarias do quotidiano, com coordenação rastreável, menos esforço administrativo e informação adequada a cada interveniente.
+> Help residential communities recover from everyday faults through traceable coordination, less administrative effort and information appropriate to each participant.
 
-Para administradores que recebem avisos dispersos, o BMC organiza o percurso do relato à resolução, sugere triagem e apoia intervenções. O ganho esperado é menor esforço de coordenação; a diferenciação face às alternativas continua por validar.
+For administrators receiving scattered reports, BMC organises the path from reporting to resolution, suggests triage and supports interventions. The expected benefit is reduced coordination effort; differentiation from alternatives still needs validation.
 
-## 2. Personas provisórias
+## 2. Provisional personas
 
-| Persona | Contexto [Hipótese] | Ganho esperado | Dificuldade / condição de confiança a investigar |
+| Persona | Context [Hypothesis] | Expected benefit | Difficulty / condition for trust to investigate |
 |---|---|---|---|
-| Marta, administradora profissional | Gere vários edifícios | Menos esforço por ocorrência e controlo das decisões/custos | Contactos dispersos; precisa de compreender sugestões e aprovar antes de comprometer recursos |
-| Rui, morador | Usa telemóvel e reporta ocasionalmente | Reportar facilmente e conhecer estado/data confirmada | Falta de feedback; receio de exposição da localização e de detalhes privados |
-| Carlos, prestador | Pequena empresa de manutenção | Pedidos completos e agenda organizada, evitando deslocações em vão | Descrições vagas, alterações tardias e dúvidas sobre condições de pagamento |
+| Marta, professional administrator | Manages several buildings | Less effort per issue and control over decisions/costs | Scattered contacts; needs to understand suggestions and approve before committing resources |
+| Rui, resident | Uses a mobile phone and reports occasionally | Report easily and know the status/confirmed date | Lack of feedback; concern about exposing location and private details |
+| Carlos, contractor | Small maintenance company | Complete requests and an organised schedule, avoiding wasted trips | Vague descriptions, late changes and uncertainty about payment terms |
 
-Pagamento atempado é uma necessidade a investigar, não uma promessa de funcionalidade de pagamentos. As metas de usabilidade pertencem aos [NFRs](requirements.md#requisitos-não-funcionais--restrições).
+Timely payment is a need to investigate, not a promise of payment functionality. Usability targets belong in the [NFRs](requirements.md#non-functional-requirements--constraints).
 
-Voluntários são participantes relevantes, mas não validam por si só a adoção pelas empresas.
+Volunteers are relevant participants, but cannot by themselves validate adoption by companies.
 
-## 3. Jornadas e responsabilidades
+## 3. Journeys and responsibilities
 
-### J1 — Reportar e acompanhar
+### J1 — Report and track
 
-1. Morador autenticado seleciona edifício a que pertence, zona e descrição por texto.
-2. Sistema persiste o relato e confirma receção sem esperar pela IA.
-3. Quando implementadas, sugestões de ocorrências semelhantes mostram apenas informação autorizada; associação não é automática e não apaga o relato.
-4. Morador acompanha o estado e, nas ocorrências comuns publicadas, pode confirmar «isto também me afeta».
-5. Recebe atualizações pelo canal definido e gere a subscrição.
+1. An authenticated resident selects a building they belong to, an area and a text description.
+2. The system persists the report and acknowledges receipt without waiting for AI.
+3. When implemented, suggestions of similar issues show only authorised information; linking is not automatic and does not delete the report.
+4. The resident tracks the status and can confirm “This affects me too” on published shared issues.
+5. They receive updates through the defined channel and manage their subscription.
 
-### J2 — Triar e coordenar (jornada principal)
+### J2 — Triage and coordinate (main journey)
 
-1. Administrador vê a fila dos edifícios que gere, incluindo itens sem classificação ou em fallback.
-2. Revê categoria, urgência e motivo sugeridos; pode corrigir e registar a decisão.
-3. Revê sugestões de duplicados, se disponíveis, e publica, quando apropriado, um resumo sem dados privados.
-4. Seleciona prestador elegível de catálogo pequeno; ranking por regras explica os critérios disponíveis.
-5. Aprova proposta e envia pedido. Sem prestador elegível, ocorrência fica visivelmente pendente de ação manual.
-6. Após aceitação do prestador, acompanha sincronização do calendário. Sem confirmação externa, fica «agendamento pendente»; pode confirmar manualmente e registar a origem.
-7. Revê conclusão, regista custo quando conhecido e encerra. Pode reabrir com motivo.
+1. The administrator sees the queue for buildings they manage, including unclassified items or items using fallback.
+2. They review the suggested category, urgency and rationale; they can correct them and record the decision.
+3. They review duplicate suggestions, if available, and publish a summary without private data when appropriate.
+4. They select an eligible contractor from a small catalogue; rule-based ranking explains the available criteria.
+5. They approve the proposal and send the request. If no contractor is eligible, the issue remains visibly pending manual action.
+6. After the contractor accepts, they track calendar synchronisation. Without external confirmation, the status remains “scheduling pending”; they can confirm manually and record the source.
+7. They review completion, record the cost when known and close the issue. They can reopen it with a reason.
 
-### J3 — Responder e executar
+### J3 — Respond and carry out the work
 
-1. Prestador consulta apenas pedidos atribuídos e dados necessários.
-2. Aceita, recusa ou propõe outra data. Alteração de condições volta à aprovação do administrador.
-3. Comunica conclusão e custo, se conhecido. Não encerra automaticamente a ocorrência.
+1. The contractor sees only assigned requests and necessary data.
+2. They accept, decline or propose another date. Changes to terms return to the administrator for approval.
+3. They report completion and cost, if known. This does not automatically close the issue.
 
-### J4 — Analisar custos (pós-MVP)
+### J4 — Analyse costs (post-MVP)
 
-Administrador consulta agregações e tendências; números calculados a partir dos registos. Resumos por IA dependem de necessidade demonstrada e avaliação própria.
+The administrator views aggregates and trends; figures are calculated from records. AI summaries depend on a demonstrated need and a separate evaluation.
 
-## 4. Fronteira do MVP proposto
+## 4. Proposed MVP boundary
 
-| Base proposta | Candidatos condicionados | Fora da base / pós-MVP |
+| Proposed baseline | Conditional candidates | Outside the baseline / post-MVP |
 |---|---|---|
-| Relato por texto, estados e histórico | Duplicados avançados por embeddings | Upload/análise de fotografias |
-| Classificação assistida, revisão, regras e fallback | Ranking por preço/distância se houver dados fiáveis | Gráficos e resumos de custos |
-| Confirmação de impacto em ocorrências comuns | Calendário real em vez de simulador | Marketplace, pagamentos, quotas e assembleias |
-| Catálogo, seleção por regras e aprovação | IoT limitado, só após DEC-01 e revisão do âmbito | Monitorização abrangente e previsão de avarias |
-| Resposta do prestador e integração de calendário | Canal adicional de notificação | Autoaprovação de despesas |
-| Notificação num canal, encerramento e autorização efetiva | | Apps nativas e gestão de subscrições |
+| Text reports, states and history | Advanced duplicate detection using embeddings | Photo upload/analysis |
+| Assisted classification, review, rules and fallback | Price/distance ranking if reliable data is available | Cost charts and summaries |
+| Impact confirmation on shared issues | Real calendar instead of a simulator | Marketplace, payments, condominium fees and assemblies |
+| Catalogue, rule-based selection and approval | Limited IoT, only after DEC-01 and a scope review | Comprehensive monitoring and fault prediction |
+| Contractor response and calendar integration | Additional notification channel | Automatic expense approval |
+| Notifications through one channel, closure and enforced authorisation | | Native apps and subscription management |
 
-Custo básico pode ficar «não informado» e não bloqueia encerramento. O [backlog](06-product-backlog.md) distingue Must/Should/Could/Won't; prioridades aguardam discussão com cliente/docentes.
+Basic cost may remain “not provided” and does not block closure. The [backlog](06-product-backlog.md) distinguishes Must/Should/Could/Won't; priorities await discussion with the customer/lecturers.
 
-## 5. Métricas e sucesso
+## 5. Metrics and success
 
-| Métrica | Como medir | Critério proposto / limitação |
+| Metric | How to measure | Proposed criterion / limitation |
 |---|---|---|
-| Esforço ativo administrativo — principal | Tempo de triagem e preparação em tarefas equivalentes, processo atual vs BMC | Redução pretendida; limiar pendente de baseline (DEC-08) |
-| Tempo até pedido enviado | Receção até envio ao prestador | Separar espera de tempo ativo |
-| Tempo até aceitação | Envio até resposta do prestador | Não confundir envio com confirmação |
-| Tempo até resolução | Receção até encerramento | Exploratória; simulação não prova impacto real |
-| Qualidade da triagem | Modelo, regras e sistema combinado | Protocolo e metas no [AI Assessment](07-responsible-ai-assessment.md) |
-| Qualidade dos duplicados | Precisão e recall em pares rotulados, se implementado | Critérios centralizados no [AI Assessment](07-responsible-ai-assessment.md#4-critérios-provisórios) |
-| Aceitação sem edição | Percentagem e auditoria de correção | Não equivale isoladamente a confiança |
-| Continuidade | IA desligada e calendário indisponível | Relato e triagem continuam; agendamento pendente/manual explícito |
+| Active administrative effort — primary | Triage and preparation time for equivalent tasks, current process vs BMC | Intended reduction; threshold pending a baseline (DEC-08) |
+| Time until request sent | Receipt to dispatch to the contractor | Separate waiting from active time |
+| Time until acceptance | Dispatch to contractor response | Do not confuse dispatch with confirmation |
+| Time until resolution | Receipt to closure | Exploratory; simulation does not prove real impact |
+| Triage quality | Model, rules and combined system | Protocol and targets in the [AI Assessment](07-responsible-ai-assessment.md) |
+| Duplicate detection quality | Precision and recall on labelled pairs, if implemented | Criteria centralised in the [AI Assessment](07-responsible-ai-assessment.md#4-provisional-criteria) |
+| Acceptance without editing | Percentage and correctness audit | Does not independently equate to trust |
+| Continuity | AI disabled and calendar unavailable | Reporting and triage continue; pending/manual scheduling is explicit |
 
-Entrevistas dão estimativas, não medições instrumentadas. Nos testes, variar ordem dos métodos quando possível e declarar amostra e limitações.
+Interviews provide estimates, not instrumented measurements. In tests, vary the order of methods where possible and disclose the sample and limitations.
 
-## 6. Participação ética e visibilidade
+## 6. Ethical participation and visibility
 
-**Mecanismo:** «isto também me afeta», em resumos de ocorrências comuns publicados pelo administrador para o mesmo edifício.
+**Mechanism:** “This affects me too”, on shared issue summaries published by the administrator for the same building.
 
-1. Incentiva confirmar impacto em vez de repetir relatos.
-2. Ajuda a compreender alcance; contador não determina urgência.
-3. Uma confirmação por utilizador/ocorrência, limites de frequência e autorização por edifício.
-4. Identidades não são expostas a outros moradores; sem rankings nem penalização de não participantes.
-5. Utilizador pode retirar confirmação e desligar atualizações opcionais; pode sempre criar relato distinto.
+1. Encourages confirming impact instead of repeating reports.
+2. Helps understand the extent of impact; the counter does not determine urgency.
+3. One confirmation per user/issue, rate limits and authorisation by building.
+4. Identities are not exposed to other residents; no rankings or penalties for non-participants.
+5. Users can withdraw confirmation and disable optional updates; they can always create a separate report.
 
-O mecanismo deve respeitar a [matriz de acesso](09-security-privacy.md#2-matriz-de-acesso-proposta), incluindo a separação entre relato privado e resumo publicado. Proposta por validar em DEC-07.
+The mechanism must respect the [access matrix](09-security-privacy.md#2-proposed-access-matrix), including the separation between the private report and the published summary. Proposal awaiting validation in DEC-07.
 
-## 7. Riscos
+## 7. Risks
 
-| Risco | Resposta proposta |
+| Risk | Proposed response |
 |---|---|
-| Segmento sem interesse | Investigar episódios, ferramentas atuais e disponibilidade para testar |
-| IA sem valor adicional | Comparar baseline e rever tarefa; manter workflow significativo exigido |
-| Urgência crítica não reconhecida | Regras independentes e revisão; sem garantia de deteção perfeita |
-| Âmbito excessivo | Ciclo completo primeiro; extras dependem de capacidade |
-| Concorrente cobre fluxo | Rever valor com evidência; sem reposicionamento automático para custos |
-| Falha externa | Pendência visível, retries limitados, idempotência e ação manual auditada |
+| Segment shows no interest | Investigate specific episodes, current tools and willingness to test |
+| AI adds no value | Compare the baseline and review the task; retain the required meaningful workflow |
+| Critical urgency goes unrecognised | Independent rules and review; no guarantee of perfect detection |
+| Excessive scope | Complete cycle first; extras depend on capacity |
+| A competitor covers the workflow | Review value against evidence; no automatic repositioning towards costs |
+| External failure | Visible pending state, limited retries, idempotency and audited manual action |
 
-DEC-01 a DEC-10 no [registo](planning/decisions-and-feedback.md). Estas propostas ainda não são decisões aprovadas por stakeholders.
+DEC-01 to DEC-10 are in the [register](planning/decisions-and-feedback.md). These proposals are not yet stakeholder-approved decisions.
 
-## 8. Modelo de negócio
+## 8. Business model
 
-**[Hipótese]** SaaS por edifício ou fração, com condições adequadas a empresas de administração. Comprador, disposição para pagar e custos de adoção por validar em DEC-02 e no [guião de administradores](03-user-research.md#41-administrador-profissional-ou-voluntário). Comissão/parceria com prestadores é apenas uma hipótese futura, sem ampliar o MVP.
+**[Hypothesis]** SaaS per building or unit, with terms suitable for property management companies. Buyer, willingness to pay and adoption costs need validation in DEC-02 and the [administrator interview guide](03-user-research.md#41-administrator-professional-or-volunteer). Contractor commissions/partnerships are only a future hypothesis and do not expand the MVP.
 
-## 9. Benefício esperado para a comunidade
+## 9. Expected community benefit
 
-Pretende-se facilitar resposta a avarias de água, luz e elevadores, reduzir esforço de coordenação e dar visibilidade ao progresso. Menos demora pode reduzir impacto e danos, mas esse benefício ainda precisa de evidência. Transparência respeita as permissões; não implica publicar custos ou detalhes privados para todo o edifício.
+The aim is to make it easier to respond to water, lighting and lift faults, reduce coordination effort and provide visibility of progress. Shorter delays may reduce impact and damage, but this benefit still needs evidence. Transparency respects permissions; it does not mean publishing costs or private details to the whole building.

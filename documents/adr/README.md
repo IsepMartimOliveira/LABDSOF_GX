@@ -1,16 +1,16 @@
 # Architecture Decision Records
 
-**Estado:** decisões em preparação; nenhuma ADR aceite nesta revisão
+**Status:** decisions in preparation; no ADR accepted in this revision
 
-ADRs documentam contexto, alternativas, escolha, consequências e evidência. «Proposta» não autoriza afirmar que uma tecnologia foi escolhida ou que a exceção de monólito foi aceite.
+ADRs document context, alternatives, choice, consequences and evidence. “Proposed” does not justify claiming that a technology was selected or that a monolith exception was accepted.
 
-| ADR | Tema | Estado |
+| ADR | Topic | Status |
 |---|---|---|
-| [ADR-001](ADR-001-backend-boundaries.md) | Fronteiras e deployment backend | Proposta |
-| A criar após investigação | Stack, armazenamento, broker e ambiente | Por decidir em DEC-04 |
-| A criar após comparação | Fornecedor/contrato de IA e avaliação | Por decidir em DEC-05 |
-| A criar após desenho de integração | Calendário/simulador e reconciliação | Por decidir em DEC-06 |
+| [ADR-001](ADR-001-backend-boundaries.md) | Backend boundaries and deployment | Proposed |
+| To be created after investigation | Stack, storage, broker and environment | Undecided in DEC-04 |
+| To be created after comparison | AI provider/contract and evaluation | Undecided in DEC-05 |
+| To be created after integration design | Calendar/simulator and reconciliation | Undecided in DEC-06 |
 
-Usar [template](../templates/adr.md). Estados: Proposta → Aceite ou Rejeitada; uma decisão aceite pode ser Substituída por nova ADR, mantendo histórico. Registar participantes/data e links a provas ou feedback.
+Use the [template](../templates/adr.md). States: Proposed → Accepted or Rejected; an accepted decision may be Superseded by a new ADR, preserving history. Record participants/date and links to evidence or feedback.
 
-O índice enumera decisões a tomar, não documentos finais que já existam. Decisões de produto e processo pertencem ao [registo](../planning/decisions-and-feedback.md).
+The index lists decisions to make, not final documents that already exist. Product and process decisions belong in the [register](../planning/decisions-and-feedback.md).

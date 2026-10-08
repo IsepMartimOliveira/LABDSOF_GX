@@ -1,186 +1,186 @@
 # 3. User Research
 
-**Projeto:** Building Maintenance Coordinator
-**Sprint:** 1 · **Estado:** plano de investigação (v0.3). **Ainda não existem resultados.** · **Revisão:** 2026-10-09
+**Project:** Building Maintenance Coordinator
+**Sprint:** 1 · **Status:** research plan (v0.3). **No findings yet.** · **Revision:** 2026-10-09
 
-> **Regra do enunciado:** não fabricar evidência de investigação. Este documento contém o plano, os guiões e os modelos de registo. As secções de resultados ficam **em branco até haver dados reais**. Se não for possível entrevistar utilizadores reais, isso deve ser escrito na secção de limitações.
+> **Assignment rule:** do not fabricate research evidence. This document contains the plan, interview guides and recording templates. Findings sections remain **blank until real data exists**. If interviewing real users is not possible, state this in the limitations section.
 
 ---
 
-## 1. Objetivos de investigação
+## 1. Research objectives
 
-| # | Pergunta | Pressuposto relacionado (entregável 1) |
+| # | Question | Related assumption (deliverable 1) |
 |---|---|---|
-| Q1 | Como são geridas hoje as avarias num condomínio, do primeiro aviso à resolução? | P1, P3 |
-| Q2 | Quanto tempo e esforço custa ao administrador cada ocorrência? | P1 |
-| Q3 | Com que frequência há reports duplicados ou contraditórios? | P2 |
-| Q4 | Como é decidida a urgência e quem decide? | P3 |
-| Q5 | Como são escolhidos os prestadores (critérios, fontes, aprovações, limites de custo)? | P6 |
-| Q6 | Que ferramentas são usadas hoje e o que falta nelas? | Entregável 2 |
-| Q7 | Os administradores aceitariam uma recomendação assistida por AI com aprovação? Em que condições? | P7 |
-| Q8 | O que leva um condómino a reportar (ou a não reportar)? | P5 |
-| Q9 | O que precisa um contractor de saber num pedido, e como gere a agenda? | P6 |
+| Q1 | How are maintenance issues currently managed, from first report to resolution? | P1, P3 |
+| Q2 | How much time and effort does each issue cost the administrator? | P1 |
+| Q3 | How often are reports duplicated or contradictory? | P2 |
+| Q4 | How is urgency determined, and who decides? | P3 |
+| Q5 | How are contractors chosen (criteria, sources, approvals, cost limits)? | P6 |
+| Q6 | What tools are used today, and what is missing? | Deliverable 2 |
+| Q7 | Would administrators accept AI-assisted recommendations subject to approval? Under what conditions? | P7 |
+| Q8 | What prompts residents to report, or not report, an issue? | P5 |
+| Q9 | What does a contractor need to know about a request, and how do they manage scheduling? | P6 |
 
-## 2. Métodos
+## 2. Methods
 
-| Método | Para quê | Participantes | Esforço |
+| Method | Purpose | Participants | Effort |
 |---|---|---|---|
-| Entrevistas semiestruturadas (30 a 40 min) | Q1 a Q7, Q9 | Administradores, prestadores | Principal método |
-| Inquérito curto online | Q8, validar frequência de problemas | Condóminos | Baixo |
-| Revisão de experiências documentadas (artigos, fóruns, reviews de apps) | Q1, Q6 | Fontes públicas | Baixo |
-| Análise de documentos públicos dos concorrentes / demos | Q6 | n/a | Baixo |
-| Teste de protótipo (Sprint 1 final ou Sprint 2) | Q7, usabilidade | Administradores, condóminos | Médio |
+| Semi-structured interviews (30–40 min) | Q1–Q7, Q9 | Administrators, contractors | Primary method |
+| Short online survey | Q8, validate problem frequency | Residents | Low |
+| Review of documented experiences (articles, forums, app reviews) | Q1, Q6 | Public sources | Low |
+| Public competitor documentation / demos | Q6 | n/a | Low |
+| Prototype testing (late Sprint 1 or Sprint 2) | Q7, usability | Administrators, residents | Medium |
 
-### Amostra-alvo (proposta a ajustar à capacidade)
+### Target sample (proposal to adjust to capacity)
 
-| Grupo | Alvo | Nota |
+| Group | Target | Note |
 |---|---|---|
-| Administradores profissionais | 2 a 3 | Acesso difícil; recorrer a contactos pessoais ou da faculdade |
-| Administradores condóminos / voluntários | 3 a 5 | Mais fácil (familiares, vizinhos, conhecidos) |
-| Condóminos | 8 a 15 (inquérito) | Distribuir por redes pessoais |
-| Contractors | 2 a 3 | Eletricistas, canalizadores, empresas de manutenção |
+| Professional administrators | 2–3 | Access may be difficult; use personal or university contacts |
+| Resident / volunteer administrators | 3–5 | Easier access through relatives, neighbours or acquaintances |
+| Residents | 8–15 (survey) | Distribute through personal networks |
+| Contractors | 2–3 | Electricians, plumbers, maintenance companies |
 
-Estes números são **objetivos**, não resultados. Registar o número real obtido.
+These figures are **targets**, not results. Record the actual numbers obtained.
 
-## 3. Recrutamento e ética
+## 3. Recruitment and ethics
 
-- Explicar o **propósito** do estudo antes de começar (requisito do enunciado, secção 11).
-- Obter **consentimento** (registado em nota ou por escrito) para notas e, se aplicável, gravação áudio.
-- **Não recolher dados pessoais desnecessários.** Identificar participantes com códigos (A1, A2, C1…). Códigos são pseudónimos se existir ligação à identidade; guardar essa ligação separadamente e fora do Git.
-- Não pedir a participantes que partilhem dados reais de moradores, fotos de casas ou documentos internos.
-- Permitir desistir a qualquer momento. Guardar notas em local com acesso restrito à equipa.
-- Antes da recolha, definir responsável, acesso e retenção segundo o [ciclo de vida dos dados](09-security-privacy.md#4-ciclo-de-vida-e-minimização). Não publicar registos brutos; usar apenas sínteses sem elementos identificadores.
+- Explain the study's **purpose** before starting (assignment section 11).
+- Obtain **consent**, recorded in notes or in writing, for note-taking and, where applicable, audio recording.
+- **Do not collect unnecessary personal data.** Identify participants by codes (A1, A2, C1…). Codes are pseudonyms if a link to identity exists; store that link separately and outside Git.
+- Do not ask participants to share real residents' data, home photographs or internal documents.
+- Allow withdrawal at any time. Store notes with access restricted to the team.
+- Before collecting data, define responsibility, access and retention under the [data lifecycle policy](09-security-privacy.md#4-data-lifecycle-and-minimisation). Do not publish raw records; use only summaries without identifying details.
 
-### Texto de consentimento (modelo)
+### Consent text (template)
 
-> Somos estudantes a desenvolver um projeto académico sobre gestão de avarias em condomínios. Gostaríamos de lhe fazer algumas perguntas sobre a sua experiência (cerca de 30 minutos). A participação é voluntária e pode parar a qualquer momento. Usaremos as respostas apenas neste projeto e publicaremos apenas sínteses sem elementos identificadores. Podemos tomar notas? A gravação é opcional e exige autorização separada; antes de gravar explicaremos quem terá acesso, onde será guardada e a data de eliminação.
+> We are students developing an academic project about maintenance issue management in residential buildings. We would like to ask about your experience (around 30 minutes). Participation is voluntary and you may stop at any time. We will use your responses only for this project and publish only summaries without identifying details. May we take notes? Recording is optional and requires separate permission; before recording, we will explain who can access it, where it will be stored and when it will be deleted.
 
-## 4. Guiões de entrevista
+## 4. Interview guides
 
-Começar por episódios reais e só depois apresentar a proposta. As perguntas centrais estão abaixo; extensões opcionais ficam separadas para não induzir âmbito nem alongar todas as entrevistas.
+Start with real experiences and only then present the proposal. Core questions are below; optional extensions are separate to avoid implying a fixed scope or lengthening every interview.
 
-### 4.1 Administrador (profissional ou voluntário)
+### 4.1 Administrator (professional or volunteer)
 
-**Contexto**
+**Context**
 
-1. Quantos edifícios/frações gere? Há quanto tempo? Esta é a sua atividade principal?
-2. Existe porteiro ou zelador?
+1. How many buildings/units do you manage? For how long? Is this your main occupation?
+2. Is there a caretaker or building attendant?
 
-**Fluxo atual**
+**Current workflow**
 
-3. Conte-me a última avaria que teve de resolver. Como chegou até si e o que fez a seguir? Se exigiu vários contactos, onde se gastou mais tempo?
-4. Que canais usa para receber avisos? E para contactar prestadores?
-5. Como decidiu a urgência na última ocorrência? Houve algum caso em que a prioridade teve de mudar? O que motivou a alteração?
-6. Recebe o mesmo problema reportado por várias pessoas? O que faz nesses casos?
+3. Tell me about the last maintenance issue you resolved. How did you hear about it, and what did you do next? If it required several contacts, where was most time spent?
+4. Which channels do you use to receive reports and contact contractors?
+5. How did you decide urgency in the last case? Has priority ever needed to change? What prompted that change?
+6. Do several people report the same problem? What do you do in those cases?
 
-**Prestadores e custos**
+**Contractors and costs**
 
-7. Como escolhe o prestador? Pede vários orçamentos? Quem aprova a despesa e a partir de que valor?
-8. Como regista custos e histórico? Usa isso para decidir (por exemplo, obras ou substituições)? Quem confirma a data e a conclusão? Como tratam recusa, indisponibilidade ou remarcação (DEC-10)?
+7. How do you select a contractor? Do you request several quotes? Who approves expenditure, and above what amount?
+8. How do you record costs and history? Do you use them to make decisions, such as repairs or replacements? Who confirms the date and completion? How do you handle rejection, unavailability or rescheduling (DEC-10)?
 
-**Ferramentas e AI**
+**Tools and AI**
 
-9. Que software ou ferramentas usa? O que lhe falta?
-10. Se um sistema sugerisse a urgência e o prestador, o que precisaria de ver para confiar? Aceitaria aprovar com um clique? Em que casos não aceitaria?
+9. What software or tools do you use? What is missing?
+10. If a system suggested urgency and a contractor, what would you need to see to trust it? Would you approve with one click? When would you not?
 
-**Fecho**
+**Closing**
 
-11. Quanto tempo gasta, em média, por avaria? Qual é a parte mais frustrante?
-12. Que ferramentas já paga ou contratou? Quem decide essa compra? O que justificaria testar outra solução? Só depois explorar modelo de pagamento e distinguir intenção de compromisso.
-13. Que informação pode ser partilhada com o edifício e o que deve ficar privado (DEC-07)? Como recebe avisos de moradores sem acesso digital?
-14. Estaria disponível para um teste de tarefa numa segunda sessão? Registar compromisso efetivo separadamente de interesse declarado.
+11. On average, how much time do you spend per issue? What is the most frustrating part?
+12. What tools do you already pay for or have you purchased? Who decides that purchase? What would justify testing another solution? Only then explore payment models and distinguish intention from commitment.
+13. What information can be shared with the building, and what must remain private (DEC-07)? How do you receive reports from residents without digital access?
+14. Would you be available for a task-based test in a second session? Record actual commitment separately from stated interest.
 
-### 4.2 Condómino
+### 4.2 Resident
 
-1. Quando foi a última vez que reportou um problema no prédio? O que aconteceu?
-2. Como reportou (a quem, por que canal)? Teve resposta? Quanto tempo demorou?
-3. Alguma vez viu um problema e não reportou? Porquê?
-4. O que gostaria de saber depois de reportar?
-5. Que informação sobre si ou a sua casa preferiria não partilhar? Que dificuldades teria em usar uma página/app e que alternativa precisaria?
-6. Aceitaria confirmar um problema já reportado por um vizinho ("isto também me afeta")? Preocupa-o ser identificado?
+1. When did you last report a problem in your building? What happened?
+2. How did you report it (to whom, through which channel)? Did you receive a response? How long did it take?
+3. Have you ever noticed a problem and not reported it? Why?
+4. What would you like to know after reporting?
+5. What information about you or your home would you prefer not to share? What difficulties would you have using a page/app, and what alternative would you need?
+6. Would you confirm a problem already reported by a neighbour (“This affects me too”)? Would being identified concern you?
 
 ### 4.3 Contractor
 
-1. Como recebe os pedidos hoje? Que informação costuma faltar?
-2. Como gere a agenda? Já usou calendário digital? Quem confirma a data e como comunica recusas ou alterações?
-3. Que informação precisa para estimar o preço e o tempo antes de ir ao local?
-4. Como são feitos os pagamentos e as aprovações? Quais as maiores dificuldades? Como comunica a conclusão e quem a valida?
-5. Aceitaria receber pedidos e marcações por uma plataforma? O que o faria recusar?
+1. How do you receive requests today? What information is usually missing?
+2. How do you manage your schedule? Have you used a digital calendar? Who confirms the date, and how do you communicate rejections or changes?
+3. What information do you need to estimate price and duration before visiting?
+4. How are payments and approvals handled? What are the main difficulties? How do you communicate completion, and who validates it?
+5. Would you accept requests and appointments through a platform? What would make you refuse?
 
-### 4.4. Perguntas exploratórias opcionais
+### 4.4. Optional exploratory questions
 
-- **Fotografias, pós-MVP:** ajudariam a explicar o problema? Em que condições aceitariam enviá-las?
-- **IoT, DEC-01:** existem sensores/dispositivos monitorizados? Que decisão concreta beneficiaria desses dados?
+- **Photographs, post-MVP:** would they help explain the problem? Under what conditions would participants agree to send them?
+- **IoT, DEC-01:** are sensors/devices monitored? What concrete decision would benefit from their data?
 
-Não apresentar estas capacidades como incluídas no MVP.
+Do not present these capabilities as included in the MVP.
 
-### 4.5. Teste de protótipo
+### 4.5. Prototype testing
 
-Após compreender o processo atual, propor tarefa concreta e observar conclusão, erros, tempo e ajuda necessária. Comparar com tarefa equivalente no processo atual, variando a ordem quando possível. Registar amostra e contexto; intenção de adoção ou cortesia não prova benefício nem compra.
+After understanding the current process, propose a concrete task and observe completion, errors, time and assistance needed. Compare with an equivalent task in the current process, varying order where possible. Record sample and context; adoption intentions or politeness do not prove benefit or purchasing commitment.
 
-## 5. Inquérito curto para condóminos (modelo)
+## 5. Short resident survey (template)
 
-1. Vive num edifício com administração de condomínio? (Sim/Não)
-2. Nos últimos 12 meses reportou alguma avaria? (Sim/Não)
-3. Se sim, por que canal? (chamada, WhatsApp, email, porteiro, outro)
-4. Recebeu feedback sobre o estado? (Sempre / Às vezes / Nunca)
-5. Quanto tempo demorou a resolução? (<1 dia / 1 a 3 dias / 4 a 7 dias / >1 semana / ainda por resolver)
-6. Que dificuldade sentiu? (resposta aberta)
-7. Usaria uma app ou página web para reportar? (Sim/Talvez/Não, porquê)
-8. Que informação gostaria de ver? (estado, data prevista, prestador, outro)
+1. Do you live in a building with condominium administration? (Yes/No)
+2. Have you reported a maintenance issue in the last 12 months? (Yes/No)
+3. If so, through which channel? (call, WhatsApp, email, caretaker, other)
+4. Did you receive status feedback? (Always / Sometimes / Never)
+5. How long did resolution take? (<1 day / 1–3 days / 4–7 days / >1 week / still unresolved)
+6. What difficulty did you experience? (Open answer)
+7. Would you use an app or web page to report? (Yes/Maybe/No, and why)
+8. What information would you like to see? (status, expected date, contractor, other)
 
-## 6. Análise
+## 6. Analysis
 
-- Transcrever ou resumir cada entrevista em **notas estruturadas** logo após a sessão.
-- Codificar por tema (urgência, duplicados, custos, canais, confiança em AI…).
-- Registar **citações** só com autorização e anonimizadas.
-- Cada achado deve indicar **quantos participantes** o suportam (ex.: "4 de 6 administradores").
-- Separar claramente **o que foi dito** do que a equipa **interpreta**.
+- Transcribe or summarise each interview in **structured notes** immediately after the session.
+- Code by theme (urgency, duplicates, costs, channels, trust in AI…).
+- Record **quotes** only with permission and without identifying details.
+- Each finding must state **how many participants** support it, e.g. “4 of 6 administrators”.
+- Clearly distinguish **what was said** from **the team's interpretation**.
 
-## 7. Resultados
+## 7. Findings
 
-> **Por preencher.** Não escrever nada aqui sem dados reais.
+> **To be completed.** Do not enter findings without real data.
 
-### 7.1 Participantes (real)
+### 7.1 Actual participants
 
-| Código | Grupo | Data | Modo (presencial/online) | Duração | Notas guardadas em |
+| Code | Group | Date | Mode (in person/online) | Duration | Notes stored at |
 |---|---|---|---|---|---|
 | | | | | | |
 
-### 7.2 Achados
+### 7.2 Findings
 
-| ID | Achado | Nº de participantes que o suportam | Pressuposto confirmado, refutado ou ajustado | Evidência (códigos) |
+| ID | Finding | Number of supporting participants | Assumption confirmed, refuted or adjusted | Evidence (codes) |
 |---|---|---|---|---|
 | F1 | | | | |
 
-### 7.3 Decisões de produto resultantes
+### 7.3 Resulting product decisions
 
-| Achado | Decisão tomada | Onde ficou refletida (backlog, visão, ADR) |
+| Finding | Decision taken | Where reflected (backlog, vision, ADR) |
 |---|---|---|
 | | | |
 
-## 8. Limitações (rever após a recolha)
+## 8. Limitations (review after collection)
 
-Limitações previstas, a confirmar ou ajustar:
+Expected limitations, to confirm or adjust:
 
-- Amostra **pequena e por conveniência**, não representativa.
-- Acesso limitado a **administradores profissionais**; provável enviesamento para voluntários.
-- Risco de **enviesamento de confirmação**: entrevistadores conhecem a solução proposta. Mitigar com perguntas abertas sobre experiências passadas, antes de mostrar a ideia.
-- Participantes podem ser conhecidos dos estudantes (cortesia, enviesamento social).
-- Intenção de pagar e de adotar declarada nem sempre corresponde a comportamento real.
-- Sem acesso a dados reais de ocorrências; a avaliação de AI usará dados sintéticos.
+- **Small convenience sample**, not representative.
+- Limited access to **professional administrators**; probable bias towards volunteers.
+- Risk of **confirmation bias**: interviewers know the proposed solution. Mitigate with open questions about past experiences before showing the idea.
+- Participants may know the students (politeness, social desirability bias).
+- Stated willingness to pay or adopt does not always translate into behaviour.
+- No access to real incident data; AI evaluation will use synthetic data.
 
-## 9. Calendário sugerido
+## 9. Suggested schedule
 
-| Quando | Atividade |
+| When | Activity |
 |---|---|
-| Phase 1 / início da Phase 2 | Finalizar guiões, identificar e contactar participantes |
-| Phase 2 | Entrevistas a administradores e prestadores |
-| Phase 2, conforme capacidade | Inquérito a moradores |
-| Phase 2–3 | Análise, atualização das personas, decisões e teste de protótipo |
+| Phase 1 / start of Phase 2 | Finalise guides, identify and contact participants |
+| Phase 2 | Administrator and contractor interviews |
+| Phase 2, subject to capacity | Resident survey |
+| Phases 2–3 | Analysis, persona updates, decisions and prototype testing |
 
-## 10. Registos e decisões
+## 10. Records and decisions
 
-Usar o [modelo de registo](templates/research-record.md). Os achados permanecem na secção 7; requisitos e relatório do problema referenciam os respetivos IDs. A secção 7.3 liga ao [registo de decisões](planning/decisions-and-feedback.md), onde ficam motivo, participantes e estado da decisão, sem duplicar atas.
+Use the [recording template](templates/research-record.md). Findings remain in section 7; requirements and the problem report reference their IDs. Section 7.3 links to the [decision register](planning/decisions-and-feedback.md), which stores rationale, participants and decision status without duplicating meeting notes.
 
-Antes da recolha, atribuir responsável e resolver acesso/retenção em DEC-07. Datas dependem de DEC-03. Resultados alimentam os [requisitos](requirements.md) e a priorização do [backlog](06-product-backlog.md).
+Before collection, assign an owner and resolve access/retention in DEC-07. Dates depend on DEC-03. Findings inform [requirements](requirements.md) and [backlog](06-product-backlog.md) prioritisation.

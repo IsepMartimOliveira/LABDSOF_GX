@@ -1,117 +1,117 @@
 # Technical Design
 
-**Estado:** desenho conceptual proposto · Sprint 1, entregável 7 · stack e contratos finais pendentes
+**Status:** proposed conceptual design · Sprint 1, deliverable 7 · final stack and contracts pending
 
-## 1. Contexto e fronteiras
+## 1. Context and boundaries
 
-Morador, administrador e prestador usam um cliente proposto web responsivo. O backend coordena ocorrências e intervenções, consulta um fornecedor de IA e integra calendário externo ou simulador. A escolha do cliente/stack integra DEC-04; não está implementada.
+Residents, administrators and contractors use a proposed responsive web client. The backend coordinates issues and interventions, calls an AI provider and integrates an external calendar or simulator. Client/stack selection is part of DEC-04; it is not implemented.
 
-| Unidade proposta | Responsabilidade / dados que controla | Comunicação |
+| Proposed unit | Responsibility / data it controls | Communication |
 |---|---|---|
-| Cliente | Formulários, filas, estados e correções; sem autoridade sobre permissões | API autenticada |
-| Issue Service | Edifícios/pertenças para autorização, relatos, ocorrências, triagem, resumos e confirmações | API; publica eventos; recebe resultados autorizados |
-| Dispatch Service | Catálogo, propostas, respostas, marcações e custos | API; eventos; adaptador calendário |
-| Worker de triagem | Processa eventos, chama IA/regras, entrega sugestões com versão | Fila e interface interna do Issue Service; não escreve tabelas alheias |
-| Worker de notificações | Entrega notificações idempotentes; localização final por decidir | Eventos de estado; canal in-app proposto |
-| Broker | Transporte e reentrega | Publicação/consumo autenticados |
-| Armazenamento | Persistência; uma tecnologia proposta para limitar complexidade | Esquemas e credenciais por responsabilidade |
-| Calendário/simulador | Respostas de criação/consulta de marcação e falhas simuláveis | Contrato externo com referência e chave idempotente |
+| Client | Forms, queues, states and corrections; no authority over permissions | Authenticated API |
+| Issue Service | Buildings/memberships for authorisation, reports, issues, triage, summaries and confirmations | API; publishes events; receives authorised results |
+| Dispatch Service | Catalogue, proposals, responses, bookings and costs | API; events; calendar adapter |
+| Triage worker | Processes events, calls AI/rules, delivers versioned suggestions | Queue and internal Issue Service interface; does not write to other components' tables |
+| Notification worker | Delivers idempotent notifications; final placement undecided | State events; proposed in-app channel |
+| Broker | Transport and redelivery | Authenticated publishing/consumption |
+| Storage | Persistence; one proposed technology to limit complexity | Schemas and credentials by responsibility |
+| Calendar/simulator | Booking creation/query responses and simulatable failures | External contract with reference and idempotency key |
 
-Issue e Dispatch são os **dois componentes backend independentemente implantáveis propostos**. Workers podem ter processos próprios; agrupamento final depende de ADR/DEC-04. Não usar simulador como substituto artificial de componente de negócio.
+Issue and Dispatch are the **two proposed independently deployable backend components**. Workers may have their own processes; final grouping depends on ADR/DEC-04. Do not use a simulator as an artificial substitute for a business component.
 
-Uma instância de base de dados pode alojar esquemas separados no ambiente académico; não autoriza escrita cruzada. Explicitar dependência operacional partilhada e migrações compatíveis. Tecnologia, fila e mecanismo de autenticação entre serviços por decidir.
+One database instance may host separate schemas in the academic environment; this does not authorise cross-writing. Make the shared operational dependency and compatible migrations explicit. Technology, queue and service-to-service authentication are undecided.
 
-## 2. Modelo de domínio
+## 2. Domain model
 
-| Entidade | Relações e campos conceptuais |
+| Entity | Conceptual relationships and fields |
 |---|---|
-| Organização | Gere vários edifícios; permite representar empresa administradora |
-| Edifício | Pertence a organização; zonas/localizações; identificador de autorização |
-| Utilizador / Pertença | Utilizador pode ter papel em vários edifícios; papel global não concede acesso universal |
-| Relato | Autor, edifício, zona, texto privado, instante e origem; ligado a ocorrência |
-| Ocorrência | Agrega um ou mais relatos; categoria/urgência, estado, versão, resumo publicado opcional |
-| Sugestão de triagem | Ocorrência, versão de origem, resultado, regras/modelo/prompt e instante |
-| Confirmação de impacto | Utilizador + ocorrência únicos; retirada possível |
-| Prestador | Especialidade/cobertura; dados sintéticos no MVP |
-| Intervenção | Ocorrência referenciada, prestador, proposta e versão, aprovação e resposta |
-| Marcação | Intervenção, intervalo, estado, referência externa ou origem manual |
-| Registo de custo | Intervenção, valor opcional, moeda, origem e confirmação |
-| Evento de auditoria | Ator, ação, referência, versão e instante; evitar texto privado desnecessário |
-| Notificação | Evento/destinatário/canal únicos, estado de entrega |
+| Organisation | Manages several buildings; can represent a property management company |
+| Building | Belongs to an organisation; areas/locations; authorisation identifier |
+| User / Membership | A user may have a role in several buildings; a global role does not grant universal access |
+| Report | Author, building, area, private text, timestamp and source; linked to an issue |
+| Issue | Aggregates one or more reports; category/urgency, state, version, optional published summary |
+| Triage suggestion | Issue, source version, result, rules/model/prompt and timestamp |
+| Impact confirmation | Unique user + issue; withdrawal possible |
+| Contractor | Specialisation/coverage; synthetic data in the MVP |
+| Intervention | Referenced issue, contractor, proposal and version, approval and response |
+| Booking | Intervention, interval, state, external reference or manual source |
+| Cost record | Intervention, optional amount, currency, source and confirmation |
+| Audit event | Actor, action, reference, version and timestamp; avoid unnecessary private text |
+| Notification | Unique event/recipient/channel, delivery state |
 
-Cardinalidades: organização 1:N edifícios; utilizadores N:M edifícios por pertenças; ocorrência 1:N relatos e 0:N intervenções; intervenção 0:N versões de marcação, com no máximo uma ativa. Contratos usam IDs; nenhum serviço altera diretamente os dados do outro.
+Cardinalities: organisation 1:N buildings; users N:M buildings through memberships; issue 1:N reports and 0:N interventions; intervention 0:N booking versions, with at most one active. Contracts use IDs; neither service directly modifies the other's data.
 
-## 3. Estados e regras de negócio
+## 3. States and business rules
 
-| Percurso de ocorrência | Regra proposta |
+| Issue progression | Proposed rule |
 |---|---|
-| Recebida → em triagem → triada | Registo independente de IA; administrador confirma triagem |
-| Triada → em coordenação | Pedido de intervenção em preparação/envio |
-| Em coordenação → agendada | Projeção de uma marcação efetivamente confirmada |
-| Agendada → em execução → aguarda validação | Prestador atribuído comunica progresso/conclusão |
-| Aguarda validação → resolvida | Administrador valida; devolução à execução exige motivo |
-| Resolvida → em triagem | Reabertura com motivo |
-| Aberta → resolvida/cancelada manualmente | Administrador justifica; coordenar cancelamento de intervenção ativa |
+| Received → in triage → triaged | Reporting independent of AI; administrator confirms triage |
+| Triaged → in coordination | Intervention request being prepared/sent |
+| In coordination → scheduled | Projection of an actually confirmed booking |
+| Scheduled → in progress → awaiting validation | Assigned contractor reports progress/completion |
+| Awaiting validation → resolved | Administrator validates; returning to execution requires a reason |
+| Resolved → in triage | Reopening with a reason |
+| Open → manually resolved/cancelled | Administrator justifies; coordinate cancellation of any active intervention |
 
-Intervenção tem estado próprio: proposta → aprovada/enviada → aceite ou recusada/contraproposta → agendamento pendente → confirmado externo/manual → em execução → concluída. Contraproposta altera versão e exige nova aprovação. Cancelamentos propagam-se com pendência visível até reconciliação.
+Interventions have their own state: proposed → approved/sent → accepted or declined/counterproposed → scheduling pending → externally/manually confirmed → in progress → completed. A counterproposal changes the version and requires new approval. Cancellations propagate with a visible pending state until reconciliation.
 
-O histórico da ocorrência pode refletir eventos do Dispatch com atraso; mostrar instante de atualização. Não confundir consistência eventual com confirmação de uma ação que não aconteceu. DEC-10 valida estas regras antes da implementação.
+Issue history may reflect Dispatch events with a delay; show the update timestamp. Do not confuse eventual consistency with confirmation of an action that did not happen. DEC-10 validates these rules before implementation.
 
-## 4. API inicial (sem contrato executável ainda)
+## 4. Initial API (no executable contract yet)
 
-A [matriz de acesso](09-security-privacy.md#2-matriz-de-acesso-proposta) define a política; a tabela abaixo mostra a sua aplicação aos endpoints. Critérios funcionais permanecem no [backlog](06-product-backlog.md#4-histórias-e-critérios).
+The [access matrix](09-security-privacy.md#2-proposed-access-matrix) defines policy; the table below shows its application to endpoints. Functional criteria remain in the [backlog](06-product-backlog.md#4-stories-and-criteria).
 
-| Operação proposta | Autorização / resultado |
+| Proposed operation | Authorisation / result |
 |---|---|
-| POST /reports | Morador do edifício; devolve ID após persistência; chave idempotente |
-| GET /issues e GET /issues/{id} | Filtro por pertença e projeção por papel |
-| POST /issues/{id}/triage | Administrador do edifício; versão e motivo |
-| POST /issues/{id}/publication | Administrador publica resumo sanitizado |
-| PUT/DELETE /issues/{id}/impact | Morador do edifício; contribuição única |
-| POST /issues/{id}/associations | Administrador; associação/reversão auditadas |
-| GET /contractors | Administrador; filtros explícitos |
-| POST /interventions | Administrador; proposta com ocorrência autorizada |
-| POST /interventions/{id}/approval | Administrador; versão e idempotência |
-| POST /interventions/{id}/response | Prestador atribuído; aceitar/recusar/contrapropor |
-| POST /interventions/{id}/manual-confirmation | Administrador; origem, intervalo e motivo |
-| POST /interventions/{id}/completion | Prestador atribuído ou administrador com motivo |
-| POST /issues/{id}/closure ou /reopening | Administrador; validação de estado e versão |
+| POST /reports | Building resident; returns ID after persistence; idempotency key |
+| GET /issues and GET /issues/{id} | Membership filter and role-specific projection |
+| POST /issues/{id}/triage | Building administrator; version and reason |
+| POST /issues/{id}/publication | Administrator publishes a sanitised summary |
+| PUT/DELETE /issues/{id}/impact | Building resident; unique contribution |
+| POST /issues/{id}/associations | Administrator; audited linking/reversal |
+| GET /contractors | Administrator; explicit filters |
+| POST /interventions | Administrator; proposal with authorised issue |
+| POST /interventions/{id}/approval | Administrator; version and idempotency |
+| POST /interventions/{id}/response | Assigned contractor; accept/decline/counterpropose |
+| POST /interventions/{id}/manual-confirmation | Administrator; source, interval and reason |
+| POST /interventions/{id}/completion | Assigned contractor or administrator with a reason |
+| POST /issues/{id}/closure or /reopening | Administrator; state and version validation |
 
-Definir contratos OpenAPI/schemas após stack: erros 400/401/403 ou 404 sem enumeração, 409 para versão/conflito, 503 para indisponibilidade material. Não retornar sucesso de persistência se a base de dados falhar.
+Define OpenAPI contracts/schemas after stack selection: 400/401/403 errors or 404 without enumeration, 409 for version/conflict, 503 for material unavailability. Do not return persistence success if the database fails.
 
-## 5. Workflow assíncrono e consistência
+## 5. Asynchronous workflow and consistency
 
-1. Issue persiste relato/ocorrência e registo de evento na mesma transação (outbox proposta).
-2. Publicador envia ReportSubmitted; falha de broker preserva evento para repetição.
-3. Worker valida schema, ID e versão e aplica o [workflow de IA/baseline/fallback](07-responsible-ai-assessment.md#2-baseline-e-fallback), com timeout definido em NFR-03.
-4. Resultado chega à interface interna autorizada do Issue; resultado antigo não substitui correção humana.
-5. Eventos de mudança alimentam projeções/notificações; consumidores deduplicam pelo eventId.
-6. Dispatch gere aprovação/aceitação e emite pedido de calendário só quando elegível.
+1. Issue persists the report/issue and event record in the same transaction (proposed outbox).
+2. The publisher sends ReportSubmitted; broker failure preserves the event for retry.
+3. The worker validates schema, ID and version and applies the [AI/baseline/fallback workflow](07-responsible-ai-assessment.md#2-baseline-and-fallback), with the timeout defined in NFR-03.
+4. The result reaches Issue's authorised internal interface; an old result does not replace a human correction.
+5. Change events feed projections/notifications; consumers deduplicate by eventId.
+6. Dispatch manages approval/acceptance and issues a calendar request only when eligible.
 
-Envelope proposto: eventId, eventType, schemaVersion, aggregateId, aggregateVersion, buildingId, occurredAt, correlationId e payload mínimo. Identificadores de edifício recebidos também são validados; não bastam como autorização.
+Proposed envelope: eventId, eventType, schemaVersion, aggregateId, aggregateVersion, buildingId, occurredAt, correlationId and minimal payload. Received building identifiers are also validated; they do not suffice as authorisation.
 
-Retries com atraso crescente e limite configurado; esgotamento para registo/fila de falhas com replay controlado. Testar crash após persistir e antes de publicar, entrega repetida e eventos fora de ordem. Não prometer entrega «exactly once»; construir efeitos idempotentes.
+Retries use increasing delays and a configured limit; exhausted attempts go to a failure record/queue with controlled replay. Test crashes after persistence and before publication, repeated delivery and out-of-order events. Do not promise “exactly once” delivery; build idempotent effects.
 
-## 6. Integração externa e modo degradado
+## 6. External integration and degraded mode
 
-Calendário/simulador deve suportar pedido com ID estável, consulta/reconciliação e cenários: sucesso, timeout, indisponibilidade, atraso, resposta incompleta/inválida e conflito de horário.
+The calendar/simulator must support requests with stable IDs, query/reconciliation and scenarios: success, timeout, unavailability, delay, incomplete/invalid response and scheduling conflict.
 
-Timeout pode ocorrer depois de o evento externo ser criado; consultar/reconciliar antes de repetir. Confirmação manual fica distinta de sincronização externa e suspende criação automática duplicada até reconciliação. Slot em calendário não prova por si só disponibilidade do prestador.
+Timeout may occur after the external event is created; query/reconcile before retrying. Manual confirmation remains distinct from external synchronisation and suspends duplicate automatic creation until reconciliation. A calendar slot alone does not prove contractor availability.
 
-IA indisponível: regras + revisão manual. Broker/worker indisponível: relato persistido e triagem pendente/manual. Calendário indisponível: pendente/manual. Notificação falha: estado continua consultável. Base indisponível: erro explícito sem recibo falso.
+AI unavailable: rules + manual review. Broker/worker unavailable: persisted report and pending/manual triage. Calendar unavailable: pending/manual. Notification failure: status remains queryable. Database unavailable: explicit error without false acknowledgement.
 
-## 7. Deployment e operação propostos
+## 7. Proposed deployment and operations
 
-- Contentores: cliente, Issue, Dispatch, workers, broker, base de dados e simulador conforme perfil.
-- Apenas endpoints necessários expostos; base/broker em rede interna.
-- Configuração por ambiente; segredos injetados fora do Git; identidades de serviço de menor privilégio.
-- CI constrói/testa/imagens; ambiente de demonstração por escolher (DEC-04); sem compromisso com Kubernetes.
-- Migrações por dono do esquema, health/readiness e versões compatíveis para deploy independente.
-- Logs estruturados com correlation ID; métricas de erros, latência, fila, retries, fallback, marcações pendentes e notificações falhadas.
-- Dashboard inicial na S2; backup/restore e rollback documentados/exercitados antes de release.
+- Containers: client, Issue, Dispatch, workers, broker, database and simulator according to the profile.
+- Expose only necessary endpoints; database/broker on an internal network.
+- Configuration per environment; secrets injected outside Git; least-privilege service identities.
+- CI builds/tests/images; demonstration environment to be chosen (DEC-04); no Kubernetes commitment.
+- Migrations owned by each schema owner, health/readiness and compatible versions for independent deployment.
+- Structured logs with correlation ID; metrics for errors, latency, queue, retries, fallback, pending bookings and failed notifications.
+- Initial dashboard in S2; backup/restore and rollback documented/exercised before release.
 
-## 8. Lacunas e validação
+## 8. Gaps and validation
 
-Por decidir: stack, broker, base, alojamento, identidade, mecanismo de publicação, schemas finais e tratamento detalhado de remarcação/cancelamento. Registar alternativas e consequências em [ADRs](adr/README.md). Modelo de dados físico e contratos executáveis ainda não existem.
+Undecided: stack, broker, database, hosting, identity, publishing mechanism, final schemas and detailed rescheduling/cancellation handling. Record alternatives and consequences in [ADRs](adr/README.md). The physical data model and executable contracts do not yet exist.
 
-Ver [requisitos](requirements.md), [segurança](09-security-privacy.md) e [walking skeleton](10-walking-skeleton.md).
+See [requirements](requirements.md), [security](09-security-privacy.md) and [walking skeleton](10-walking-skeleton.md).

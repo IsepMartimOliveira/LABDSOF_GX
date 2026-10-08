@@ -1,41 +1,41 @@
 ---
-name: "Tarefa ou spike"
-about: "Pesquisa, documentação, configuração ou investigação técnica delimitada."
+name: "Task or spike"
+about: "Research, documentation, configuration or bounded technical investigation."
 title: "[TASK-XX] "
 labels: ""
 assignees: ""
 ---
 
-## Identificação
+## Identification
 
-- ID local / épico:
-- Tipo: tarefa / spike.
-- Labels sugeridas: type:task ou type:spike, area:…, phase:… quando aplicável.
-- Milestone / prioridade:
-- Responsável / revisor / estimativa:
-- Dependências / decisão relacionada:
+- Local ID / epic:
+- Type: task / spike.
+- Suggested labels: type:task or type:spike, area:…, phase:… where applicable.
+- Milestone / priority:
+- Owner / reviewer / estimate:
+- Dependencies / related decision:
 
-## Objetivo ou pergunta
+## Objective or question
 
-Resultado necessário e razão.
+Required outcome and reason.
 
-## Âmbito e limite de esforço
+## Scope and effort limit
 
-Para spike, indicar limite acordado e pergunta que será respondida. Para pesquisa, método, participantes/fontes, acesso e gestão dos dados.
+For a spike, indicate the agreed limit and the question to be answered. For research, method, participants/sources, access and data management.
 
-## Critérios de aceitação
+## Acceptance criteria
 
-- [ ] Artefacto ou resultado observável:
-- [ ] Evidência:
-- [ ] Revisão e atualização dos documentos/itens afetados:
+- [ ] Observable artefact or outcome:
+- [ ] Evidence:
+- [ ] Review and update of affected documents/items:
 
-## Verificação
+## Verification
 
-Comandos, revisão ou método de pesquisa planeados.
+Planned commands, review or research method.
 
-## Resultado (preencher após execução)
+## Result (complete after execution)
 
-Achados, limitações e decisão/ação seguinte. Não preencher como realizado antes da execução.
+Findings, limitations and next decision/action. Do not mark as performed before execution.
 
-- [ ] DoR verificada; data/autor:
-- [ ] DoD verificada; evidências:
+- [ ] DoR verified; date/author:
+- [ ] DoD verified; evidence:

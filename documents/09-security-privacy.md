@@ -1,68 +1,68 @@
 # Security and Privacy Assessment
 
-**Estado:** avaliação inicial proposta · Sprint 1, entregável 9 · controlos não implementados/verificados
+**Status:** proposed initial assessment · Sprint 1, deliverable 9 · controls not implemented/verified
 
-## 1. Contexto e ativos
+## 1. Context and assets
 
-Ativos: identidade/pertença, texto privado, resumo publicado, localização, propostas, horários, custos, credenciais, eventos e histórico. Fronteiras: cliente→API, serviço→serviço, broker, base de dados, fornecedor IA/calendário e repositório de investigação.
+Assets: identity/membership, private text, published summary, location, proposals, schedules, costs, credentials, events and history. Boundaries: client→API, service→service, broker, database, AI/calendar provider and research repository.
 
-O MVP usa dados sintéticos de demonstração. Entrevistas reais continuam a exigir propósito, autorização de participação e gestão de dados próprios. Esta proposta não declara conformidade jurídica; questões legais e políticas institucionais precisam de revisão adequada antes de piloto real.
+The MVP uses synthetic demonstration data. Real interviews still require a purpose, participation permission and their own data management. This proposal does not claim legal compliance; legal issues and institutional policies need appropriate review before a real pilot.
 
-## 2. Matriz de acesso proposta
+## 2. Proposed access matrix
 
-| Operação/dados | Morador | Administrador | Prestador |
+| Operation/data | Resident | Administrator | Contractor |
 |---|---|---|---|
-| Criar relato | Edifícios a que pertence | Edifícios geridos, com origem registada | Fora da base |
-| Texto bruto do relato | Próprio | Edifícios geridos | Só extrato necessário no pedido atribuído |
-| Resumo comum publicado | Mesmo edifício | Edifícios geridos | Contexto necessário ao pedido |
-| Categoria/urgência confirmada | Consulta autorizada | Confirma/corrige | Consulta do pedido atribuído |
-| Confirmar impacto | Mesmo edifício; própria contribuição | Consulta contador | Não |
-| Proposta/aprovação | Não | Edifícios geridos | Responde só ao pedido atribuído |
-| Marcação/conclusão | Estado público autorizado | Coordena/valida | Pedido atribuído |
-| Custo | Sem acesso por defeito | Edifícios geridos | Propõe/consulta do seu trabalho |
-| Encerrar/reabrir | Não | Com motivo conforme transição | Comunica conclusão, sem encerramento |
-| Dados de outro edifício/pedido | Não | Só se explicitamente autorizado | Não |
+| Create report | Buildings they belong to | Managed buildings, with source recorded | Outside baseline |
+| Raw report text | Own | Managed buildings | Only necessary extract in the assigned request |
+| Published shared summary | Same building | Managed buildings | Context needed for the request |
+| Confirmed category/urgency | Authorised viewing | Confirms/corrects | Views assigned request |
+| Confirm impact | Same building; own contribution | Views counter | No |
+| Proposal/approval | No | Managed buildings | Responds only to assigned request |
+| Booking/completion | Authorised public status | Coordinates/validates | Assigned request |
+| Cost | No access by default | Managed buildings | Proposes/views cost of own work |
+| Close/reopen | No | With reason according to transition | Reports completion, without closing |
+| Data from another building/request | No | Only if explicitly authorised | No |
 
-Verificar no backend para cada operação; ocultar botões não basta. Mock de autenticação identifica utilizadores de teste predefinidos, mas não permite ao cliente escolher arbitrariamente privilégios. Serviço interno também é autenticado/autorizado.
+Check in the backend for each operation; hiding buttons is insufficient. Mock authentication identifies predefined test users, but does not allow the client to choose arbitrary privileges. Internal services are also authenticated/authorised.
 
-## 3. Ameaças e verificações
+## 3. Threats and checks
 
-| ID | Ameaça / impacto | Controlo proposto | Evidência necessária |
+| ID | Threat / impact | Proposed control | Required evidence |
 |---|---|---|---|
-| T-01 | Alterar ID para ler outro edifício | Autorização por pertença/recurso e projeção de dados | Testes negativos em API/listagem/pesquisa |
-| T-02 | Prestador aprovar despesas ou ler outro pedido | Permissões e atribuição verificadas no servidor | Testes da matriz |
-| T-03 | Texto induz IA a agir/divulgar | Aplicar [controlos de IA](07-responsible-ai-assessment.md#5-controlos-e-comunicação) | [Casos adversos e protocolo](07-responsible-ai-assessment.md#3-dataset-e-protocolo-propostos) |
-| T-04 | Retry duplica pedido/marcação | Idempotência, versionamento e reconciliação | Falhas após efeito externo e eventos repetidos |
-| T-05 | Texto malicioso na UI | Renderização segura, validação de inputs | Testes de conteúdo não executável |
-| T-06 | Logs/payloads expõem dados | Minimização, sanitização e acesso limitado | Inspeção de logs e payloads |
-| T-07 | Tokens/segredos no Git | Injeção por ambiente, revisão/checks de segredos | Evidência CI e revisão |
-| T-08 | Spam ou excesso de chamadas IA | Limites por utilizador/entrada, budget e retries limitados | Teste de limites e custos |
-| T-09 | Perda de dados / falha de componente | Persistência, backup/restore, estados degradados | Ensaio de recuperação |
-| T-10 | Alteração sem responsabilidade | Auditoria mínima com ator, versão e instante | Rastrear uma intervenção e correção |
+| T-01 | Change ID to read another building | Membership/resource authorisation and data projection | Negative API/list/search tests |
+| T-02 | Contractor approves expenses or reads another request | Permissions and assignment checked on the server | Matrix tests |
+| T-03 | Text induces AI to act/disclose | Apply [AI controls](07-responsible-ai-assessment.md#5-controls-and-communication) | [Adversarial cases and protocol](07-responsible-ai-assessment.md#3-proposed-dataset-and-protocol) |
+| T-04 | Retry duplicates request/booking | Idempotency, versioning and reconciliation | Failures after external effects and repeated events |
+| T-05 | Malicious text in UI | Safe rendering, input validation | Non-executable content tests |
+| T-06 | Logs/payloads expose data | Minimisation, sanitisation and restricted access | Log and payload inspection |
+| T-07 | Tokens/secrets in Git | Environment injection, review/secret checks | CI and review evidence |
+| T-08 | Spam or excessive AI calls | Per-user/input limits, budget and limited retries | Limit and cost tests |
+| T-09 | Data loss / component failure | Persistence, backup/restore, degraded states | Recovery exercise |
+| T-10 | Changes without accountability | Minimal audit with actor, version and timestamp | Trace an intervention and correction |
 
-Avaliar probabilidade e impacto com a equipa após definir deployment; não atribuir uma classificação de risco residual sem validar controlos.
+Assess likelihood and impact with the team after defining deployment; do not assign a residual risk rating without validating controls.
 
-## 4. Ciclo de vida e minimização
+## 4. Data lifecycle and minimisation
 
-| Dados | Proposta de recolha/acesso | Retenção/eliminação |
+| Data | Proposed collection/access | Retention/deletion |
 |---|---|---|
-| Fixtures de demo | Sintéticos, sem pessoas/moradas reais | Reset reproduzível; manter apenas fixtures necessárias |
-| Relatos/intervenções | Texto mínimo e referência de zona; detalhes privados restritos | Prazo e regras por fechar em DEC-07 antes de piloto |
-| Logs/auditoria | Metadados necessários, sem texto integral/segredos | Prazo, acesso e eliminação por definir com ambiente |
-| Entrevistas | Notas mínimas com códigos; gravação opcional autorizada separadamente | Local, responsável e data de eliminação definidos antes da recolha |
-| Identidade dos participantes | Ligação código→identidade separada, se necessária | Fora do Git; eliminar quando deixar de ser necessária |
-| Dados enviados a fornecedor | Apenas necessário; sintéticos no desenvolvimento | Rever termos, configuração e retenção do fornecedor antes do uso |
-| Backups | Acesso limitado e teste de restore | Definir rotação e efeito de pedidos de eliminação |
+| Demo fixtures | Synthetic, without real people/addresses | Reproducible reset; retain only necessary fixtures |
+| Reports/interventions | Minimal text and area reference; restricted private details | Period and rules to be finalised in DEC-07 before a pilot |
+| Logs/audit | Necessary metadata, without full text/secrets | Period, access and deletion to be defined with the environment |
+| Interviews | Minimal coded notes; optional recording with separate permission | Location, owner and deletion date defined before collection |
+| Participant identities | Separate code→identity mapping, if needed | Outside Git; delete when no longer necessary |
+| Data sent to a provider | Only what is necessary; synthetic during development | Review provider terms, configuration and retention before use |
+| Backups | Restricted access and restore test | Define rotation and the effect of deletion requests |
 
-Código de participante não é anonimização se a pessoa continuar identificável. Não publicar notas brutas, contactos, gravações ou consentimentos no repositório. O procedimento de recrutamento e o [texto de consentimento](03-user-research.md#texto-de-consentimento-modelo) são mantidos no plano de investigação.
+A participant code is not anonymisation if the person remains identifiable. Do not publish raw notes, contacts, recordings or consent forms in the repository. Recruitment procedure and [consent text](03-user-research.md#consent-text-template) are maintained in the research plan.
 
-## 5. Questões por fechar e plano de revisão
+## 5. Open questions and review plan
 
-- DEC-07: fronteira áreas comuns/privadas, publicação de resumos, retenção, eliminação e acesso dos participantes.
-- DEC-04/05/06: configuração de identidade, segredos e fornecedores.
-- Antes de recolher dados: confirmar propósito, responsável e local seguro.
-- Antes da S2: testes de isolamento e revisão do fluxo de aprovação.
-- Na S3: rever ameaça/controlos implementados, dependências, resultados e risco residual; registar limitações.
-- Antes de piloto real: rever obrigações e políticas aplicáveis; dados sintéticos não provam adequação para operação real.
+- DEC-07: shared/private area boundary, summary publication, retention, deletion and participant access.
+- DEC-04/05/06: identity, secrets and provider configuration.
+- Before collecting data: confirm purpose, owner and secure location.
+- Before S2: isolation tests and approval workflow review.
+- In S3: review threats/implemented controls, dependencies, results and residual risk; record limitations.
+- Before a real pilot: review applicable obligations and policies; synthetic data does not prove suitability for real operation.
 
-Rastreabilidade: [NFR-01/02/04/09](requirements.md), [backlog](06-product-backlog.md), [pesquisa](03-user-research.md).
+Traceability: [NFR-01/02/04/09](requirements.md), [backlog](06-product-backlog.md), [research](03-user-research.md).

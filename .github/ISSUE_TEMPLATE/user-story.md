@@ -1,45 +1,45 @@
 ---
 name: "User story"
-about: "Valor para um utilizador, critérios verificáveis e preparação para sprint."
+about: "User value, verifiable criteria and sprint preparation."
 title: "[US-XX] "
 labels: ""
 assignees: ""
 ---
 
-## Identificação
+## Identification
 
-- ID local / épico:
-- Requisito(s), hipótese/achado e jornada:
-- Prioridade MoSCoW proposta / motivo:
-- Milestone oficial: S1 / S2 / S3 — selecionar após configuração.
-- Labels sugeridas: type:story, area:…, priority:…
-- Responsável / revisor / estimativa: por acordar.
-- Decisões/dependências bloqueantes:
+- Local ID / epic:
+- Requirement(s), hypothesis/finding and journey:
+- Proposed MoSCoW priority / reason:
+- Official milestone: S1 / S2 / S3 — select after configuration.
+- Suggested labels: type:story, area:…, priority:…
+- Owner / reviewer / estimate: to be agreed.
+- Blocking decisions/dependencies:
 
-## História
+## Story
 
-Como **[papel]**, quero **[capacidade]**, para **[benefício]**.
+As a **[role]**, I want **[capability]**, so that **[benefit]**.
 
-## Âmbito
+## Scope
 
-Incluído:
-Excluído:
+Included:
+Excluded:
 
-## Critérios de aceitação
+## Acceptance criteria
 
-- [ ] Dado [contexto], quando [ação], então [resultado observável].
-- [ ] Entrada inválida/falha:
-- [ ] Utilizador sem permissão:
-- [ ] Repetição/concorrência, quando aplicável:
+- [ ] Given [context], when [action], then [observable outcome].
+- [ ] Invalid input/failure:
+- [ ] User without permission:
+- [ ] Repetition/concurrency, where applicable:
 
-## Verificação e riscos
+## Verification and risks
 
-Dados/ambiente, NFRs, falhas, acesso/privacidade e evidência esperada.
-Se houver IA: inputs/outputs, baseline/fallback e protocolo de avaliação.
+Data/environment, NFRs, failures, access/privacy and expected evidence.
+If AI is involved: inputs/outputs, baseline/fallback and evaluation protocol.
 
 ## Ready / Done
 
-- [ ] DoR revista pela equipa; data/autor:
-- [ ] DoD verificada com links a PR, testes e demonstração:
+- [ ] DoR reviewed by the team; date/author:
+- [ ] DoD verified with links to PR, tests and demonstration:
 
-Consultar documents/governance/definition-of-ready.md e definition-of-done.md. Não marcar Ready sem estimativa/capacidade e dependências resolvidas.
+See documents/governance/definition-of-ready.md and definition-of-done.md. Do not mark Ready without estimates/capacity and resolved dependencies.

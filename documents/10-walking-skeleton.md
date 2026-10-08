@@ -1,54 +1,54 @@
 # Walking Skeleton
 
-**Estado:** plano de execução · Sprint 1, entregável 10 · **Não implementado**
+**Status:** execution plan · Sprint 1, deliverable 10 · **Not implemented**
 
-Um documento de plano não satisfaz o entregável executável. Nesta base documental não existem aplicação, Dockerfiles, pipeline ou testes.
+A planning document does not satisfy the executable deliverable. This documentation baseline contains no application, Dockerfiles, pipeline or tests.
 
-## 1. Objetivo mínimo
+## 1. Minimum objective
 
-Cliente de teste → backend → armazenamento persistente → consulta do mesmo ID após reinício. Incluir identidade de teste e uma verificação de acesso entre dois edifícios.
+Test client → backend → persistent storage → query the same ID after restart. Include a test identity and an access check between two buildings.
 
-Este skeleton não precisa de implementar já todas as histórias, IA ou calendário. As fronteiras futuras devem estar claras; na Sprint 2 são exigidos dois componentes backend independentes ou alternativa modular aceite.
+This skeleton does not need to implement all stories, AI or the calendar yet. Future boundaries must be clear; Sprint 2 requires two independent backend components or an accepted modular alternative.
 
-## 2. Sequência proposta
+## 2. Proposed sequence
 
-1. Resolver stack/ambiente e fronteiras mínimas em DEC-04 / EN-01.
-2. Criar fixtures sintéticas de dois edifícios, morador e administrador.
-3. Implementar uma fatia de US-01: registar relato e consultar estado.
-4. Aplicar autorização no backend; não delegar segurança no cliente.
-5. Containerizar cliente/backend/armazenamento e documentar configuração.
-6. Criar build automático e pelo menos teste de integração da fatia.
-7. Reiniciar serviço e demonstrar persistência; testar acesso negado de outro edifício.
-8. Guardar links de commit/PR, execução do pipeline e instruções testadas.
+1. Resolve the stack/environment and minimum boundaries in DEC-04 / EN-01.
+2. Create synthetic fixtures for two buildings, a resident and an administrator.
+3. Implement a slice of US-01: record a report and query its status.
+4. Enforce authorisation in the backend; do not delegate security to the client.
+5. Containerise the client/backend/storage and document configuration.
+6. Create an automated build and at least an integration test for the slice.
+7. Restart the service and demonstrate persistence; test denied access from another building.
+8. Save commit/PR links, pipeline run and tested instructions.
 
-## 3. Checklist de aceitação
+## 3. Acceptance checklist
 
-- [ ] Código e configuração em Git, ligados a EN-02.
-- [ ] Cliente regista e consulta um ID persistido.
-- [ ] Dados sobrevivem ao reinício.
-- [ ] Teste automatizado confirma o percurso.
-- [ ] Teste de acesso indevido falha como esperado.
-- [ ] Build automático executado com sucesso.
-- [ ] Contentores arrancam com instruções reproduzíveis.
-- [ ] Health check e log com correlation ID básicos.
-- [ ] Configuração/segredos e limpeza de dados de teste documentados.
-- [ ] Outro elemento reproduz a demonstração.
+- [ ] Code and configuration in Git, linked to EN-02.
+- [ ] Client records and queries a persisted ID.
+- [ ] Data survives restart.
+- [ ] Automated test confirms the path.
+- [ ] Unauthorised access test fails as expected.
+- [ ] Automated build executed successfully.
+- [ ] Containers start with reproducible instructions.
+- [ ] Basic health check and log with correlation ID.
+- [ ] Configuration/secrets and test data cleanup documented.
+- [ ] Another member reproduces the demonstration.
 
-## 4. Registo de execução (por preencher com evidência)
+## 4. Execution record (to be filled in with evidence)
 
-| Campo | Estado |
+| Field | Status |
 |---|---|
-| Stack / ADR aceite | Por decidir |
-| Commit / PR | Não disponível |
-| Pipeline / execução | Não disponível |
-| Comandos de instalação/build/teste/deploy | A escrever após escolher stack; não inventar comandos |
-| Ambiente e versões | Por definir |
-| Resultado do teste | Não executado |
-| Demonstração / revisor | Pendente |
-| Limitações observadas | A registar após execução |
+| Stack / accepted ADR | Undecided |
+| Commit / PR | Unavailable |
+| Pipeline / run | Unavailable |
+| Installation/build/test/deploy commands | To be written after stack selection; do not invent commands |
+| Environment and versions | To be defined |
+| Test result | Not executed |
+| Demonstration / reviewer | Pending |
+| Observed limitations | To be recorded after execution |
 
-## 5. Evolução
+## 5. Evolution
 
-A evolução após o skeleton segue os [marcos da Sprint 2](05-product-roadmap.md#3-sprint-2--sequência-proposta). Cada incremento atualiza [desenho](08-technical-design.md), contratos e [DoD](governance/definition-of-done.md).
+Evolution after the skeleton follows the [Sprint 2 milestones](05-product-roadmap.md#3-sprint-2--proposed-sequence). Each increment updates the [design](08-technical-design.md), contracts and [DoD](governance/definition-of-done.md).
 
-Itens: EN-01/02/03 e US-01 no [backlog](06-product-backlog.md). Este documento será o ponto de entrada para instruções reais de execução quando existirem.
+Items: EN-01/02/03 and US-01 in the [backlog](06-product-backlog.md). This document will be the entry point for actual execution instructions when they exist.

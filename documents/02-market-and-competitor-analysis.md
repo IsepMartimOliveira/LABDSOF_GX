@@ -1,108 +1,109 @@
 # 2. Market and Competitor Analysis
 
-**Estado:** levantamento preliminar v0.3 · **Sprint:** 1 · **Revisão:** 2026-10-09
+**Status:** preliminary research v0.3 · **Sprint:** 1 · **Revision:** 2026-10-09
 
-## 1. Qualidade da evidência
+## 1. Evidence quality
 
-O levantamento inicial contém pistas úteis, mas faltam URLs completos e datas por achado. Os detalhes abaixo são **alegações antigas por verificar**, não resultados de uma nova pesquisa. Não existe demo, trial ou auditoria funcional documentada.
+The initial research contains useful leads, but exact URLs and dates are missing for individual findings. The details below are **older claims awaiting verification**, not results of new research. No demo, trial or functional audit has been documented.
 
-- «Não confirmado» significa evidência insuficiente, não ausência da funcionalidade.
-- Material comercial descreve alegações do fornecedor; não comprova qualidade, segurança ou conformidade.
-- Registar fonte exata, data, versão/plano e observação relevante antes de confirmar uma capacidade.
-- Preços históricos não são preços atuais. Não usar informação antiga para estimar custos sem verificação.
-- A diferenciação só pode ser sustentada depois de comparar alternativas relevantes para os utilizadores.
+- “Unconfirmed” means insufficient evidence, not absence of a capability.
+- Marketing material describes supplier claims; it does not prove quality, security or compliance.
+- Record the exact source, date, version/plan and relevant observation before confirming a capability.
+- Historical prices are not current prices. Do not use older information to estimate costs without verification.
+- Differentiation can only be supported after comparing alternatives relevant to users.
 
-## 2. Alternativas identificadas
+## 2. Identified alternatives
 
-### 2.1. Práticas informais [Hipóteses a validar]
+### 2.1. Informal practices [Hypotheses to validate]
 
-| Alternativa | Utilizadores | Vantagem possível | Limitação a investigar |
+| Alternative | Users | Potential advantage | Limitation to investigate |
 |---|---|---|---|
-| Chamadas, SMS, WhatsApp e email | Moradores, administração e prestadores | Familiaridade e baixo esforço inicial de adoção | Histórico de mensagens pode não estruturar estados, responsáveis e decisões |
-| Grupos de vizinhos | Moradores | Comunicação rápida e conhecimento local | Ruído, repetição e exposição de informação |
-| Folhas de cálculo, papel e livro de ocorrências | Administração e zeladores | Flexibilidade e registo simples | Esforço de atualização, consulta e partilha |
-| Contactos habituais de prestadores | Administração | Confiança e conhecimento do edifício | Dependência de pessoas e disponibilidade; comparação pode ser manual |
+| Calls, SMS, WhatsApp and email | Residents, administrators and contractors | Familiarity and low initial adoption effort | Message history may not structure statuses, responsibilities and decisions |
+| Neighbourhood groups | Residents | Fast communication and local knowledge | Noise, repetition and information exposure |
+| Spreadsheets, paper and incident logs | Administrators and caretakers | Flexibility and simple record-keeping | Effort required to update, consult and share |
+| Established contractor contacts | Administrators | Trust and knowledge of the building | Dependence on individuals and availability; comparisons may be manual |
 
-Confirmar nas entrevistas a utilização efetiva, o custo e as dificuldades. Não assumir que todos usam os mesmos canais ou que o processo atual é sempre inferior.
+Confirm actual usage, cost and difficulties in interviews. Do not assume everyone uses the same channels or that the current process is always inferior.
 
-### 2.2. Produtos e pistas do levantamento inicial
+### 2.2. Products and leads from the initial research
 
-Todos os detalhes desta tabela permanecem por verificar; a coluna «Fonte a recuperar» não é uma referência confirmada.
+All details in this table still require verification; the “Source to recover” column is not a confirmed reference.
 
-| Produto | Mercado / utilizadores indicados | Capacidades mencionadas no levantamento | Potencial relevante e questão em aberto | Fonte a recuperar |
+| Product | Reported market / users | Capabilities mentioned in the initial research | Potential relevance and open question | Source to recover |
 |---|---|---|---|---|
-| SolidSoft GC | Portugal; administradores profissionais/voluntários e moradores | Relato com foto/offline, técnicos por QR, rotas de manutenção, documentos, assembleias e quotas; alegação de conformidade RGPD | Suite ampla e contexto português; verificar profundidade de triagem, despacho e controlos de acesso | Artigo Pplware; URL e data por recuperar |
-| Unitify | Portugal; administração e edifícios inteligentes | Acessos, intercomunicador vídeo, contadores, app de residente, quotas e pagamentos locais | Integração com edifício; verificar o fluxo de avarias e dependência de hardware | Pista: unitify.com/smart-building/portugal; data/plano por verificar |
-| CondoBOM | Brasil; síndicos, porteiros e moradores | Ocorrências, manutenção periódica, reservas, visitantes e encomendas; visibilidade restrita ao autor/admin mencionada | Comparável de acompanhamento e privacidade; verificar despacho e adequação ao contexto português | App Store; URL e versão por recuperar |
-| Manu | Brasil; síndicos | Manutenção preventiva por equipamento e ligação a fornecedores/engenharia | Comparável de manutenção; verificar resposta a avarias não planeadas | SíndicoNet, conteúdo publicitário de 2022; URL por recuperar |
-| Condomob / Sivirino | Brasil; síndicos e moradores | Pedidos com foto e acompanhamento de estado | Pistas adicionais; verificar produto, versão e relevância atual | Imprensa/SíndicoNet de 2017; URL por recuperar |
+| SolidSoft GC | Portugal; professional/volunteer administrators and residents | Photo/offline reporting, technician QR check-ins, maintenance routes, documents, assemblies and fees; GDPR compliance claim | Broad suite and Portuguese context; verify depth of triage, dispatch and access controls | Pplware article; URL and date to recover |
+| Unitify | Portugal; administration and smart buildings | Access control, video intercom, meters, resident app, fees and local payment methods | Building integration; verify maintenance issue workflow and hardware dependence | Lead: unitify.com/smart-building/portugal; date/plan to verify |
+| CondoBOM | Brazil; administrators, caretakers and residents | Incident reporting, periodic maintenance, reservations, visitors and deliveries; author/admin-only visibility mentioned | Relevant for follow-up and privacy; verify dispatch and suitability for Portugal | App Store; URL and version to recover |
+| Manu | Brazil; condominium administrators | Preventive maintenance by equipment and links to suppliers/engineering companies | Maintenance comparable; verify response to unplanned failures | SíndicoNet, advertising content from 2022; URL to recover |
+| Condomob / Sivirino | Brazil; administrators and residents | Photo requests and status tracking | Additional leads; verify product, version and current relevance | Media/SíndicoNet from 2017; URL to recover |
 
-### 2.3. Categorias ainda por pesquisar
+### 2.3. Categories still to research
 
-| Categoria | Comparação necessária |
+| Category | Comparison needed |
 |---|---|
-| Software internacional de manutenção/gestão de propriedades | Ordens de trabalho, priorização, prestadores, custos e histórico |
-| Helpdesk / ticketing genérico | Estados, atribuição, automações, duplicados, permissões e esforço de adaptação ao domínio |
-| Marketplace de serviços em Portugal | Orçamentos, seleção, resposta e continuidade do acompanhamento |
+| International maintenance/property management software | Work orders, prioritisation, contractors, costs and history |
+| Generic helpdesk / ticketing | Statuses, assignment, automation, duplicates, permissions and domain adaptation effort |
+| Service marketplaces in Portugal | Quotes, selection, response and continuity of follow-up |
 
-Selecionar comparáveis a partir das ferramentas usadas pelo segmento. Não assumir que estas categorias não oferecem funcionalidades apenas porque ainda não foram pesquisadas.
+Choose comparables based on the segment's actual tools. Do not assume these categories lack capabilities simply because they have not yet been researched.
 
-## 3. Matriz comparativa
+## 3. Comparison matrix
 
-**NC** = não confirmado. **PI** = pista do levantamento inicial, ainda sem referência suficiente. Uma célula só passa a «confirmado na fonte» ou «observado em teste» com ID do registo da secção 5. PI não prova presença nem qualidade. A coluna BMC descreve planeamento, não funcionalidades implementadas; âmbito e prioridades em [04 Visão](04-product-vision.md) e [06 Backlog](06-product-backlog.md).
+**UC** = unconfirmed. **IL** = initial research lead, still lacking a sufficient reference. A cell only becomes “confirmed in source” or “observed in testing” with an ID from the register in section 5. IL proves neither presence nor quality. The BMC column describes plans, not implemented capabilities; scope and priorities are in [04 Vision](04-product-vision.md) and [06 Backlog](06-product-backlog.md).
 
-| Critério | SolidSoft GC | Unitify | CondoBOM | Manu | BMC proposto |
+| Criterion | SolidSoft GC | Unitify | CondoBOM | Manu | Proposed BMC |
 |---|---|---|---|---|---|
-| Relato e acompanhamento | PI | NC | PI | NC | Texto, estados e histórico |
-| Fotografias | PI | NC | PI | NC | Pós-MVP |
-| Triagem automática de urgência | NC | NC | NC | NC | IA assistida, regras e revisão |
-| Duplicados | NC | NC | NC | NC | Should; associação revista |
-| Prestadores e despacho | PI: técnicos/rotas | NC | NC | PI: ligação a fornecedores | Catálogo pequeno; aprovação e resposta |
-| Calendário externo | NC | NC | NC | NC | Simulador realista; fornecedor real opcional |
-| Registo de custos | NC | NC | NC | NC | Básico, opcional |
-| Análise financeira / resumos | NC | NC | NC | NC | Pós-MVP |
-| Manutenção preventiva | PI: rotas | NC | PI | PI | Fora da base atual |
-| Quotas, assembleias e pagamentos | PI | PI: quotas/pagamentos | PI: gestão administrativa, detalhe a confirmar | NC | Fora da base atual |
-| Hardware / contadores | NC | PI | NC | NC | IoT por decidir em DEC-01 |
+| Reporting and follow-up | IL | UC | IL | UC | Text, statuses and history |
+| Photographs | IL | UC | IL | UC | Post-MVP |
+| Automatic urgency triage | UC | UC | UC | UC | Assisted AI, rules and review |
+| Duplicates | UC | UC | UC | UC | Should; reviewed association |
+| Contractors and dispatch | IL: technicians/routes | UC | UC | IL: supplier connections | Small catalogue; approval and response |
+| External calendar | UC | UC | UC | UC | Realistic simulator; real provider optional |
+| Cost recording | UC | UC | UC | UC | Basic, optional |
+| Financial analysis / summaries | UC | UC | UC | UC | Post-MVP |
+| Preventive maintenance | IL: routes | UC | IL | IL | Outside the current baseline scope |
+| Fees, assemblies and payments | IL | IL: fees/payments | IL: administration, details to confirm | UC | Outside the current baseline scope |
+| Hardware / meters | UC | IL | UC | UC | IoT pending DEC-01 |
 
-Avaliar também o processo informal da secção 2.1 com tarefas equivalentes; não lhe atribuir ausências absolutas por falta de estrutura especializada.
+Also evaluate the informal process in section 2.1 using equivalent tasks; do not assign absolute capability gaps merely because it lacks specialised structure.
 
-## 4. Negócio, utilização e confiança
+## 4. Business models, usability and trust
 
-| Dimensão | Informação preservada / estado | Verificação necessária |
+| Dimension | Preserved information / status | Verification needed |
 |---|---|---|
-| Modelo comercial dos concorrentes | Manu: pista de subscrição mensal anunciada em 2022 a R$ 59,90; restantes planos não confirmados | Fonte original, oferta atual, unidade de cobrança, custos de adoção/migração; preço histórico não orienta orçamento |
-| UX | Hipótese: um percurso focado pode exigir menos esforço que uma suite ampla | Executar tarefa equivalente, observar tempo, erros e ajuda; não concluir a partir de marketing |
-| Privacidade | Pistas específicas na tabela de produtos; nenhuma conformidade auditada | Visibilidade por papel, retenção e controlos demonstráveis |
-| Confiança na IA | Não há evidência suficiente sobre adoção de IA pelos concorrentes | Verificar sugestões, explicações, correção e aprovação; não afirmar exclusividade do BMC |
+| Competitor business models | Manu: lead about a monthly subscription advertised in 2022 at R$ 59.90; other plans unconfirmed | Original source, current offer, billing unit, adoption/migration costs; historical price must not guide budgeting |
+| UX | Hypothesis: a focused journey may require less effort than a broad suite | Run an equivalent task, observe time, errors and assistance; do not conclude from marketing |
+| Privacy | Specific leads in the product table; no compliance audit | Role-based visibility, retention and demonstrable controls |
+| Trust in AI | Insufficient evidence about competitors' use of AI | Verify suggestions, explanations, correction and approval; do not claim BMC exclusivity |
 
-O modelo comercial do BMC é uma [hipótese de produto](04-product-vision.md#8-modelo-de-negócio), a validar em DEC-02. A sua política de acesso é definida na [avaliação de segurança](09-security-privacy.md#2-matriz-de-acesso-proposta), não por imitação automática de um concorrente.
+BMC's commercial model is a [product hypothesis](04-product-vision.md#8-business-model), to validate in DEC-02. Its access policy is defined in the [security assessment](09-security-privacy.md#2-proposed-access-matrix), not by automatically copying a competitor.
 
-## 5. Registo de fontes e resultados
+## 5. Source and findings register
 
-| ID | Produto e plano | URL exato / data de consulta | Capacidade ou limitação observada | Tipo de evidência | Consequência para BMC |
+| ID | Product and plan | Exact URL / access date | Observed capability or limitation | Evidence type | Consequence for BMC |
 |---|---|---|---|---|---|
-| A preencher após verificação | — | — | — | — | — |
+| Complete after verification | — | — | — | — | — |
 
-Registar aqui a evidência e referenciar o ID na matriz. Não criar entradas a partir de memória de páginas ou conteúdo gerado sem verificação.
+Record evidence here and reference its ID in the matrix. Do not create entries from memory of pages or unverified generated content.
 
-## 6. Hipótese de diferenciação
+## 6. Differentiation hypothesis
 
-A [proposta de valor](04-product-vision.md#1-visão-e-proposta-de-valor) depende de demonstrar redução de esforço administrativo, sem pressupor exclusividade de IA, rastreabilidade ou calendário.
+The [value proposition](04-product-vision.md#1-vision-and-value-proposition) depends on demonstrating lower administrative effort, without assuming exclusivity in AI, traceability or scheduling.
 
-Hipóteses a testar:
-- Simplicidade pode reduzir contactos e tempo ativo.
-- Explicações e correção podem apoiar decisões.
-- Empresas podem preferir integração com software existente a substituição.
-- Um catálogo conhecido pode ser mais útil que um marketplace.
-- Uma suite pode já cobrir o fluxo ou adicioná-lo; foco e rapidez, por si só, não demonstram vantagem defensável.
+Hypotheses to test:
 
-Se concorrentes cobrirem o essencial, rever posicionamento com evidência; não mudar automaticamente para análise de custos sem investigar essa necessidade.
+- Simplicity may reduce contacts and active time.
+- Explanations and correction may support decisions.
+- Companies may prefer integration with existing software over replacement.
+- An established catalogue may be more useful than a marketplace.
+- A suite may already cover the workflow or add it; focus and speed alone do not demonstrate a defensible advantage.
 
-## 7. Próximas ações
+If competitors cover the essentials, revisit positioning using evidence; do not automatically switch to cost analysis without investigating that need.
 
-1. Recuperar fontes e escolher comparáveis de manutenção/helpdesk e marketplace.
-2. Completar critérios do §5.2: utilizadores, funcionalidades, forças/fraquezas, negócio, UX, privacidade/confiança e diferenciação.
-3. Procurar demo/trial dos produtos relevantes e documentar tarefas observadas e limitações de acesso.
-4. Cruzar resultados com a [investigação](03-user-research.md).
-5. Rever visão e prioridades; registar decisões em [DEC-02](planning/decisions-and-feedback.md) e trabalho em DISC-02 do [backlog](06-product-backlog.md).
+## 7. Next actions
+
+1. Recover sources and select maintenance/helpdesk and marketplace comparables.
+2. Complete the §5.2 criteria: users, capabilities, strengths/weaknesses, business model, UX, privacy/trust and differentiation.
+3. Seek demos/trials of relevant products and document observed tasks and access limitations.
+4. Cross-check findings with [user research](03-user-research.md).
+5. Revise vision and priorities; record decisions under [DEC-02](planning/decisions-and-feedback.md) and work under DISC-02 in the [backlog](06-product-backlog.md).

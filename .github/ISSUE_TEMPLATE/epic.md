@@ -1,39 +1,39 @@
 ---
-name: "Épico"
-about: "Resultado amplo, fronteira e histórias associadas."
+name: "Epic"
+about: "Broad outcome, boundary and associated stories."
 title: "[EP-XX] "
 labels: ""
 assignees: ""
 ---
 
-## Identificação
+## Identification
 
-- ID local:
-- Labels sugeridas: type:epic, area:…
-- Stakeholders / responsável:
-- Horizonte ou milestones:
-- Hipótese/achado/enunciado de origem:
+- Local ID:
+- Suggested labels: type:epic, area:…
+- Stakeholders / owner:
+- Horizon or milestones:
+- Source hypothesis/finding/assignment:
 
-## Problema e resultado
+## Problem and outcome
 
-Quem beneficia e que resultado mensurável se pretende?
+Who benefits, and what measurable outcome is intended?
 
-## Fronteira
+## Boundary
 
-Incluído:
-Excluído:
-Decisões por tomar:
+Included:
+Excluded:
+Open decisions:
 
-## Itens filhos
+## Child items
 
-- [ ] ID / link — contribuição para o resultado.
+- [ ] ID / link — contribution to the outcome.
 
-## Critério de conclusão
+## Completion criterion
 
-Jornada demonstrável, requisitos de qualidade, evidência de avaliação e limitações aceites. Concluir documentos não implica concluir capacidades.
+Demonstrable journey, quality requirements, evaluation evidence and accepted limitations. Completing documents does not imply completing capabilities.
 
-## Dependências e riscos
+## Dependencies and risks
 
-## Validação de prioridade
+## Priority validation
 
-Proposta MoSCoW, participantes/data da discussão e alterações resultantes.
+MoSCoW proposal, discussion participants/date and resulting changes.

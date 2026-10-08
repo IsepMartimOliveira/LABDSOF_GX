@@ -1,34 +1,34 @@
-# Registo de investigação — [ID]
+# Research record — [ID]
 
-**Estado:** planeado / realizado / analisado
-**Data e investigador:** a preencher
-**Método:** entrevista / observação / protótipo / fonte pública
-**Pergunta / P1–P7 / DEC relacionada:** a preencher
+**Status:** planned / performed / analysed
+**Date and researcher:** to be filled in
+**Method:** interview / observation / prototype / public source
+**Question / P1–P7 / related DEC:** to be filled in
 
-## Participante ou fonte
+## Participant or source
 
-Código e segmento; não incluir nome/contactos no Git. Para fonte pública, URL exato, data e natureza da fonte. Códigos com ligação à identidade são pseudónimos.
+Code and segment; do not include names/contacts in Git. For a public source, exact URL, date and source type. Codes linked to identity are pseudonyms.
 
-## Participação e dados
+## Participation and data
 
-Propósito explicado, autorização para notas/gravação, acesso, local restrito e data de eliminação. Guardar prova identificável separadamente, não neste ficheiro público.
+Purpose explained, permission for notes/recording, access, restricted location and deletion date. Store identifiable evidence separately, not in this public file.
 
-## Evidência observada
+## Observed evidence
 
-Factos e citações autorizadas sem elementos identificadores. No teste: tarefa, tempo, erros e ajuda. Não inventar respostas.
+Facts and authorised quotations without identifying details. For tests: task, time, errors and assistance. Do not invent responses.
 
-## Interpretação
+## Interpretation
 
-O que a equipa infere? Alternativas e contradições?
+What does the team infer? Alternatives and contradictions?
 
-## Achado e consequência
+## Finding and consequence
 
-ID do achado, pressuposto confirmado/refutado/ajustado, decisão proposta, requisitos/backlog afetados.
+Finding ID, assumption confirmed/refuted/adjusted, proposed decision, affected requirements/backlog.
 
-## Limitações
+## Limitations
 
-Amostra, contexto, enviesamento e o que não se pode concluir.
+Sample, context, bias and what cannot be concluded.
 
-## Seguimento
+## Follow-up
 
-Responsável, ação, prazo e local da síntese publicável.
+Owner, action, deadline and location of the publishable synthesis.

@@ -1,33 +1,33 @@
-# Review / priorização — [Sprint ou sessão]
+# Review / prioritisation — [Sprint or session]
 
-**Estado:** agendada / realizada
-**Data, participantes e papéis:** a preencher
-**Objetivo:** problema/MVP, MoSCoW, arquitetura ou avaliação
+**Status:** scheduled / held
+**Date, participants and roles:** to be filled in
+**Objective:** problem/MVP, MoSCoW, architecture or evaluation
 
-## Material apresentado
+## Material presented
 
-Links para versão dos documentos, protótipo/incremento e evidência. Identificar simulações e limitações.
+Links to document versions, prototype/increment and evidence. Identify simulations and limitations.
 
-## Feedback observado
+## Observed feedback
 
-| Origem | Feedback | Evidência/nota |
+| Source | Feedback | Evidence/note |
 |---|---|---|
 | | | |
 
-## Prioridades discutidas
+## Priorities discussed
 
-| Item | Proposta anterior | Prioridade após discussão | Motivo |
+| Item | Previous proposal | Priority after discussion | Reason |
 |---|---|---|---|
 | | | | |
 
-## Decisão revista
+## Revised decision
 
-Decisão anterior → nova decisão, feedback que motivou alteração, alternativas e consequências. Se não houve mudança, escrever isso; não fabricar revisão para cumprir §5.7.
+Previous decision → new decision, feedback motivating the change, alternatives and consequences. If there was no change, state that; do not fabricate a revision to meet §5.7.
 
-## Ações
+## Actions
 
-| Ação / issue | Responsável | Prazo | Estado |
+| Action / issue | Owner | Deadline | Status |
 |---|---|---|---|
 | | | | |
 
-Atualizar documents/planning/decisions-and-feedback.md e artefactos afetados. Uma sessão prevista não é evidência de envolvimento realizado.
+Update documents/planning/decisions-and-feedback.md and affected artefacts. A planned session is not evidence of actual engagement.

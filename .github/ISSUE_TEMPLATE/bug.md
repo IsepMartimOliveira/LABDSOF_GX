@@ -1,39 +1,39 @@
 ---
 name: "Bug"
-about: "Comportamento observado, reprodução e impacto."
+about: "Observed behaviour, reproduction and impact."
 title: "[BUG-XX] "
 labels: ""
 assignees: ""
 ---
 
-## Identificação
+## Identification
 
-- Labels sugeridas: type:bug, area:…
-- Versão/commit e ambiente:
-- Requisito/história afetada:
-- Impacto e prioridade proposta:
+- Suggested labels: type:bug, area:…
+- Version/commit and environment:
+- Affected requirement/story:
+- Impact and proposed priority:
 
-## Reprodução
+## Reproduction
 
 1.
 2.
 3.
 
-## Esperado
+## Expected
 
-## Observado
+## Observed
 
-## Evidência sanitizada
+## Sanitised evidence
 
-Logs/correlation ID ou captura sem dados pessoais/segredos. Se envolver vulnerabilidade ou credenciais, usar canal restrito acordado, não issue pública.
+Logs/correlation ID or screenshot without personal data/secrets. For vulnerabilities or credentials, use the agreed restricted channel, not a public issue.
 
-## Critérios de correção
+## Fix criteria
 
-- [ ] Comportamento esperado restabelecido.
-- [ ] Causa/impacto compreendidos.
-- [ ] Verificação de regressão proporcional ao risco.
-- [ ] Documentação/limitações atualizadas quando necessário.
+- [ ] Expected behaviour restored.
+- [ ] Cause/impact understood.
+- [ ] Regression verification proportionate to risk.
+- [ ] Documentation/limitations updated when necessary.
 
-## Acompanhamento
+## Tracking
 
-Responsável, revisor, estimativa, dependências, PR e evidência DoD.
+Owner, reviewer, estimate, dependencies, PR and DoD evidence.

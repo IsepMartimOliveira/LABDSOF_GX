@@ -1,36 +1,36 @@
-# ADR-001 — Fronteiras e deployment backend
+# ADR-001 — Backend boundaries and deployment
 
-**Estado:** Proposta · **Data da proposta:** 2026-10-07 · **Decisores:** por atribuir · **DEC:** DEC-04
+**Status:** Proposed · **Proposal date:** 2026-10-07 · **Decision-makers:** to be assigned · **DEC:** DEC-04
 
-## Contexto
+## Context
 
-O §6.2 exige pelo menos dois componentes backend implantáveis independentemente; alternativa modular depende de justificação e aceitação. O BMC distingue ocorrência/triagem de preparação e execução de intervenção.
+§6.2 requires at least two independently deployable backend components; a modular alternative depends on justification and acceptance. BMC distinguishes issue/triage from intervention preparation and execution.
 
-## Alternativas
+## Alternatives
 
-| Alternativa | Vantagens esperadas | Custos/riscos |
+| Alternative | Expected advantages | Costs/risks |
 |---|---|---|
-| Issue + Dispatch, com worker assíncrono | Fronteiras do domínio e falhas externas explícitas; deploy separado | Consistência eventual, contratos, testes e operação distribuída |
-| Backend de domínio + worker independente | Menos fronteiras de dados; isolamento da IA | Justificar autonomia/responsabilidade do worker e adequação com docentes |
-| Monólito modular | Menor custo inicial de operação e transações | Exceção requer evidência e aceitação; módulos devem ter limites verificáveis |
-| Serviço por cada papel/subscrição | Separação extensa | Sem necessidade demonstrada; custo excessivo para o MVP |
+| Issue + Dispatch, with asynchronous worker | Explicit domain boundaries and external failures; separate deployment | Eventual consistency, contracts, tests and distributed operations |
+| Domain backend + independent worker | Fewer data boundaries; AI isolation | Justify worker autonomy/responsibility and suitability with lecturers |
+| Modular monolith | Lower initial operational and transaction costs | Exception requires evidence and acceptance; modules must have verifiable boundaries |
+| Service per role/subscription | Extensive separation | No demonstrated need; excessive cost for the MVP |
 
-## Direção proposta (não aceite)
+## Proposed direction (not accepted)
 
-Issue controla ocorrências/triagem; Dispatch controla intervenções/prestadores/calendário. Worker processa triagem e comunica resultados pela interface do dono dos dados. Uma tecnologia de persistência com esquemas/credenciais separados é candidata.
+Issue controls issues/triage; Dispatch controls interventions/contractors/calendar. A worker processes triage and communicates results through the data owner's interface. A single persistence technology with separate schemas/credentials is a candidate.
 
-Comunicação síncrona para pedidos/consultas com resposta imediata; eventos para tarefas demoradas e propagação de estado. IDs e contratos versionados; sem escrita cruzada nas tabelas. Outbox e consumidores idempotentes são propostas a confirmar.
+Synchronous communication for requests/queries requiring an immediate response; events for lengthy tasks and state propagation. IDs and versioned contracts; no cross-writing to tables. Outbox and idempotent consumers are proposals to confirm.
 
-## Consequências e validação
+## Consequences and validation
 
-- Dois serviços têm builds, configuração, migrações e health checks próprios.
-- Base de dados/infraestrutura partilhadas continuam a ser dependências e pontos de falha.
-- Testar indisponibilidade de worker, reentrega e atualização atrasada.
-- Comparar esforço com capacidade real antes de fechar escolha.
-- Se escolher alternativa modular, registar justificação e resposta dos docentes; não assumir aprovação.
+- Two services have their own builds, configuration, migrations and health checks.
+- Shared database/infrastructure remain dependencies and failure points.
+- Test worker unavailability, redelivery and delayed updates.
+- Compare effort with actual capacity before finalising the choice.
+- If choosing a modular alternative, record the justification and lecturer response; do not assume approval.
 
-## Por resolver
+## Open questions
 
-Stack, broker, autenticação entre serviços, deployment, cancelamento/reconciliação e propriedade final das notificações. Rever com [desenho técnico](../08-technical-design.md), EN-01 e DEC-04.
+Stack, broker, service-to-service authentication, deployment, cancellation/reconciliation and final notification ownership. Review with the [technical design](../08-technical-design.md), EN-01 and DEC-04.
 
-**Decisão final / data / evidência:** pendente.
+**Final decision / date / evidence:** pending.

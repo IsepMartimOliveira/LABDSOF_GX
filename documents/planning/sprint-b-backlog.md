@@ -1,54 +1,54 @@
-# Sprint B — proposta de backlog
+# Sprint B — backlog proposal
 
-**Estado:** rascunho para planning; **nenhum item comprometido**.
+**Status:** draft for planning; **no committed items**.
 
-A expressão Sprint B foi indicada nas fases da Sprint 1, mas a correspondência com Sprint 1/2/3, duração e datas não está documentada. DEC-03 tem de esclarecer isso. Este plano assume apenas um próximo ciclo de trabalho que prepara/demonstra uma fatia mínima; não renomeia a Sprint 2.
+The term Sprint B was specified in the Sprint 1 phases, but its correspondence with Sprint 1/2/3, duration and dates is not documented. DEC-03 must clarify this. This plan assumes only a next work cycle that prepares/demonstrates a minimal slice; it does not rename Sprint 2.
 
-## Objetivo candidato
+## Candidate objective
 
-Demonstrar relato por texto persistido e consulta de estado com autorização, enquanto se fecham decisões e se recolhe evidência que sustente o MVP.
+Demonstrate a persisted text report and authorised status query while closing decisions and gathering evidence supporting the MVP.
 
-## Candidatos por ordem de dependência
+## Candidates in dependency order
 
-IDs e critérios completos no [product backlog](../06-product-backlog.md).
+Full IDs and criteria are in the [product backlog](../06-product-backlog.md).
 
-| Ordem | Item | Resultado candidato | Dependências/DoR em falta | Estimativa | Responsável | Selecionado |
+| Order | Item | Candidate outcome | Missing dependencies/DoR | Estimate | Owner | Selected |
 |---|---|---|---|---|---|---|
-| 1 | DISC-03 | Âmbito, calendário e prioridades discutidos | Participantes/data, pergunta e tempo de sessão | Por estimar | Por atribuir | Não |
-| 2 | DISC-01 | Primeira evidência de utilizadores | Recrutamento, responsável e retenção | Por estimar | Por atribuir | Não |
-| 3 | EN-01 | Desenho/stack/segurança suficientes para skeleton | DEC-04/07, revisão técnica | Por estimar | Por atribuir | Não |
-| 4 | EN-02 | Build, teste e contentores executáveis | EN-01, ambiente e checks | Por estimar | Por atribuir | Não |
-| 5 | US-01 | Relatar/consultar com pertença ao edifício | DEC-07, EN-01/02, critérios revistos | Por estimar | Por atribuir | Não |
-| 6 | US-02 | Estados básicos e correção manual | US-01, regras de transição | Por estimar | Por atribuir | Não |
+| 1 | DISC-03 | Scope, schedule and priorities discussed | Participants/date, question and session duration | To be estimated | To be assigned | No |
+| 2 | DISC-01 | Initial user evidence | Recruitment, owner and retention | To be estimated | To be assigned | No |
+| 3 | EN-01 | Sufficient design/stack/security for the skeleton | DEC-04/07, technical review | To be estimated | To be assigned | No |
+| 4 | EN-02 | Executable build, test and containers | EN-01, environment and checks | To be estimated | To be assigned | No |
+| 5 | US-01 | Report/query with building membership | DEC-07, EN-01/02, reviewed criteria | To be estimated | To be assigned | No |
+| 6 | US-02 | Basic states and manual correction | US-01, transition rules | To be estimated | To be assigned | No |
 
-DISC-02 (concorrência) pode substituir um candidato se tiver maior valor para as decisões. Isto não é autorização para comprometer todos os itens sem capacidade.
+DISC-02 (competitors) may replace a candidate if it offers greater value for decisions. This does not authorise committing to all items without capacity.
 
-## Registo de planning
+## Planning record
 
-| Campo | Valor |
+| Field | Value |
 |---|---|
-| Correspondência com sprint oficial | Por confirmar em DEC-03 |
-| Datas e duração | Por confirmar |
-| Disponibilidade individual / ausências | Por preencher |
-| Estimativa total e margem para imprevistos | Por calcular pela equipa |
-| Itens efetivamente selecionados | Nenhum |
-| Objetivo final acordado | Pendente |
-| Data/participantes do planning | Pendente |
+| Correspondence with official sprint | To be confirmed in DEC-03 |
+| Dates and duration | To be confirmed |
+| Individual availability / absences | To be filled in |
+| Total estimate and contingency | To be calculated by the team |
+| Items actually selected | None |
+| Final agreed objective | Pending |
+| Planning date/participants | Pending |
 
-## Gate DoR
+## DoR gate
 
-- [ ] Acordo de equipa e capacidade conhecidos.
-- [ ] Critérios e dependências de cada candidato revistos.
-- [ ] Responsáveis, revisores e estimativas atribuídos.
-- [ ] [DoR](../governance/definition-of-ready.md) verificada por item, com data.
-- [ ] Seleção cabe na capacidade e apoia o objetivo.
+- [ ] Team agreement and capacity known.
+- [ ] Each candidate's criteria and dependencies reviewed.
+- [ ] Owners, reviewers and estimates assigned.
+- [ ] [DoR](../governance/definition-of-ready.md) checked per item, with date.
+- [ ] Selection fits capacity and supports the objective.
 
-Itens sem DoR permanecem no product backlog. Um spike pode ser selecionado para resolver incerteza se tiver pergunta, limite de esforço e saída verificável.
+Items without DoR remain in the product backlog. A spike may be selected to resolve uncertainty if it has a question, effort limit and verifiable output.
 
-## Demonstração proposta e acompanhamento
+## Proposed demonstration and tracking
 
-Utilizador de teste autorizado regista ocorrência; após reiniciar o serviço, consulta o mesmo ID. Outro edifício não consegue ler/alterar a ocorrência. Mostrar build, teste automatizado e contentores; sem dependência da IA para registar.
+An authorised test user records an issue; after restarting the service, they query the same ID. Another building cannot read/modify the issue. Show the build, automated test and containers; reporting does not depend on AI.
 
-Atualizar progresso no board e refletir decisões na review. Ver [walking skeleton](../10-walking-skeleton.md).
+Update progress on the board and reflect decisions at the review. See [walking skeleton](../10-walking-skeleton.md).
 
-Referência: [Sprint Backlog — Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/scrum/artifacts/sprint-backlog), consultada em 2026-10-07. Este documento é uma preparação para seleção pela equipa, não um compromisso já aprovado.
+Reference: [Sprint Backlog — Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/scrum/artifacts/sprint-backlog), accessed on 2026-10-07. This document prepares for team selection; it is not an approved commitment.
