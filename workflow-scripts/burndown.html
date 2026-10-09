@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprint burndown</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  <style>
+    body { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; font: 16px/1.5 system-ui, sans-serif; color: #182936; }
+    h1 { margin-bottom: .25rem; }
+    form { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; background: #f2f5f8; padding: 1rem; border-radius: 8px; }
+    label { display: flex; flex-direction: column; gap: .3rem; font-weight: 600; }
+    input, button { font: inherit; padding: .5rem; }
+    input { min-width: 0; }
+    .wide { grid-column: 1 / -1; }
+    button { cursor: pointer; }
+    #message { white-space: pre-wrap; }
+    #message.error { color: #a21919; }
+    .chart { height: 380px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { padding: .5rem; text-align: left; border-bottom: 1px solid #d6dfe5; }
+    small { font-weight: normal; }
+  </style>
+</head>
+<body>
+  <h1>Sprint burndown</h1>
+  <p>Remaining issues against an ideal line. Dates and daily snapshots use UTC.</p>
+  <form id="settings">
+    <label class="wide">History URL
+      <input id="history-url" value="../scripts/data/history.json">
+    </label>
+    <label class="wide">Or select a history.json file
+      <input id="history-file" type="file" accept=".json,application/json">
+      <small>A selected file takes precedence over the URL. No upload is made.</small>
+    </label>
+    <label>Sprint start (opening baseline)<input id="start" type="date" required></label>
+    <label>Sprint end<input id="end" type="date" required></label>
+    <label>Completed status<input id="done-status" value="Done" required></label>
+    <label class="wide">Initial sprint issue numbers
+      <input id="scope" placeholder="12, 18, 24" required>
+      <small>One repository only. Fixed starting scope; later additions are excluded. Keep scope changes in the sprint review.</small>
+    </label>
+    <button type="submit">Draw burndown</button>
+    <button id="export" type="button" disabled>Download CSV</button>
+  </form>
+  <p id="message" role="status" aria-live="polite">Choose sprint dates, enter the selected issue numbers, then draw the chart.</p>
+  <div class="chart"><canvas id="chart" role="img" aria-label="Sprint burndown; the same values are in the table below."></canvas></div>
+  <p>The ideal line starts at the initial issue count and reaches zero at the end, decreasing on Monday–Friday only (public holidays are not excluded). Actual values use the latest snapshot each UTC day. Missing snapshots, missing selected issues or unknown statuses leave gaps.</p>
+  <details>
+    <summary>Daily values and data gaps</summary>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date (UTC)</th><th>Scope</th><th>Done</th><th>Remaining</th><th>Ideal</th><th>Data quality</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </details>
+<script id="burndown-model">
+function parseScope(text) {
+  const parts = text.trim().split(/[\s,]+/);
+  if (!text.trim() || parts.some(id => !/^[1-9]\d*$/.test(id) || !Number.isSafeInteger(Number(id)))) {
+    throw new Error('Enter positive issue numbers separated by commas or spaces.');
+  }
+  return [...new Set(parts.map(id => String(Number(id))))];
+}
+
+function buildBurndown(history, start, end, ids, doneStatus) {
+  const dayMs = 86400000;
+  function parseDay(day) {
+    const value = Date.parse(day + 'T00:00:00Z');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || !Number.isFinite(value) || new Date(value).toISOString().slice(0, 10) !== day) {
+      throw new Error('Choose valid sprint dates.');
+    }
+    return value;
+  }
+  const first = parseDay(start), last = parseDay(end);
+  if (last <= first || (last - first) / dayMs > 366) throw new Error('Sprint end must follow start, within 366 days.');
+  const completed = doneStatus.trim().toLowerCase();
+  if (!completed || ['no_status', 'unknown'].includes(completed)) throw new Error('Enter a valid completed status.');
+  if (!ids.length) throw new Error('Select at least one sprint issue.');
+  if (!Array.isArray(history) || !history.length) throw new Error('History must be a non-empty array of snapshots.');
+
+  const days = [];
+  let workdays = 0;
+  for (let time = first; time <= last; time += dayMs) {
+    const date = new Date(time);
+    if (time > first && date.getUTCDay() !== 0 && date.getUTCDay() !== 6) workdays++;
+    days.push({ date: date.toISOString().slice(0, 10), elapsed: workdays });
+  }
+  if (!workdays) throw new Error('The interval must include a working day after the opening baseline.');
+
+  const latest = new Map();
+  for (const snapshot of history) {
+    const time = typeof snapshot?.date === 'string' ? Date.parse(snapshot.date) : NaN;
+    if (!Number.isFinite(time) || !Array.isArray(snapshot?.issues)) {
+      throw new Error('Each snapshot must contain a valid date and an issues array. Aggregate-only history is not supported.');
+    }
+    const day = new Date(time).toISOString().slice(0, 10);
+    if (!latest.has(day) || time >= latest.get(day).time) latest.set(day, { time, snapshot });
+  }
+
+  return days.map(({ date, elapsed }) => {
+    const row = { date, scope: ids.length, done: null, remaining: null, ideal: ids.length * (1 - elapsed / workdays), quality: 'No snapshot' };
+    const entry = latest.get(date);
+    if (!entry) return row;
+    const items = new Map();
+    const duplicate = new Set();
+    for (const item of entry.snapshot.issues) {
+      const id = String(item?.id);
+      if (items.has(id)) duplicate.add(id);
+      items.set(id, item);
+    }
+    const unavailable = ids.filter(id => {
+      const status = items.get(id)?.status;
+      return duplicate.has(id) || typeof status !== 'string' || !status.trim() || ['no_status', 'unknown'].includes(status.trim().toLowerCase());
+    });
+    if (unavailable.length) {
+      row.quality = 'Missing, duplicate or unknown: ' + unavailable.join(', ');
+      return row;
+    }
+    row.done = ids.filter(id => items.get(id).status.trim().toLowerCase() === completed).length;
+    row.remaining = ids.length - row.done;
+    row.quality = 'Latest snapshot: ' + new Date(entry.time).toISOString();
+    return row;
+  });
+}
+</script>
+<script>
+const byId = id => document.getElementById(id);
+let chart = null;
+let rows = [];
+let requestVersion = 0;
+
+function resetResult() {
+  requestVersion++;
+  if (chart) chart.destroy();
+  chart = null;
+  rows = [];
+  byId('rows').replaceChildren();
+  byId('export').disabled = true;
+}
+byId('settings').addEventListener('input', () => {
+  resetResult();
+  byId('message').className = '';
+  byId('message').textContent = 'Settings changed. Draw the chart to update the results.';
+});
+
+byId('settings').addEventListener('submit', async event => {
+  event.preventDefault();
+  resetResult();
+  const version = requestVersion;
+  byId('message').className = '';
+  byId('message').textContent = 'Loading snapshots…';
+  try {
+    const ids = parseScope(byId('scope').value);
+    const file = byId('history-file').files[0];
+    let history;
+    if (file) {
+      history = JSON.parse(await file.text());
+    } else {
+      const url = byId('history-url').value.trim();
+      if (!url) throw new Error('Enter a history URL or select a JSON file.');
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error('History request failed: HTTP ' + response.status);
+      history = await response.json();
+    }
+    if (version !== requestVersion) return;
+    rows = buildBurndown(history, byId('start').value, byId('end').value, ids, byId('done-status').value);
+    for (const row of rows) {
+      const tr = document.createElement('tr');
+      for (const value of [row.date, row.scope, row.done ?? '—', row.remaining ?? '—', row.ideal.toFixed(2), row.quality]) {
+        const td = document.createElement('td');
+        td.textContent = String(value);
+        tr.append(td);
+      }
+      byId('rows').append(tr);
+    }
+    byId('export').disabled = false;
+    const gaps = rows.filter(row => row.remaining === null).length;
+    byId('message').textContent = `${ids.length} issues in fixed starting scope. ${rows.length - gaps} measured days; ${gaps} days without complete data.`;
+    if (typeof Chart === 'undefined') {
+      byId('message').textContent += ' Chart.js could not load. Daily values and CSV are still available.';
+      return;
+    }
+    chart = new Chart(byId('chart'), {
+      type: 'line',
+      data: {
+        labels: rows.map(row => row.date),
+        datasets: [
+          { label: 'Actual remaining issues', data: rows.map(row => row.remaining), borderColor: '#1765ab', backgroundColor: '#1765ab', tension: 0, spanGaps: false, pointRadius: 4 },
+          { label: 'Ideal remaining issues', data: rows.map(row => row.ideal), borderColor: '#667680', borderDash: [6, 5], pointRadius: 0, tension: 0 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: { title: { display: true, text: `Sprint burndown · ${rows[0].date} to ${rows.at(-1).date} · UTC` } },
+        scales: { y: { beginAtZero: true, suggestedMax: ids.length, ticks: { precision: 0 }, title: { display: true, text: 'Remaining issues' } }, x: { title: { display: true, text: 'Date (UTC)' } } }
+      }
+    });
+  } catch (error) {
+    if (version !== requestVersion) return;
+    resetResult();
+    byId('message').className = 'error';
+    byId('message').textContent = error.message + ' If opening this page directly, select a local history.json file instead of fetching a URL.';
+  }
+});
+
+byId('export').addEventListener('click', () => {
+  const quote = value => '"' + String(value ?? '').replaceAll('"', '""') + '"';
+  const csv = ['date_utc,total_scope,done,remaining,ideal,data_quality', ...rows.map(row => [row.date, row.scope, row.done, row.remaining, row.ideal.toFixed(4), row.quality].map(quote).join(','))].join('\r\n');
+  const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `burndown-${rows[0].date}-${rows.at(-1).date}.csv`;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+</script>
+</body>
+</html>
