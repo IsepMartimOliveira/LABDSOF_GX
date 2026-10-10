@@ -1,8 +1,8 @@
 # Sprint 1 — phases and deliverables
 
-**Status:** proposed plan v0.1 · **Current stage:** Sprint 1 · **Dates/capacity:** to be confirmed
+**Status:** plan v0.2 — scope and team assignments updated on 2026-10-10 · **Current stage:** Sprint 1 · **Dates/capacity:** to be confirmed
 
-The following three phases were specified to organise Sprint 1. They may overlap and do not replace the ten deliverables in §7.1.2. Documentation status does not equate to execution. Listed owners are proposed roles, not yet named people.
+The following three phases organise Sprint 1 and may overlap. The assignment's §7.1.2 remains the reference, with the evaluator's clarification in DEC-11: the walking skeleton is optional, and the team will not develop it this sprint. Documentation status does not equate to execution. Role holders are agreed in the [team agreement](../governance/team-working-agreement.md): Pedro (PM/frontend), Ricardo (Tech Lead/Issue), Afonso (BA/PO/Intervention), Sandro (AI) and Martim (DevOps/QA/security). Specific work-item ownership and capacity still require planning.
 
 ## Phase 1 — organisation
 
@@ -13,12 +13,13 @@ The following three phases were specified to organise Sprint 1. They may overlap
 | Methodology | [Agreement](../governance/team-working-agreement.md) and ratification meeting | Proposal, no recorded agreement | Team |
 | DoR | [Checklist](../governance/definition-of-ready.md) applied to an item | Proposal, awaiting ratification | BA/PO + Dev |
 | DoD | [Checklist](../governance/definition-of-done.md) applied to a delivery | Proposal, awaiting ratification | QA + Dev |
-| Roles | Names, backups and availability in the agreement | To be assigned | Team |
+| Roles | Names, backups and availability in the agreement | Names and responsibilities agreed; backups and availability pending | Team |
 
 - [x] Local Git repository and draft documentation available.
 - [ ] Remote, access and rules verified with evidence.
 - [ ] Tracking tool selected and configured.
-- [ ] Methodology, DoR/DoD and roles agreed.
+- [x] Team member assignments and responsibility division agreed.
+- [ ] Methodology and DoR/DoD agreed.
 - [ ] Schedule, capacity and Sprint B designation clarified.
 
 ## Phase 2 — discovery and initial requirements
@@ -66,10 +67,10 @@ The following three phases were specified to organise Sprint 1. They may overlap
 | 7 — Technical Design | [08](../08-technical-design.md) | Proposal; stack/contracts/deployment to consolidate |
 | 8 — ADRs | [Index](../adr/README.md) | Initial proposed ADR; decisions not yet accepted |
 | 9 — Security and Privacy Assessment | [09](../09-security-privacy.md) | Initial assessment; review and policies pending |
-| 10 — Walking Skeleton | [10](../10-walking-skeleton.md) | Plan; implementation, build, test and deployment missing |
+| 10 — Walking Skeleton | [10](../10-walking-skeleton.md) | Optional per evaluator; team will not develop it in Sprint 1 (DEC-11). Plan retained for later implementation |
 
 ## Exit review
 
-Demonstrate the executable skeleton; explain value, hypotheses, alternatives and scope. Show what was learned and which decisions changed. Document at least one actual revision following lecturer feedback during the project; aim to do so at this review.
+Explain value, hypotheses, alternatives, scope and technical design. Show what was learned and which decisions changed. The skeleton demonstration is excluded from this sprint by DEC-11. Document at least one actual product or technical decision revision following lecturer feedback during the project; the skeleton's optional status alone is not treated as evidence of meeting §5.7.
 
 Creating these documents does not complete Sprint 1. Update the checklist with links to PRs, board, research and execution. Use the [review template](../templates/investor-review.md).

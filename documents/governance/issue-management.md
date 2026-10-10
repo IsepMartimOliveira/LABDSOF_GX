@@ -30,7 +30,7 @@ Do not duplicate state in labels if the board already has a Status field. Priori
 
 | Name | Outcome | Date | Remote status |
 |---|---|---|---|
-| S1 — Discover, Validate and Design | §7.1.2 deliverables, including skeleton | To be confirmed | Not verified |
+| S1 — Discover, Validate and Design | §7.1.2 discovery/design deliverables; optional skeleton excluded by team decision (DEC-11) | To be confirmed | Not verified |
 | S2 — Build and Operate | Operational slice, §7.2.2 | To be confirmed | Not verified |
 | S3 — Evaluate and Present | Evaluation and delivery, §7.3.2 | To be confirmed | Not verified |
 

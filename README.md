@@ -4,6 +4,8 @@
 
 **Current stage: Sprint 1 — discovery, validation and design.** The repository contains planning documentation and templates. **It does not yet contain an application, software tests, CI/CD or executable deployment.**
 
+**Confirmed Sprint 1 scope:** the evaluator clarified that the walking skeleton is optional, and the team decided not to develop it this sprint. This is recorded in [DEC-11](documents/planning/decisions-and-feedback.md#confirmed-sprint-1-scope-decision--dec-11); later implementation requirements remain applicable.
+
 ## Start here
 
 1. Read the [assignment](LABDSOF-26-27-Assignment.md).
@@ -27,7 +29,7 @@
 
 **Draft/proposal** = written but not validated. **Plan/template** = a way to perform/record work, not proof of execution. **Completed/verified** requires evidence (PR, result, configuration or session). Checked boxes below refer only to what they explicitly describe.
 
-**Last documentation review:** 2026-10-07. Team review and ratification pending. Documentation prepared with AI assistance; claims, choices and results require human review and evidence.
+**Latest team update recorded:** 2026-10-10 — member assignments, P1/P3 cross-cutting role swap and optional Sprint 1 skeleton decision. Other proposals and working practices still require review/ratification. Documentation prepared with AI assistance; claims, choices and results require human review and evidence.
 
 ## Product documents and Sprint 1 deliverables
 
@@ -47,21 +49,21 @@ File numbering does not always match the assignment: **05 is the roadmap; 06 is 
 | [08 — Technical Design](documents/08-technical-design.md) | 7 | Conceptual model and initial contracts | Stack, details and technical decisions |
 | [ADRs](documents/adr/README.md) / [ADR-001](documents/adr/ADR-001-backend-boundaries.md) | 8 | One proposed ADR | Choices and consequences accepted with evidence |
 | [09 — Security and privacy](documents/09-security-privacy.md) | 9 | Initial assessment | Policies/review; controls in implementation |
-| [10 — Walking Skeleton](documents/10-walking-skeleton.md) | 10 | Plan | Code, build, test, containers and demonstration |
+| [10 — Walking Skeleton](documents/10-walking-skeleton.md) | 10, optional per evaluator | Not selected for Sprint 1 (DEC-11) | Plan retained for later implementation; not a Sprint 1 blocker |
 | [Original notes](NOTAS.md) | Exploration | Ideas preserved and contextualised | Validate suggestions and provider information |
 
 ## Organisation, planning and templates
 
 | Document | Status |
 |---|---|
-| [Team working agreement and roles](documents/governance/team-working-agreement.md) | Proposal; names and ratification pending |
+| [Team working agreement and roles](documents/governance/team-working-agreement.md) | Named assignments agreed; remaining working practices await ratification |
 | [Definition of Ready](documents/governance/definition-of-ready.md) | Proposed checklist |
 | [Definition of Done](documents/governance/definition-of-done.md) | Proposal by delivery type |
 | [Git workflow](documents/governance/git-workflow.md) | Proposal; remote protections not verified |
 | [Issues, labels and milestones](documents/governance/issue-management.md) | Local conventions; remote configuration pending |
 | [Sprint 1 plan](documents/planning/sprint-1-plan.md) | Phases, dependencies and exit criteria |
 | [Sprint B backlog](documents/planning/sprint-b-backlog.md) | Candidates; no Ready commitments |
-| [Decisions and feedback](documents/planning/decisions-and-feedback.md) | Open questions; no actual feedback recorded |
+| [Decisions and feedback](documents/planning/decisions-and-feedback.md) | Evaluator clarification and team decisions recorded; other questions remain open |
 | [Story](.github/ISSUE_TEMPLATE/user-story.md), [epic](.github/ISSUE_TEMPLATE/epic.md), [task/spike](.github/ISSUE_TEMPLATE/task.md), [bug](.github/ISSUE_TEMPLATE/bug.md) | Local GitHub templates; labels/milestones to select after setup |
 | [Pull request](.github/pull_request_template.md) | Local template |
 | [ADR](documents/templates/adr.md), [research](documents/templates/research-record.md), [review](documents/templates/investor-review.md) | Templates to copy and complete with real data |
@@ -75,7 +77,8 @@ File numbering does not always match the assignment: **05 is the roadmap; 06 is 
 - [x] Local collaboration templates prepared.
 - [ ] Verify remote, access, main branch and protections.
 - [ ] Choose/configure board, labels, milestones and issues.
-- [ ] Ratify methodology/DoR/DoD and assign roles.
+- [x] Record agreed member assignments and responsibilities (Pedro/PM; Afonso/BA-PO).
+- [ ] Ratify methodology/DoR/DoD.
 - [ ] Confirm dates, capacity and the meaning of Sprint B.
 
 ### Phase 2 — discovery · documentation preparation
@@ -94,8 +97,8 @@ File numbering does not always match the assignment: **05 is the roadmap; 06 is 
 - [ ] Discuss priorities with the customer/lecturers and record changes.
 - [ ] Estimate, assign owners and select only Ready items.
 - [ ] Consolidate architecture, AI, security and ADRs.
-- [ ] Implement and demonstrate the walking skeleton with build/tests/containers.
-- [ ] Record actual feedback and track the decision revision required by §5.7.
+- [x] Record the decision not to develop the optional walking skeleton in Sprint 1 (DEC-11).
+- [ ] Record investor review and the product/technical decision revision required by §5.7; evaluator scope clarification is recorded separately.
 
 ## Priority decisions
 
@@ -105,4 +108,4 @@ DEC-01: scope and IoT; DEC-03: team/schedule/Sprint B; DEC-04: stack and archite
 
 ## Run the project
 
-There is no application to run yet. The [walking skeleton plan](documents/10-walking-skeleton.md) defines the first demonstration and fields where actual commands, environment and evidence will be added after implementation.
+There is no application to run yet. The [walking skeleton plan](documents/10-walking-skeleton.md) is retained for later implementation planning, with fields for actual commands, environment and evidence. The team has excluded its development from Sprint 1 following the evaluator's clarification.

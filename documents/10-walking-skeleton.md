@@ -1,8 +1,10 @@
 # Walking Skeleton
 
-**Status:** execution plan · Sprint 1, deliverable 10 · **Not implemented**
+**Status:** retained implementation plan · **Not selected for Sprint 1; not implemented** · Decision recorded on 2026-10-10
 
-A planning document does not satisfy the executable deliverable. This documentation baseline contains no application, Dockerfiles, pipeline or tests.
+The evaluator clarified that the walking skeleton (§7.1.2, item 10) is optional for Sprint 1. The team decided not to develop it this sprint; its absence is not a Sprint 1 completion blocker. See [DEC-11](planning/decisions-and-feedback.md#confirmed-sprint-1-scope-decision--dec-11). The original assignment remains unchanged, and later technical delivery requirements remain applicable.
+
+The plan below is retained for later implementation planning, not a Sprint 1 commitment or evidence of implementation. This baseline contains no application, Dockerfiles, application build/test pipeline or software tests.
 
 ## 1. Minimum objective
 
@@ -22,6 +24,8 @@ This skeleton does not need to implement all stories, AI or the calendar yet. Fu
 8. Save commit/PR links, pipeline run and tested instructions.
 
 ## 3. Acceptance checklist
+
+Apply this checklist when the implementation is scheduled; these unchecked items are not Sprint 1 exit criteria.
 
 - [ ] Code and configuration in Git, linked to EN-02.
 - [ ] Client records and queries a persisted ID.

@@ -4,6 +4,8 @@
 
 The term Sprint B was specified in the Sprint 1 phases, but its correspondence with Sprint 1/2/3, duration and dates is not documented. DEC-03 must clarify this. This plan assumes only a next work cycle that prepares/demonstrates a minimal slice; it does not rename Sprint 2.
 
+**Scope constraint recorded on 2026-10-10 (DEC-11):** the evaluator clarified that the walking skeleton is optional in Sprint 1, and the team will not develop it this sprint. The implementation objective, EN-02/US-01/US-02 candidates and demonstration below apply only to a later implementation cycle. If Sprint B falls within Sprint 1, select discovery/design work instead; EN-01 remains design work without a required executable prototype.
+
 ## Candidate objective
 
 Demonstrate a persisted text report and authorised status query while closing decisions and gathering evidence supporting the MVP.

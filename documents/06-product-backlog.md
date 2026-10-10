@@ -8,7 +8,9 @@ Corresponds to deliverable 5 in §7.1.2. The [roadmap](05-product-roadmap.md) de
 
 MoSCoW refers to the **academic release**: Must = essential for the cycle/obligations; Should = valuable but can be simplified; Could = optional; Won't = outside this release. This is a proposal for the prioritisation session, not its outcome.
 
-All items are in **Backlog**, with **estimate, owner, reviewer and issue URL yet to be assigned**; none has been declared Ready. Capacity and DoR discussion: [Sprint B](planning/sprint-b-backlog.md).
+All items are in **Backlog**, with **estimate, owner, reviewer and issue URL yet to be assigned**; none has been declared Ready. Team role assignments are confirmed in the [agreement](governance/team-working-agreement.md), but do not automatically assign individual backlog items. Capacity and DoR discussion: [Sprint B](planning/sprint-b-backlog.md).
+
+**Scope update recorded on 2026-10-10 (DEC-11):** the evaluator clarified that the walking skeleton is optional in Sprint 1. The team will not develop it this sprint. EN-02 is retained as a foundation for later implementation planning; its technical outcomes support the Sprint 2 delivery requirements.
 
 Initial order: DISC/EN discovery and foundations → US-01/02 → US-03/04 → US-06/07/08/09/10 → Should/Could according to evidence. EN-03 accompanies implementation and EN-04 evaluation.
 
@@ -30,7 +32,7 @@ Initial order: DISC/EN discovery and foundations → US-01/02 → US-03/04 → U
 | DISC-02 / Must | Complete comparison: exact, dated sources; §5.2 criteria; include an informal alternative and a comparable maintenance/helpdesk product; conclusion separates evidence from inference | Selection of comparables | S1 |
 | DISC-03 / Must | Ratify organisation and review scope/priorities: roles/board/DoR/DoD; DEC-01/03/09 and DEC-10 discussion; actual feedback recorded. Document at least one decision revised following lecturer feedback during the project | Team and stakeholder availability | S1, follow-up S2/S3 |
 | EN-01 / Must | Consolidate design: context, components, model, API/events, data ownership, deployment and threats; ADRs record alternatives and actual decisions | DEC-04/07, vision | S1 |
-| EN-02 / Must | Walking skeleton: client→backend→persistence→query after restart; automated build, initial test and containers with reproducible instructions; linked evidence | EN-01 | S1 |
+| EN-02 / Must for later implementation foundations; optional in S1 | Walking skeleton: client→backend→persistence→query after restart; automated build, initial test and containers with reproducible instructions; linked evidence. Not selected for Sprint 1 (DEC-11) | EN-01 | S2 planning candidate; no Sprint 1 commitment |
 | EN-03 / Must | Delivery/quality: independent components or accepted exception; CI/CD, authorisation/contract/journey tests, logs/health/metrics/correlation, queue/AI/calendar failures and backup/restore; evidence for applicable NFRs | EN-01/02; accompanies stories | S2, strengthened in S3 |
 | EN-04 / Must | Final evaluation: AI/baseline, usability, accessibility, security, performance, dashboard, architecture evolution, limitations, roadmap and contributions; reproducible results and environment | Operational increment, DEC-08 | S3 |
 

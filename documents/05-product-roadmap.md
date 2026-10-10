@@ -8,7 +8,7 @@ This filename is retained, but this is **not the Product Backlog deliverable**: 
 
 | Assignment milestone | Objective | Intended evidence |
 |---|---|---|
-| Sprint 1 | Discover, validate and design | Research, vision, backlog, AI Assessment, design, ADRs, security and walking skeleton |
+| Sprint 1 | Discover, validate and design | Research, vision, backlog, AI Assessment, design, ADRs and security; optional skeleton excluded by team decision (DEC-11) |
 | Sprint 2 | Build and operate the first version of the complete cycle | Application, persistence, permissions, AI/fallback, integration, tests, CI/CD and demonstrated failure |
 | Sprint 3 | Complete, evaluate and strengthen | AI, usability, accessibility, security, performance and resilience results, and presentation |
 | Post-MVP | Explore extensions with proven demand | New planning, with no commitment for the semester |
@@ -17,14 +17,14 @@ Dates, duration and capacity need confirmation (DEC-03). **Phases 1–3 are Spri
 
 ## 2. Sprint 1
 
-Phases may overlap; the walking skeleton can begin while research is underway.
+Phases may overlap. Following the evaluator's clarification that the walking skeleton is optional, the team will not develop it in Sprint 1 (DEC-11, recorded on 2026-10-10). The plan is retained for later implementation planning; the Sprint 2 technical requirements remain applicable.
 
 | Phase | Work | Output |
 |---|---|---|
 | Phase 1 | Git, board, methodology, DoR/DoD and roles | Reviewed agreement and verified configuration |
 | Phase 2 | Domain, alternatives, questions, interviews, requirements | Evidence or limitations, findings and decisions |
 | Phase 3 | Vision, personas, workflow, domain, backlog, MoSCoW with stakeholders, Sprint B | Revised scope and selection meeting the DoR |
-| Throughout | AI, architecture, ADRs, security and walking skeleton | Justifiable design and minimal runnable implementation |
+| Throughout | AI, architecture, ADRs and security | Justifiable design ready to guide implementation |
 
 Checklist: [Sprint 1 plan](planning/sprint-1-plan.md). At the review, assess the value of the problem and the size of the MVP. Documented limitations do not count as positive validation. Record actual feedback and at least one revised decision during the project (§5.7).
 
