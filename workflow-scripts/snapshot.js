@@ -9,13 +9,11 @@ const dataDirectory = path.join(__dirname, "data");
 const historyFile = path.join(dataDirectory, "history.json");
 const token = process.env.GITHUB_TOKEN;
 
+// Personal projects belong to the user, even when not linked to a repository.
 const projectQuery = `
-query($owner: String!, $repository: String!, $after: String) {
-  repository(owner: $owner, name: $repository) {
-    projectsV2(first: 100, after: $after) {
-      nodes { id number title }
-      pageInfo { hasNextPage endCursor }
-    }
+query($owner: String!, $number: Int!) {
+  user(login: $owner) {
+    projectV2(number: $number) { id number title }
   }
 }`;
 
@@ -73,18 +71,13 @@ function nextCursor(connection, seen) {
 }
 
 async function findProject() {
-  let after = null;
-  const seen = new Set();
-  do {
-    const data = await graphql(projectQuery, { owner, repository, after });
-    if (!data.repository) throw new Error(`Repository ${owner}/${repository} was not found or is inaccessible.`);
-    const connection = data.repository.projectsV2;
-    const next = nextCursor(connection, seen);
-    const project = connection.nodes.find(item => item?.number === projectNumber);
-    if (project?.id) return project;
-    after = next;
-  } while (after);
-  throw new Error(`Project ${projectNumber} was not found among projects linked to ${owner}/${repository}. Check the project number, repository link and token access.`);
+  const data = await graphql(projectQuery, { owner, number: projectNumber });
+  if (!data.user) throw new Error(`GitHub user ${owner} was not found or is inaccessible.`);
+  const project = data.user.projectV2;
+  if (!project?.id) {
+    throw new Error(`Project ${projectNumber} is unavailable under user ${owner}. Confirm the owner and number at https://github.com/users/${owner}/projects/${projectNumber} and that MY_PAT has read:project access. A repository link is not required.`);
+  }
+  return project;
 }
 
 async function fetchIssues(project) {

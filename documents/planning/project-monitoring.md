@@ -34,10 +34,10 @@ Files: [snapshot.js](../../workflow-scripts/snapshot.js), [metrics.yml](../../.g
 
 ### Implemented configuration
 
-- Repository: `Phenriquerafael/LABDSOF_GX`; project number: `7`. These values are constants at the top of `snapshot.js`, not placeholders. The project must be linked to that repository and accessible to the token.
+- Repository: `Phenriquerafael/LABDSOF_GX`; project number: `7`. These values are constants at the top of `snapshot.js`, not placeholders. The collector queries personal project `7` directly under user `Phenriquerafael`; a repository link is not required. The token must have access to the project. Confirm the owner and number in the project URL (`https://github.com/users/Phenriquerafael/projects/7`).
 - The collector runs as CommonJS on Node 20 without requiring a root `package.json`. Run it from the repository root with `node workflow-scripts/snapshot.js`, with `GITHUB_TOKEN` supplied through the environment.
 - All output paths are resolved relative to the script: `workflow-scripts/data/history.json` holds timestamped issue/status snapshots; `workflow-scripts/data/raw/` holds individual API responses. Existing history is appended, not reset.
-- Projects and project items are paginated. Status is retrieved directly by field name rather than from a limited field list, using [GitHub's project field API](https://docs.github.com/en/graphql/reference/projects).
+- The project is resolved directly by owner and number; its items are paginated. Status is retrieved directly by field name rather than from a limited field list, using [GitHub's project field API](https://docs.github.com/en/graphql/reference/projects).
 - Only issues from the configured repository are counted; PRs, draft items and issues from other repositories are excluded. The collector queries active project items: preserve review evidence before archiving/removing items. It collects the whole project, not a specific sprint.
 - HTTP/GraphQL errors, inaccessible items, missing Status values, invalid pagination and empty collections stop the run without appending to history. Invalid existing history is not overwritten. History is replaced only after the complete snapshot has been written to a temporary file.
 - Both HTML pages use `./data/history.json`. `chart.html` renders stacked status counts; `burndown.html` filters explicit starting issue IDs, plots actual/ideal lines, supports local JSON selection and exports daily CSV data.
@@ -46,7 +46,7 @@ Files: [snapshot.js](../../workflow-scripts/snapshot.js), [metrics.yml](../../.g
 ### Checks still required before automated collection
 
 1. Configure the Actions secret `MY_PAT` with access to read the repository/project and push snapshot commits. It is passed to the collector as `GITHUB_TOKEN`; do not add tokens to tracked files.
-2. Confirm project `7` is linked to `Phenriquerafael/LABDSOF_GX`, that its single-select field is named `Status`, and that each tracked issue has a value. The burndown's completed status defaults to `Done` and can be changed in the page.
+2. Confirm the project URL identifies personal project `7` under `Phenriquerafael`, the token has `read:project` access, its single-select field is named `Status`, and each tracked issue has a value. If the URL uses `/orgs/` instead of `/users/`, the lookup must use an organisation owner rather than the current user query. The burndown's completed status defaults to `Done` and can be changed in the page.
 3. Confirm `main` is the intended destination and branch rules permit this workflow to push. Ensure the workflow is available on the repository's default branch for scheduled execution.
 4. If earlier history exists at an old path, preserve and migrate it into `workflow-scripts/data/history.json` before the first run; do not silently start a new series or concatenate overlapping histories.
 5. Run the workflow manually and inspect the saved history, raw responses and resulting commit. Then verify scheduled collection. Live token permissions and project visibility have not been verified locally.
