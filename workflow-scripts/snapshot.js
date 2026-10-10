@@ -84,15 +84,23 @@ async function fetchIssues(project) {
   let after = null;
   const cursors = new Set();
   const issues = new Map();
+  const types = new Map();
+  const repositories = new Map();
+  let scanned = 0;
   do {
     const data = await graphql(itemsQuery, { id: project.id, after });
     const connection = data.node?.items;
     after = nextCursor(connection, cursors);
     for (const item of connection.nodes) {
+      scanned++;
+      const type = item?.content?.__typename || "Inaccessible";
+      types.set(type, (types.get(type) || 0) + 1);
       if (!item?.content) throw new Error("A project item is inaccessible. Check token access before collecting a complete snapshot.");
       if (item.content.__typename !== "Issue") continue;
       if (!item.content.repository?.nameWithOwner) throw new Error("Issue repository information is missing.");
-      if (item.content.repository.nameWithOwner.toLowerCase() !== `${owner}/${repository}`.toLowerCase()) continue;
+      const sourceRepository = item.content.repository.nameWithOwner;
+      repositories.set(sourceRepository, (repositories.get(sourceRepository) || 0) + 1);
+      if (sourceRepository.toLowerCase() !== `${owner}/${repository}`.toLowerCase()) continue;
       const id = item.content.number;
       const status = item.status?.name?.trim();
       if (!Number.isSafeInteger(id) || id <= 0) throw new Error("Invalid issue number returned by GitHub.");
@@ -103,6 +111,21 @@ async function fetchIssues(project) {
       issues.set(id, { id, status });
     }
   } while (after);
+  const counts = values => [...values].map(([name, count]) => `${name}: ${count}`).join(", ") || "none";
+  console.log(`Project ${projectNumber}: scanned ${scanned} active items. Types: ${counts(types)}. Issue repositories: ${counts(repositories)}. Matched ${owner}/${repository}: ${issues.size}.`);
+  if (!issues.size) {
+    let hint;
+    if (!scanned) {
+      hint = "The project returned no active items. Confirm the project number and add existing repository issues to the board; archived items are not collected.";
+    } else if (!repositories.size && types.has("DraftIssue")) {
+      hint = `The board contains draft cards, not repository issues. Convert the intended cards to issues in ${owner}/${repository}, or add existing issues to the project. Draft cards have no repository issue number and are not supported by the current burndown format.`;
+    } else if (repositories.size) {
+      hint = `Issues were found under ${counts(repositories)}, but none under ${owner}/${repository}. Confirm which repository should be tracked; changing a project owner does not transfer its issues.`;
+    } else {
+      hint = "No Issue items were returned. Pull requests and other item types are excluded from this issue-based chart.";
+    }
+    throw new Error(`${hint} History will not be updated.`);
+  }
   return [...issues.values()].sort((a, b) => a.id - b.id);
 }
 
@@ -110,7 +133,6 @@ async function main() {
   if (!token) throw new Error("GITHUB_TOKEN not set. Configure the MY_PAT workflow secret.");
   const project = await findProject();
   const issues = await fetchIssues(project);
-  if (!issues.length) throw new Error("No repository issues found in the project; history will not be updated.");
   const snapshot = { date: new Date().toISOString(), issues };
   let history = [];
   if (fs.existsSync(historyFile)) {
