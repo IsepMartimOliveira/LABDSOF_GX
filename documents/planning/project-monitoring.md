@@ -1,6 +1,6 @@
 ﻿# Project monitoring
 
-**Status:** monitoring plan with snapshot/CFD templates and an implemented burndown page; project configuration and real measurements remain pending.
+**Status:** collector and chart paths configured; live project access, workflow execution and real measurements remain to be verified.
 
 ## 1. Assignment requirements and chosen evidence
 
@@ -28,27 +28,31 @@ The operational dashboard required by §6.7 and §7.3.2 monitors the running app
 - Use one reporting timezone, retain UTC source timestamps and show missing snapshots as gaps.
 - Save the selected chart, source data, sprint goal outcome and evidence links in `documents/planning/sprint-N-review.md` for each official sprint. These review records are to be created when evidence exists.
 
-## 3. Data collection and template setup
+## 3. Data collection and configuration
 
-Templates: [snapshot.js](../../workflow-scripts/snapshot.js), [metrics.yml](../../.github/workflows/metrics.yml), [chart.html](../../workflow-scripts/chart.html) and [burndown.html](../../workflow-scripts/burndown.html).
+Files: [snapshot.js](../../workflow-scripts/snapshot.js), [metrics.yml](../../.github/workflows/metrics.yml), [chart.html](../../workflow-scripts/chart.html) and [burndown.html](../../workflow-scripts/burndown.html).
 
-Current behaviour:
+### Implemented configuration
 
-- `snapshot.js` reads project issue numbers and Status through the GitHub GraphQL API. It appends snapshots to `scripts/data/history.json` and saves raw responses under `scripts/data/raw/`.
-- `metrics.yml` specifies daily collection (`0 0 * * *`) and a manual trigger, followed by a commit of the data.
-- `chart.html` plots counts by Status over time as stacked areas (cumulative flow).
-- `burndown.html` plots remaining issues and an ideal line for explicit sprint dates and issue numbers. It reads the same history format, supports local JSON selection, and exports a daily CSV. Its default URL is `../scripts/data/history.json`, matching the collector output when served from the repository root.
+- Repository: `Phenriquerafael/LABDSOF_GX`; project number: `7`. These values are constants at the top of `snapshot.js`, not placeholders. The project must be linked to that repository and accessible to the token.
+- The collector runs as CommonJS on Node 20 without requiring a root `package.json`. Run it from the repository root with `node workflow-scripts/snapshot.js`, with `GITHUB_TOKEN` supplied through the environment.
+- All output paths are resolved relative to the script: `workflow-scripts/data/history.json` holds timestamped issue/status snapshots; `workflow-scripts/data/raw/` holds individual API responses. Existing history is appended, not reset.
+- Projects and project items are paginated. Status is retrieved directly by field name rather than from a limited field list, using [GitHub's project field API](https://docs.github.com/en/graphql/reference/projects).
+- Only issues from the configured repository are counted; PRs, draft items and issues from other repositories are excluded. The collector queries active project items: preserve review evidence before archiving/removing items. It collects the whole project, not a specific sprint.
+- HTTP/GraphQL errors, inaccessible items, missing Status values, invalid pagination and empty collections stop the run without appending to history. Invalid existing history is not overwritten. History is replaced only after the complete snapshot has been written to a temporary file.
+- Both HTML pages use `./data/history.json`. `chart.html` renders stacked status counts; `burndown.html` filters explicit starting issue IDs, plots actual/ideal lines, supports local JSON selection and exports daily CSV data.
+- The workflow runs daily at `00:00 UTC` or manually, checks out `main`, runs the collector and commits `workflow-scripts/data/` back to `main`. Concurrent workflow runs are serialised. A rebase incorporates intervening commits before pushing; commit/push failures remain visible.
 
-Required setup before using these templates:
+### Checks still required before automated collection
 
-1. Fill in the three placeholders in `snapshot.js` before running it: `<REPOSITORY_OWNER>` (GitHub user or organisation), `<REPOSITORY_NAME>` (repository name) and `<PROJECT_NUMBER>` (numeric project number). Replace the whole placeholder, including angle brackets. The project number is converted with `Number(...)`; for example, `Number("12")`. Verify that the chosen project is accessible through the repository query.
-2. Align paths: the workflow calls `scripts/snapshot.js`, but the file is in `workflow-scripts/`. The CFD page (`chart.html`) expects `workflow-scripts/data/history.json`, while the collector writes `scripts/data/history.json`. The new burndown page already defaults to the collector location; update its editable URL if the output moves. Choose one location and update the command, writer, fetch URL and workflow commit path consistently.
-3. Configure Node to support the script's ES-module `import`. Configure `MY_PAT` with the required project-read and repository-write access, and review the workflow's `HEAD:main` destination against the agreed branch rules.
-4. Validate API responses and Status values; fail collection on errors. Add pagination before the query limits (10 projects, 100 items and 10 field values) can omit data.
-5. Filter collected items against the dated sprint scope record. The script currently captures the entire project, not sprint membership. Use repository-qualified issue IDs if multiple repositories are included.
-6. Verify a manual run, persisted history and scheduled collection. Serve the HTML and data through a local HTTP server or the chosen static hosting location so its relative fetch resolves.
+1. Configure the Actions secret `MY_PAT` with access to read the repository/project and push snapshot commits. It is passed to the collector as `GITHUB_TOKEN`; do not add tokens to tracked files.
+2. Confirm project `7` is linked to `Phenriquerafael/LABDSOF_GX`, that its single-select field is named `Status`, and that each tracked issue has a value. The burndown's completed status defaults to `Done` and can be changed in the page.
+3. Confirm `main` is the intended destination and branch rules permit this workflow to push. Ensure the workflow is available on the repository's default branch for scheduled execution.
+4. If earlier history exists at an old path, preserve and migrate it into `workflow-scripts/data/history.json` before the first run; do not silently start a new series or concatenate overlapping histories.
+5. Run the workflow manually and inspect the saved history, raw responses and resulting commit. Then verify scheduled collection. Live token permissions and project visibility have not been verified locally.
+6. Serve `workflow-scripts/` through HTTP and open either chart. Alternatively, open `burndown.html` directly and select a local history file. Record sprint dates and initial issue IDs before drawing the burndown.
 
-The separate `burndown.html` page is implemented and uses the same item-level snapshot format as the CFD page. Repository/project values in `snapshot.js` are now placeholders, not a configured data source. The workflow still needs the path, secret and branch setup above before automated collection can run.
+The collector, workflow paths and chart defaults are aligned. Configuration is implemented; successful local checks do not constitute evidence of live collection or completed project work.
 
 ## 4. Charts and flow measures
 
