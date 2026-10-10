@@ -1,0 +1,278 @@
+{
+  "data": {
+    "node": {
+      "items": {
+        "nodes": [
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 1,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 2,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 3,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 4,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 5,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 6,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 7,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 8,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 9,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 10,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 11,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 12,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 13,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 14,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 15,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 16,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 17,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 18,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 19,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 20,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 21,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          },
+          {
+            "content": {
+              "__typename": "Issue",
+              "number": 22,
+              "repository": {
+                "nameWithOwner": "Phenriquerafael/LABDSOF_GX"
+              }
+            },
+            "status": {
+              "name": "Backlog"
+            }
+          }
+        ],
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDQ1NDU0NTQ1NDU0NTQ1NM4P-Ji-"
+        }
+      }
+    }
+  }
+}
