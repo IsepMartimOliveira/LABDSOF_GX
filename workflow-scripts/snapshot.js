@@ -25,7 +25,7 @@ query($id: ID!, $after: String) {
         nodes {
           content {
             __typename
-            ... on Issue { number repository { nameWithOwner } }
+            ... on Issue { number title repository { nameWithOwner } }
           }
           status: fieldValueByName(name: "Status") {
             ... on ProjectV2ItemFieldSingleSelectValue { name }
@@ -37,7 +37,6 @@ query($id: ID!, $after: String) {
   }
 }`;
 
-let responseNumber = 0;
 const runId = `${Date.now()}-${process.pid}`;
 
 async function graphql(query, variables) {
@@ -49,9 +48,6 @@ async function graphql(query, variables) {
   });
   if (!response.ok) throw new Error(`GitHub API returned HTTP ${response.status}. Check token access and API limits.`);
   const json = await response.json();
-  const rawDirectory = path.join(dataDirectory, "raw");
-  fs.mkdirSync(rawDirectory, { recursive: true });
-  fs.writeFileSync(path.join(rawDirectory, `${runId}-${++responseNumber}.json`), JSON.stringify(json, null, 2));
   if (json.errors?.length) {
     throw new Error(`GitHub GraphQL error: ${json.errors.map(error => error.message).join("; ")}`);
   }
@@ -84,6 +80,7 @@ async function fetchIssues(project) {
   let after = null;
   const cursors = new Set();
   const issues = new Map();
+  const rawItems = [];
   const types = new Map();
   const repositories = new Map();
   let scanned = 0;
@@ -109,6 +106,10 @@ async function fetchIssues(project) {
       }
       if (issues.has(id)) throw new Error(`Duplicate issue #${id} across pages; retry collection.`);
       issues.set(id, { id, status });
+      rawItems.push({
+        content: { number: id, title: item.content.title },
+        fieldValues: { nodes: [{ name: status, field: { name: "Status" } }] },
+      });
     }
   } while (after);
   const counts = values => [...values].map(([name, count]) => `${name}: ${count}`).join(", ") || "none";
@@ -126,19 +127,38 @@ async function fetchIssues(project) {
     }
     throw new Error(`${hint} History will not be updated.`);
   }
-  return [...issues.values()].sort((a, b) => a.id - b.id);
+  return { issues: [...issues.values()].sort((a, b) => a.id - b.id), rawItems };
 }
 
 async function main() {
   if (!token) throw new Error("GITHUB_TOKEN not set. Configure the MY_PAT workflow secret.");
   const project = await findProject();
-  const issues = await fetchIssues(project);
+  const { issues, rawItems } = await fetchIssues(project);
   const snapshot = { date: new Date().toISOString(), issues };
   let history = [];
   if (fs.existsSync(historyFile)) {
     history = JSON.parse(fs.readFileSync(historyFile, "utf8"));
     if (!Array.isArray(history)) throw new Error("Existing history.json is not an array; refusing to overwrite it.");
   }
+  // Compatibility export matching example.json, assembled from all API pages.
+  // This contains the configured repository's issues, not verbatim API responses.
+  const rawSnapshot = {
+    data: {
+      repository: {
+        projectsV2: {
+          nodes: [{
+            id: project.id,
+            number: project.number,
+            title: project.title,
+            items: { nodes: rawItems },
+          }],
+        },
+      },
+    },
+  };
+  const rawDirectory = path.join(dataDirectory, "raw");
+  fs.mkdirSync(rawDirectory, { recursive: true });
+  fs.writeFileSync(path.join(rawDirectory, `${runId}.json`), JSON.stringify(rawSnapshot, null, 2));
   history.push(snapshot);
   fs.mkdirSync(dataDirectory, { recursive: true });
   const temporaryFile = path.join(dataDirectory, `history-${runId}.tmp`);

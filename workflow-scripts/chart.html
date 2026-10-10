@@ -1,19 +1,53 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { max-width: 900px; margin: 2rem auto; font-family: sans-serif; }
-    canvas { width: 100%; height: 400px; }
+    body { padding: 0 1rem; }
+    .chart-container { position: relative; height: 400px; }
+    #message { white-space: pre-wrap; }
+    #message.error { color: #a21919; }
   </style>
 </head>
 <body>
   <h2>Project Issues CFD (Stacked Area)</h2>
-  <canvas id="chart"></canvas>
+  <p>Load the collected history, or select a local JSON file when opening this page directly.</p>
+  <p><label>History JSON <input id="history-file" type="file" accept=".json,application/json"></label>
+  <button id="reload" type="button">Reload collected history</button></p>
+  <p id="message" role="status" aria-live="polite"></p>
+  <p id="summary"></p>
+  <div class="chart-container"><canvas id="chart" role="img" aria-label="Issue counts by status over time"></canvas></div>
 
 <script>
-async function loadData() {
-  const history = await fetch('./data/history.json').then(r => r.json());
+const historyUrl = './data/history.json';
+let chart = null;
+let loadVersion = 0;
+
+async function loadData(file) {
+  let history;
+  if (file) {
+    history = JSON.parse((await file.text()).replace(/^\uFEFF/, ''));
+  } else {
+    if (location.protocol === 'file:') {
+      throw new Error('Select workflow-scripts/data/history.json above, or open this page with a local HTTP server (for example VS Code Live Server). Direct file opening cannot reliably fetch the JSON.');
+    }
+    const response = await fetch(historyUrl, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Could not load ${historyUrl}: HTTP ${response.status}. Pull the latest workflow-generated data, or select history.json above.`);
+    history = JSON.parse((await response.text()).replace(/^\uFEFF/, ''));
+  }
+  if (!Array.isArray(history) || history.length === 0) throw new Error('History must contain at least one snapshot.');
+  for (const snapshot of history) {
+    if (!snapshot || typeof snapshot.date !== 'string' || !Number.isFinite(Date.parse(snapshot.date))) throw new Error('A snapshot has an invalid date.');
+    if ('issues' in snapshot) {
+      if (!Array.isArray(snapshot.issues) || snapshot.issues.some(issue => !issue || typeof issue.status !== 'string')) throw new Error('Each issue must have a status.');
+    } else {
+      const values = Object.entries(snapshot).filter(([key]) => key !== 'date');
+      if (!values.length || values.some(([, value]) => typeof value !== 'number' || !Number.isFinite(value) || value < 0)) throw new Error('Legacy snapshots must contain non-negative numeric status counts.');
+    }
+  }
   return history.sort((a,b) => new Date(a.date) - new Date(b.date));
 }
 
@@ -78,10 +112,28 @@ function colorForStatus(status, idx) {
   };
 }
 
-async function main() {
-  const history = await loadData();
+async function main(file) {
+  const version = ++loadVersion;
+  const message = document.getElementById("message");
+  message.className = "";
+  message.textContent = "Loading history…";
+  document.getElementById("summary").textContent = "";
+  if (chart) chart.destroy();
+  chart = null;
+  try {
+  const history = await loadData(file);
+  if (version !== loadVersion) return;
 
   const statuses = getStatuses(history);
+  if (!statuses.length) throw new Error('Snapshots contain no issue counts to display.');
+  document.getElementById('summary').textContent = 'Latest snapshot: ' + new Date(history.at(-1).date).toISOString() + ' — ' + statuses.map(status => `${status}: ${countByStatus(history.at(-1), status)}`).join(' · ');
+  message.textContent = `${history.length} snapshot(s) loaded.`;
+  if (history.length === 1) message.textContent += ' With one snapshot, only points are shown; the flow develops as more snapshots are collected.';
+  if (typeof Chart === 'undefined') {
+    message.className = 'error';
+    message.textContent += ' Chart.js could not load from the CDN. Check your internet connection or browser restrictions. Counts are shown below.';
+    return;
+  }
 
   const datasets = statuses.map((status, idx) => ({
     label: status,
@@ -90,17 +142,19 @@ async function main() {
     backgroundColor: colorForStatus(status, idx).bg,
     borderColor: colorForStatus(status, idx).border,
     borderWidth: 1,
-    tension: 0.3                       // smooth curves
+    pointRadius: 4,
+    tension: 0                       // smooth curves
   }));
 
-  new Chart(document.getElementById('chart'), {
+  chart = new Chart(document.getElementById('chart'), {
     type: 'line',
     data: {
-      labels: history.map(s => new Date(s.date).toISOString().slice(0,10)),
+      labels: history.map(s => new Date(s.date).toISOString().replace('T', ' ').slice(0, 19) + ' UTC'),
       datasets
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         title: { display: true, text: 'Project Issues CFD' },
         tooltip: { mode: 'index', intersect: false }
@@ -111,12 +165,25 @@ async function main() {
       },
       scales: {
         x: { stacked: true },
-        y: { stacked: true }
+        y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } }
       }
     }
   });
+  } catch (error) {
+    if (version !== loadVersion) return;
+    message.className = 'error';
+    message.textContent = error.message;
+  }
 }
 
+document.getElementById('history-file').addEventListener('change', event => {
+  const file = event.target.files[0];
+  if (file) main(file);
+});
+document.getElementById('reload').addEventListener('click', () => {
+  document.getElementById('history-file').value = '';
+  main();
+});
 main();
 </script>
 </body>

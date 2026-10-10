@@ -1,0 +1,1303 @@
+{
+  "data": {
+    "repository": {
+      "projectsV2": {
+        "nodes": [
+          {
+            "id": "PVT_kwHOBbQ8Lc4BSias",
+            "number": 6,
+            "title": "ECOS project",
+            "items": {
+              "nodes": [
+                {
+                  "content": {
+                    "number": 17,
+                    "title": "SIM-002+VAL-002 - Configure Coefficient, Tariff and Algorithm with Compatibility Validation"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "In progress",
+                        "field": {
+                          "name": "Status"
+                        }
+                      },
+                      {}
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 7,
+                    "title": "AUTH-001 — Basic Authentication"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "In progress",
+                        "field": {
+                          "name": "Status"
+                        }
+                      },
+                      {}
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 16,
+                    "title": "VAL-001 — Complete Input Validation"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "In progress",
+                        "field": {
+                          "name": "Status"
+                        }
+                      },
+                      {}
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 1,
+                    "title": "Epic 01 - Community Management"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 2,
+                    "title": "CM-001 — Create Community"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 3,
+                    "title": "CM-002 — Define Visual Identity"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 4,
+                    "title": "CM-003 — Define Community Elements"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 5,
+                    "title": "CM-004 — Differentiate Real vs Simulated Communities"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 6,
+                    "title": "Epic 02 - Credentials and Plans Management"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 8,
+                    "title": "AUTH-002 — RBAC by Roles"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 9,
+                    "title": "PLN-001 — Define Plan per Community Manager"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 10,
+                    "title": "PLN-002 — Associate Community Manager to Pilot"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 11,
+                    "title": "Epic 03 - Input Handling"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 12,
+                    "title": "IN-001 — Configure Profiles and Periods via UI"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 13,
+                    "title": "IN-002 — Optional File Upload Excel CSV"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 14,
+                    "title": "Epic 04 - Simulation Configuration"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 15,
+                    "title": "SIM-001 — Select Scenario Type"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 20,
+                    "title": "JOB-001 — Job Queue Redis"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 18,
+                    "title": "SIM-003+VAL-003 - Battery Parameters and Rules"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 19,
+                    "title": "Epic 05 - Optimization Execution"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 21,
+                    "title": "OPT-001 — Create Asynchronous Job"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 22,
+                    "title": "OPT-002 — Job States"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 23,
+                    "title": "OPT-003 — Solver Execution Gurobi"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 24,
+                    "title": "OPT-004 - Concurrency Control by License"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 25,
+                    "title": "Epic 06 - Persistence and Storage"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 26,
+                    "title": "PST-001 — Persist Communities and Scenarios"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 27,
+                    "title": "PST-002 — Persist Runs and Summary Logs"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 28,
+                    "title": "PST-003 — File Storage"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 29,
+                    "title": "PST-004 — Backup and Retention"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 30,
+                    "title": "Epic 07 - Results Visualization"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 31,
+                    "title": "RES-001 — Visualization of Results"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 32,
+                    "title": "RES-002 — Comparison Between Scenarios"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 33,
+                    "title": "Epic 08 - Automatic Reports"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 34,
+                    "title": "REP-001 — Automatic Reports"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 35,
+                    "title": "REP-002 — Export PDF Excel JSON"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 36,
+                    "title": "Epic 09 - MQTT Integration"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 37,
+                    "title": "MQTT-001 — MQTT Ingestion Service"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 38,
+                    "title": "MQTT-002 — MQTT Management UI"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 39,
+                    "title": "Epic 10 - Multi-Format Inputs/Outputs"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 40,
+                    "title": "FMT-001 — Excel CSV Support"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Ready",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 41,
+                    "title": "Epic 12 - Observability and Operations"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 42,
+                    "title": "OBS-001 — Summary Execution Logs"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 43,
+                    "title": "OBS-002 — Job Metrics"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 44,
+                    "title": "Epic 13 - Change Governance for Real Communities"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 45,
+                    "title": "GOV-001 — Change Proposal with Admin Approval"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 46,
+                    "title": "GOV-002 — Change History and Audit"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 47,
+                    "title": "Epic 14 - Multi-Community Manager per Pilot"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 48,
+                    "title": "CM-006 — Multiple CMs per Real Pilot"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 49,
+                    "title": "CM-007 — Shared Simulation History"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 50,
+                    "title": "CM-008 — Change Notifications for CMs"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 51,
+                    "title": "Epic 15 - Bootstrap and Backup Synchronization"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 52,
+                    "title": "BACKUP-001 — Backup Database Synchronization"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 53,
+                    "title": "BOOT-001 — Bootstrap Script for Real Communities"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 54,
+                    "title": "BOOT-002 — Golden Copy Versioning"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 55,
+                    "title": "Epic 16 - Simulations as Managed Snapshots"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 56,
+                    "title": "SIM-004 — Create Simulated Community from Real"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 57,
+                    "title": "SIM-005 — Comparison Between Real and Simulated"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 58,
+                    "title": "SIM-006 — Propose Integration of Simulated in Real"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 59,
+                    "title": "Epic 17 - Transition Between Communities (Energy Analyst)"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 60,
+                    "title": "EA-001 — Multi Pilot Selector for Energy Analyst"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 61,
+                    "title": "EA-002 — Edit Restrictions on Real Communities EA"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 62,
+                    "title": "EA-003 — Isolated Context per Community"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 63,
+                    "title": "Epic 18 - Notifications and Confirmations"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 64,
+                    "title": "NOTIF-001 — Admin Approval Notification"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 65,
+                    "title": "NOTIF-002 — Mandatory Change Confirmation"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVT_kwHOBbQ8Lc4BSTgb",
+            "number": 5,
+            "title": "@Phenriquerafael's untitled project",
+            "items": {
+              "nodes": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}
