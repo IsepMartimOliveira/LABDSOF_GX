@@ -74,4 +74,4 @@ Targets must be agreed before formal testing. Do not change thresholds after obs
 
 Expected limitations: small synthetic dataset, linguistic variation, incomplete context, lack of specialist validation of criticality and differences between tests and real operation. The product supports coordination; it must not promise infallible emergency assessment.
 
-Traceability: [US-03/05 and EN-04](06-product-backlog.md), [NFR-03/10](requirements.md), [security](09-security-privacy.md).
+Traceability: [AI-01 — Sprint 1 assessment task](backlog/tasks/AI-01-assess-ai-opportunity.md), [US-03/05 and EN-04](06-product-backlog.md), [NFR-03/10](requirements.md), [security](09-security-privacy.md). Completing AI-01 does not complete implementation or evaluation results.

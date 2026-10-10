@@ -6,6 +6,8 @@ The following three phases organise Sprint 1 and may overlap. The assignment's Â
 
 ## Phase 1 â€” organisation
 
+Assignable candidate work, proposed owners/reviewers and deliverable traceability are in the [Sprint 1 issue drafts](../backlog/README.md). Creating drafts does not select the work, publish issues or confirm readiness.
+
 | Activity | Artefact/evidence | Current status | Proposed role |
 |---|---|---|---|
 | Source control | Local Git repository and [workflow](../governance/git-workflow.md); remote URL/access/protections | Local Git exists; remote to be verified | DevOps |

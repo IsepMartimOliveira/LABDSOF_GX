@@ -6,6 +6,8 @@
 
 Until a board is confirmed, the [Markdown backlog](../06-product-backlog.md) is the source of items. After choosing GitHub Projects/Jira (DEC-09), retain local IDs, add URLs and use the board for operational status. Update the documentation snapshot at reviews; do not maintain two lists with incompatible priorities.
 
+The [Sprint 1 issue drafts](../backlog/README.md) contain proposed issue bodies and task breakdowns, with a publication workflow. After publication, record each issue URL and use GitHub Issues/Projects for live status and assignments; local drafts remain publication records. The templates below stay reusable and separate from these filled-in drafts.
+
 An epic groups a broad outcome; a story delivers observable value; a task covers technical/research/documentation work; a bug records a deviation from expected behaviour. Do not force technical tasks into fictional personas.
 
 ## Workflow

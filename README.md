@@ -62,6 +62,7 @@ File numbering does not always match the assignment: **05 is the roadmap; 06 is 
 | [Git workflow](documents/governance/git-workflow.md) | Proposal; remote protections not verified |
 | [Issues, labels and milestones](documents/governance/issue-management.md) | Local conventions; remote configuration pending |
 | [Sprint 1 plan](documents/planning/sprint-1-plan.md) | Phases, dependencies and exit criteria |
+| [Sprint 1 epic and task issue drafts](documents/backlog/README.md) | 3 epics, 4 parent tasks and 15 delivery tasks; proposed owners/reviewers; not published or committed |
 | [Sprint B backlog](documents/planning/sprint-b-backlog.md) | Candidates; no Ready commitments |
 | [Decisions and feedback](documents/planning/decisions-and-feedback.md) | Evaluator clarification and team decisions recorded; other questions remain open |
 | [Story](.github/ISSUE_TEMPLATE/user-story.md), [epic](.github/ISSUE_TEMPLATE/epic.md), [task/spike](.github/ISSUE_TEMPLATE/task.md), [bug](.github/ISSUE_TEMPLATE/bug.md) | Local GitHub templates; labels/milestones to select after setup |
