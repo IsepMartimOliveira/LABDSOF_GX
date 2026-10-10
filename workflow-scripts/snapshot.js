@@ -4,7 +4,7 @@ const path = require("node:path");
 
 const owner = "Phenriquerafael";
 const repository = "LABDSOF_GX";
-const projectNumber = 7;
+const projectNumber = 9;
 const dataDirectory = path.join(__dirname, "data");
 const historyFile = path.join(dataDirectory, "history.json");
 const token = process.env.GITHUB_TOKEN;
