@@ -1,0 +1,371 @@
+{
+  "data": {
+    "repository": {
+      "projectsV2": {
+        "nodes": [
+          {
+            "id": "PVT_kwHOBbQ8Lc4Bmfbp",
+            "number": 9,
+            "title": "LABDSOF_GX _Project",
+            "items": {
+              "nodes": [
+                {
+                  "content": {
+                    "number": 1,
+                    "title": "[EP-00] Justifiable discovery and planning"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 2,
+                    "title": "[EP-02] Assisted triage and reviewed links"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 3,
+                    "title": "[EP-04] Deliverable, secure, observable and evaluable system"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 4,
+                    "title": "[DISC-01] Gather user evidence and document the problem"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 5,
+                    "title": "[DISC-02] Complete the market and competitor comparison"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 6,
+                    "title": "[DISC-03] Agree organisation, product scope and priorities"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 7,
+                    "title": "[DISC-01-01] Prepare research and participant data handling"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 8,
+                    "title": "[DISC-01-02] Conduct research and record source evidence"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 9,
+                    "title": "[DISC-01-03] Synthesise research and update the problem report"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 10,
+                    "title": "[DISC-02-01] Verify competitor and alternative sources"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 11,
+                    "title": "[DISC-02-02] Compare alternatives and assess differentiation"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 12,
+                    "title": "[DISC-03-01] Agree working practices, dates and capacity"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 13,
+                    "title": "[DISC-03-02] Configure and verify project tracking"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 14,
+                    "title": "[DISC-03-03] Refine vision, journeys and success criteria"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 15,
+                    "title": "[DISC-03-04] Prioritise backlog and prepare the release plan"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 16,
+                    "title": "[DISC-03-05] Prepare Sprint 1 review and record stakeholder feedback"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 17,
+                    "title": "[AI-01] Assess the AI opportunity and define evaluation"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 18,
+                    "title": "[EN-01] Consolidate technical design, ADRs and security"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 19,
+                    "title": "[EN-01-01] Select the stack and accept architecture decisions"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 20,
+                    "title": "[EN-01-02] Consolidate the domain model and contract outlines"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 21,
+                    "title": "[EN-01-03] Consolidate architecture and deployment views"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "content": {
+                    "number": 22,
+                    "title": "[EN-01-04] Review the initial security and privacy assessment"
+                  },
+                  "fieldValues": {
+                    "nodes": [
+                      {
+                        "name": "Backlog",
+                        "field": {
+                          "name": "Status"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
